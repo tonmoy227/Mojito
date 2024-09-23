@@ -29,7 +29,7 @@
 <!-- Start of Header section
 	============================================= --> 
 	<header id="mt-header" class="mt-header-section header_style_one txa_sticky_header">
-        <div class="mt-header-content d-flex justify-content-between align-items-center">
+        <div class="mt-header-content d-flex justify-content-between align-items-center" data-background="assets/img/bg/header-bg.jpg">
             <div class="brand-logo">
                 <a href="#"><img src="assets/img/logo/logo-1.png" alt=""></a>
             </div>
@@ -92,8 +92,9 @@
                     <li><a href="about.html">Contact</a></li>
                 </ul>
             </nav>
-            <div class="header-cta-btn text-uppercase">
-                <a href="#">Get in touch</a>
+            <div class="header-cta-btn position-relative text-uppercase">
+                <div class="btn-glow"></div>
+                <a href="#"><span>Get in touch</span></a>
             </div>
         </div>
     </header>
@@ -102,19 +103,56 @@
 
 <!-- Start of Hero section
     ============================================= -->
-    <section id="mt-hero-1" class="mt-hero-section-1" data-background="assets/img/bg/hero-bg.jpg">
+    <section id="mt-hero-1" class="mt-hero-section-1 position-relative" data-background="assets/img/bg/hero-bg.jpg">
         <div class="mt-hero-content">
             <div class="mt-hero-text-1 headline pera-content">
-                <h1>Mojito Digital <span>Agency</span></h1>
+                <h1 class="hero_title">Mojito Digital <span>Agency</span></h1>
                 <p>Crafting compelling digital experiences that captivate audiences and drive meaningful connections.</p>
-                <div class="mt-btn">
-                    
+                <div class="mt-btn-1 text-uppercase text-center">
+                    <a href="#"><span>Let’s get Started</span> <i class="fa-regular fa-plus"></i></a>
                 </div>
             </div>
         </div>
     </section>      
 <!-- End of Hero section
-    ============================================= -->     
+    ============================================= -->
+
+<!-- Start of About section
+    ============================================= -->
+    <section id="mt-about-1" class="mt-about-section-1" data-background="assets/img/bg/about-bg.jpg">
+        <div class="container mt-container-1">
+            <div class="mt-about-content-1">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="mt-about-tab-content">
+                            <div class="mt-about-tab-btn mt-40 tx-tab-btn ul-li">
+                                <ul class="nav nav-tabs" id="mt-about-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <div class="nav-link active" id="ft_tab_1" data-bs-toggle="tab" data-bs-target="#ft_1_1"  role="tab"  aria-selected="false">
+                                             About
+                                        </div>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <div class="nav-link" id="ft_tab_2" data-bs-toggle="tab" data-bs-target="#ft_1_2"  role="tab"  aria-selected="false">
+                                            Mission
+                                        </div>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <div class="nav-link" id="ft_tab_3" data-bs-toggle="tab" data-bs-target="#ft_1_3"  role="tab"  aria-selected="false">
+                                            Value
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+<!-- End of About section
+    ============================================= -->    
+
 
 
     <!-- For Js Library -->

@@ -8,9 +8,10 @@
         --mt-body-font: "Space Grotesk", sans-serif;
         --mt-body-color: #777c83;
         --mt-title-color: #22282f;
+        --mt-main-color: #56ff61;
         --cube-1: cubic-bezier(0.55, 0.085, 0, 0.99);
         --cube-2: all .25s cubic-bezier(.645,.045,.355,1);
-        --mt-gradient:  linear-gradient( 0deg, rgb(99,255,75) 0%, rgb(0,255,239) 100%);
+        --mt-gradient:  linear-gradient( 90deg, rgb(99,255,75) 0%, rgb(0,255,239) 100%);
 
     }
 
@@ -32,3 +33,5 @@
     $md:'only screen and (min-width: 768px) and (max-width: 991px)';
     $sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
     $xs:'(max-width: 767px)';
+
+

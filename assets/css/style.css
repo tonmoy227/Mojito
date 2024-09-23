@@ -15,12 +15,13 @@
   --mt-body-font: "Space Grotesk", sans-serif;
   --mt-body-color: #777c83;
   --mt-title-color: #22282f;
+  --mt-main-color: #56ff61;
   --cube-1: cubic-bezier(0.55, 0.085, 0, 0.99);
   --cube-2: all .25s cubic-bezier(.645,.045,.355,1);
-  --mt-gradient: linear-gradient( 0deg, rgb(99,255,75) 0%, rgb(0,255,239) 100%);
+  --mt-gradient: linear-gradient( 90deg, rgb(99,255,75) 0%, rgb(0,255,239) 100%);
 }
 
-.mt-header-section.header_style_one .header-cta-btn a {
+.mt-hero-text-1 .hero_title span, .mt-btn-1 a i, .mt-btn-1 a span, .header-cta-btn a span {
   background: var(--mt-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -247,6 +248,29 @@ select:visited {
   list-style: none;
   padding: 0;
   z-index: 1;
+}
+
+@media (min-width: 1300px) {
+  .container.mt-container-1 {
+    max-width: 1350px;
+  }
+}
+.tx-tab-btn .nav-tabs .nav-item.show .nav-link,
+.tx-tab-btn .nav-tabs .nav-link.active,
+.tx-tab-btn .nav-tabs .nav-link {
+  border: none;
+  padding-top: 0;
+  padding-right: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+.tx-tab-btn .nav-tabs {
+  border: none;
+}
+.tx-tab-btn .nav {
+  display: inherit;
 }
 
 .mt-5 {
@@ -1610,12 +1634,147 @@ select:visited {
 }
 
 /*---------------------------------------------------- */
+/*Button Section*/
+/*----------------------------------------------------*/
+@-webkit-keyframes border_line_anim {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes border_line_anim {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@-webkit-keyframes borderRadial {
+  0% {
+    --gradX: 50%;
+    --gradY: 0%;
+  }
+  20% {
+    --gradX: 100%;
+    --gradY: 50%;
+  }
+  40% {
+    --gradX: 100%;
+    --gradY: 100%;
+  }
+  60% {
+    --gradX: 50%;
+    --gradY: 100%;
+  }
+  80% {
+    --gradX: 0%;
+    --gradY: 50%;
+  }
+  100% {
+    --gradX: 50%;
+    --gradY: 0%;
+  }
+}
+@keyframes borderRadial {
+  0% {
+    --gradX: 50%;
+    --gradY: 0%;
+  }
+  20% {
+    --gradX: 100%;
+    --gradY: 50%;
+  }
+  40% {
+    --gradX: 100%;
+    --gradY: 100%;
+  }
+  60% {
+    --gradX: 50%;
+    --gradY: 100%;
+  }
+  80% {
+    --gradX: 0%;
+    --gradY: 50%;
+  }
+  100% {
+    --gradX: 50%;
+    --gradY: 0%;
+  }
+}
+.header-cta-btn {
+  border-radius: 50px;
+  overflow: hidden;
+}
+.header-cta-btn a {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: #000;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.header-cta-btn a span {
+  padding: 20px 50px;
+  display: inline-block;
+  border-radius: 50px;
+}
+.header-cta-btn .btn-glow {
+  width: 750px;
+  height: 750px;
+  display: block;
+  background: conic-gradient(from 1deg, rgba(0, 0, 0, 0) 0%, rgb(99, 255, 75) 10%, rgb(0, 255, 239) 12%, transparent 17%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  border-radius: 12px;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  -webkit-animation: border_line_anim 3s linear infinite;
+  animation: border_line_anim 3s linear infinite;
+}
+
+.mt-btn-1 a {
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 50px;
+  border: 2px solid #40ff85;
+}
+.mt-btn-1 a span {
+  display: inline-block;
+}
+.mt-btn-1 a i {
+  margin-left: 40px;
+}
+
+/*---------------------------------------------------- */
 /*Header Section*/
 /*----------------------------------------------------*/
 .mt-header-section {
   left: 0;
-  width: 100%;
   z-index: 10;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1920px;
   position: absolute;
   padding: 20px 25px;
 }
@@ -1649,7 +1808,7 @@ select:visited {
 }
 .mt-header-section .dropdown-menu {
   left: 0;
-  top: 55px;
+  top: 58px;
   z-index: 100;
   margin: 0px;
   padding: 4px 4px;
@@ -1660,7 +1819,7 @@ select:visited {
   border-radius: 0;
   position: absolute;
   opacity: 0;
-  background: #fff;
+  background: #031317;
   border-radius: 5px;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
@@ -1768,9 +1927,11 @@ select:visited {
   visibility: visible;
 }
 .mt-header-section.header_style_one .mt-header-content {
-  padding: 12px 15px;
-  border-radius: 40px;
+  border-radius: 50px;
   border: 2px solid #fff;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 14px 15px 14px 40px;
 }
 .mt-header-section.header_style_one .main-navigation li {
   margin: 0px 28px;
@@ -1779,31 +1940,133 @@ select:visited {
   color: #fff;
   font-size: 18px;
   font-weight: 600;
-  padding-bottom: 30px;
-}
-.mt-header-section.header_style_one .header-cta-btn a {
-  overflow: hidden;
-  position: relative;
-  padding: 20px 50px;
-  border-radius: 50px;
-  display: inline-block;
-  background: var(--mt-gradient);
-}
-.mt-header-section.header_style_one .header-cta-btn a:before {
-  top: 0;
-  left: 0;
-  width: 100%;
-  content: "";
-  height: 100%;
-  position: absolute;
-  background-color: #031013;
+  padding-bottom: 36px;
 }
 
 /*---------------------------------------------------- */
 /*Hero Section*/
 /*----------------------------------------------------*/
+.mt-hero-section-1 {
+  margin: 0 auto;
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  max-width: 1920px;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center center;
+          mask-position: center center;
+  -webkit-mask-image: url(../img/bg/mask-shape1.png);
+          mask-image: url(../img/bg/mask-shape1.png);
+}
+
 .mt-hero-content {
   padding: 280px 0px 165px;
+}
+
+.mt-hero-text-1 {
+  margin: 0 auto;
+  max-width: 990px;
+}
+.mt-hero-text-1 .hero_title {
+  color: #fff;
+  line-height: 1.03;
+  font-size: 152px;
+}
+.mt-hero-text-1 .hero_title span {
+  padding-left: 200px;
+  position: relative;
+}
+.mt-hero-text-1 .hero_title span:before {
+  top: 50%;
+  left: 0;
+  height: 7px;
+  width: 155px;
+  content: "";
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: var(--mt-gradient);
+}
+.mt-hero-text-1 p {
+  color: #fff;
+  margin: 0 auto;
+  font-size: 26px;
+  max-width: 700px;
+  padding-top: 35px;
+  text-align: center;
+  line-height: 1.385;
+  padding-bottom: 45px;
+}
+
+.mt-hero-section-1 {
+  z-index: 1;
+}
+.mt-hero-section-1:before {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.64);
+}
+
+/*---------------------------------------------------- */
+/*About Section*/
+/*----------------------------------------------------*/
+/*Home Page 1 About*/
+/*----------------------------------------------------*/
+.mt-about-section-1 {
+  margin-top: -150px;
+  padding-top: 230px;
+}
+
+.mt-about-tab-btn {
+  padding: 15px 0px;
+  border-radius: 50px;
+  display: inline-block;
+  border: 2px solid var(--mt-main-color);
+}
+.mt-about-tab-btn .nav-item {
+  margin: 0px 19px;
+}
+.mt-about-tab-btn .nav-tabs .nav-link,
+.mt-about-tab-btn .nav-tabs .nav-link.active {
+  padding: 0;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 50px;
+  padding: 13px 40px;
+  background-color: #fff;
+  text-transform: uppercase;
+  color: var(--mt-title-color);
+  -webkit-box-shadow: 1.634px 2.516px 2px 0px rgba(0, 0, 0, 0.13);
+          box-shadow: 1.634px 2.516px 2px 0px rgba(0, 0, 0, 0.13);
+}
+.mt-about-tab-btn .nav-tabs .nav-link {
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+}
+.mt-about-tab-btn .nav-tabs .nav-link:before {
+  top: 0;
+  right: 0;
+  width: 0%;
+  left: auto;
+  z-index: -1;
+  content: "";
+  height: 100%;
+  position: absolute;
+  border-radius: 50px;
+  -webkit-transition: 500ms var(--cube-1);
+  transition: 500ms var(--cube-1);
+  background: var(--mt-gradient);
+}
+.mt-about-tab-btn .nav-tabs .nav-link.active:before {
+  left: 0;
+  width: 100%;
+  right: auto;
 }
 
 /*---------------------------------------------------- */

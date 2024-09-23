@@ -1,3 +1,58 @@
+.mt-hero-section-1 {
+	margin: 0 auto;
+	mask-size: cover;
+	max-width: 1920px;
+	mask-repeat: no-repeat;
+	mask-position: center center;
+	mask-image: url(../img/bg/mask-shape1.png);
+}
 .mt-hero-content {
 	padding: 280px 0px 165px;
+}
+.mt-hero-text-1 {
+	margin: 0 auto;
+	max-width: 990px;
+	.hero_title {
+		color: #fff;
+		line-height: 1.03;
+		font-size: 152px;
+		span {
+			@extend%gradient-text;
+			padding-left: 200px;
+			position: relative;
+			&:before {
+				top: 50%;
+				left: 0;
+				height: 7px;
+				width: 155px;
+				content: '';
+				position: absolute;
+				transform: translateY(-50%);
+				background: var(--mt-gradient);
+			}
+		}
+	}
+	p {
+		color: #fff;
+		margin: 0 auto;
+		font-size: 26px;
+		max-width: 700px;
+		padding-top: 35px;
+		text-align: center;
+		line-height: 1.385;
+		padding-bottom: 45px;
+	}
+}
+.mt-hero-section-1 {
+	z-index: 1;
+	&:before {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		content: '';
+		position: absolute;
+		background-color: rgba(0, 0, 0, .64);
+	}
 }
