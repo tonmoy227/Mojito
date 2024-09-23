@@ -223,6 +223,22 @@ select:visited {
         display: inherit;
     }
 }
+.mt-section-title {
+    .subtitle {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 3px;
+        display: inline-block;
+        @extend%gradient-text;
+    }
+    .sec_title {
+        font-size: 64px;
+        font-weight: 700;
+        span {
+            @extend%gradient-text;
+        }
+    }
+}
 // txa-common-css-start
 
 @for $i from 1 through 40 {

@@ -3,11 +3,12 @@
 .mt-about-section-1 {
 	margin-top: -150px;
 	padding-top: 230px;
+	padding-bottom: 140px;
 }
 .mt-about-tab-btn {
-	padding: 15px 0px;
 	border-radius: 50px;
 	display: inline-block;
+	padding: 12px 0px 8px;
 	border: 2px solid var(--mt-main-color);
 	.nav-item {
 		margin: 0px 19px;
@@ -49,6 +50,67 @@
 					right: auto;
 				}
 			}
+		}
+	}
+}
+.mt-about-tab-text {
+	.mt-about-tab-list {
+		overflow: hidden;
+		border-radius: 6px;
+		background-color: #f1efe7;
+		.item-icon {
+			width: 280px;
+			height: 240px;
+			background-color: #fff;
+			.m-icon {
+				width: 85px;
+				height: 85px;
+				margin: 0 auto;
+				margin-bottom: 10px;
+				border-radius: 100%;
+				background: var(--mt-gradient);
+			}
+			span {
+				font-size: 27px;
+				font-weight: 700;
+				color: var(--mt-title-color);
+			}
+		}
+		.item-list {
+			width: 100%;
+			height: 100%;
+			max-width: 340px;
+			padding-left: 50px;
+			background-color: #f1efe7;
+			li {
+				font-weight: 700;
+				 font-size: 21px;
+				 padding-left: 22px;
+				 margin: 10px 0px 7px;
+				 position: relative;
+				 color: var(--mt-title-color);
+				 &:before {
+				 	left: 0;
+				 	top: 12px;
+				 	width: 10px;
+				 	content: '';
+				 	height: 10px;
+				 	position: absolute;
+				 	border-radius: 100%;
+				 	background: var(--mt-gradient);
+				 }
+				 &:last-child {
+				 	margin-bottom: 0;
+				 }
+			}
+		}
+	}
+}
+.mt-about-client {
+	.item-text {
+		li {
+			color: #efcc4c;
+			font-size: 15px;
 		}
 	}
 }
