@@ -1,9 +1,15 @@
 /*Home Page 1 About*/
 /*----------------------------------------------------*/
 .mt-about-section-1 {
+	margin: 0 auto;
+	mask-size: cover;
+	max-width: 1920px;
 	margin-top: -150px;
-	padding-top: 230px;
+	padding-top: 270px;
 	padding-bottom: 140px;
+	mask-repeat: no-repeat;
+	mask-position: center center;
+	mask-image: url(../img/bg/mask-shape2.png);
 }
 .mt-about-tab-btn {
 	border-radius: 50px;
@@ -107,10 +113,61 @@
 	}
 }
 .mt-about-client {
+	margin-bottom: 30px;
 	.item-text {
+		margin-left: 20px;
 		li {
 			color: #efcc4c;
 			font-size: 15px;
+		}
+		span {
+			color: #777c83;
+			font-size: 16px;
+		}
+	}
+}
+.mt-about-text-wrap {
+	margin-top: 15px;
+	margin-left: 30px;
+	h3 {
+		font-size: 23px;
+		font-weight: 600;
+		line-height: 1.522;
+		padding-bottom: 25px;
+	}
+}
+.mt-about-cta {
+	gap: 30px 55px;
+	margin-top: 25px;
+	.cta-info {
+		width: 100%;
+		max-width: 220px;
+	}
+	.cta-text {
+		width: 100%;
+		max-width: 345px;
+	}
+	.cta-item {
+		margin-bottom: 18px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.item-icon {
+			width: 43px;
+			height: 43px;
+			margin-right: 12px;
+			border-radius: 100%;
+			background-color: #fff;
+			color: var(--mt-title-color);
+			border: 1px solid rgb(230, 230, 230);
+		}
+		.item-text {
+			font-size: 20px;
+			font-weight: 500;
+			color: var(--mt-title-color);
+			a {
+				text-decoration: underline;
+			}
 		}
 	}
 }

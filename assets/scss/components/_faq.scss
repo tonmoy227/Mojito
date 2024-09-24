@@ -1,0 +1,15 @@
+.mt-faq-content {
+	margin: 0 auto;
+	max-width: 1140px;
+}
+.mt-faq-text-area {
+	.mt-section-title {
+		p {
+			font-size: 23px;
+			font-weight: 600;
+			max-width: 360px;
+			padding-top: 15px;
+			color: var(--mt-title-color);
+		}
+	}
+}
