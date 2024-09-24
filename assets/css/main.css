@@ -1666,58 +1666,6 @@ select:visited {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-@-webkit-keyframes borderRadial {
-  0% {
-    --gradX: 50%;
-    --gradY: 0%;
-  }
-  20% {
-    --gradX: 100%;
-    --gradY: 50%;
-  }
-  40% {
-    --gradX: 100%;
-    --gradY: 100%;
-  }
-  60% {
-    --gradX: 50%;
-    --gradY: 100%;
-  }
-  80% {
-    --gradX: 0%;
-    --gradY: 50%;
-  }
-  100% {
-    --gradX: 50%;
-    --gradY: 0%;
-  }
-}
-@keyframes borderRadial {
-  0% {
-    --gradX: 50%;
-    --gradY: 0%;
-  }
-  20% {
-    --gradX: 100%;
-    --gradY: 50%;
-  }
-  40% {
-    --gradX: 100%;
-    --gradY: 100%;
-  }
-  60% {
-    --gradX: 50%;
-    --gradY: 100%;
-  }
-  80% {
-    --gradX: 0%;
-    --gradY: 50%;
-  }
-  100% {
-    --gradX: 50%;
-    --gradY: 0%;
-  }
-}
 .header-cta-btn {
   border-radius: 50px;
   overflow: hidden;
@@ -1774,6 +1722,18 @@ select:visited {
 }
 .mt-btn-1 a i {
   margin-left: 40px;
+}
+
+.mt-btn-2 a {
+  font-weight: 500;
+  padding: 14px 40px;
+  border-radius: 40px;
+  display: inline-block;
+  color: var(--mt-title-color);
+  background: var(--mt-gradient);
+}
+.mt-btn-2 a i {
+  margin-left: 18px;
 }
 
 /*---------------------------------------------------- */
@@ -2237,19 +2197,131 @@ select:visited {
 }
 
 /*---------------------------------------------------- */
-/*Faq Section*/
+/*Service Section*/
 /*----------------------------------------------------*/
-.mt-faq-content {
+.mt-service-content {
+  gap: 0px 80px;
   margin: 0 auto;
   max-width: 1140px;
 }
 
-.mt-faq-text-area .mt-section-title p {
+.mt-service-text-area {
+  max-width: 480px;
+}
+.mt-service-text-area .mt-section-title {
+  margin-bottom: 45px;
+}
+.mt-service-text-area .mt-section-title p {
   font-size: 23px;
   font-weight: 600;
   max-width: 360px;
   padding-top: 15px;
   color: var(--mt-title-color);
+}
+
+.mt-service-accordion h3 {
+  font-size: 36px;
+  font-weight: 700;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--mt-title-color);
+}
+
+.mt-service-accordion {
+  width: 100%;
+  max-width: 570px;
+  margin-top: 48px;
+}
+.mt-service-accordion .accordion-item,
+.mt-service-accordion .accordion-button:not(.collapsed),
+.mt-service-accordion .accordion-button {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.mt-service-accordion .accordion-item {
+  border: none;
+  border-radius: 0;
+  padding-left: 15px;
+  position: relative;
+  border-bottom: 1px solid var(--mt-title-color);
+}
+.mt-service-accordion .accordion-button {
+  padding: 0;
+  border: none;
+  font-size: 30px;
+  font-weight: 700;
+  position: relative;
+  padding: 20px 0px 18px;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  color: var(--mt-title-color);
+}
+.mt-service-accordion .accordion-button span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 85%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.mt-service-accordion .accordion-button:focus {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.mt-service-accordion .accordion-body {
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  line-height: 30px;
+  line-height: 1.667;
+  padding-bottom: 30px;
+}
+.mt-service-accordion .accordion-body p {
+  max-width: 420px;
+}
+.mt-service-accordion .accordion-body a {
+  display: block;
+  font-weight: 700;
+  margin-top: 10px;
+  color: var(--mt-title-color);
+}
+.mt-service-accordion .accordion-body a i {
+  font-size: 14px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.mt-service-accordion .accordion-button::after {
+  top: 20px;
+  right: 22px;
+  width: 32px;
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  content: "\f067";
+  font-weight: 400;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100%;
+  background-image: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Font Awesome 5 Pro";
+}
+.mt-service-accordion .accordion-button:not(.collapsed) {
+  color: var(--mt-title-color);
+}
+.mt-service-accordion .accordion-button:not(.collapsed):after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 /*---------------------------------------------------- */

@@ -8,37 +8,6 @@
 		transform: translate(-50%, -50%) rotate(360deg);
 	}
 }
-@keyframes borderRadial {
-	0% {
-		--gradX: 50%;
-		--gradY: 0%;
-	}
-
-	20% {
-		--gradX: 100%;
-		--gradY: 50%;
-	}
-
-	40% {
-		--gradX: 100%;
-		--gradY: 100%;
-	}
-
-	60% {
-		--gradX: 50%;
-		--gradY: 100%;
-	}
-
-	80% {
-		--gradX: 0%;
-		--gradY: 50%;
-	}
-
-	100% {
-		--gradX: 50%;
-		--gradY: 0%;
-	}
-}
 .header-cta-btn {
 	border-radius: 50px;
 	overflow: hidden;
@@ -97,6 +66,19 @@
 		i {
 			margin-left: 40px;
 			@extend%gradient-text;
+		}
+	}
+}
+.mt-btn-2 {
+	a {
+		font-weight: 500;
+		padding: 14px 40px;
+		border-radius: 40px;
+		display: inline-block;
+		color: var(--mt-title-color);
+		background: var(--mt-gradient);
+		i {
+			margin-left: 18px;
 		}
 	}
 }
