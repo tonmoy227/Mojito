@@ -1,0 +1,33 @@
+.mt-sponsor-area {
+	max-width: 1250px;
+}
+.mt-sponsor-item {
+	height: 60px;
+	display: flex;
+	margin: 0 auto;
+	overflow: hidden;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	.img_1 {
+		transition: 500ms var(--cube-1);
+	}
+	.img_2 {
+		left: 0;
+		top: 50%;
+		opacity: 1;
+		position: absolute;
+		transform: translateY(100%);
+		transition: 500ms var(--cube-1);
+	}
+	&:hover {
+		.img_1 {
+			opacity: 0;
+			transform: translateY(-100%);
+		}
+		.img_2 {
+			opacity: 1;
+			transform: translateY(-50%);
+		}
+	}
+}

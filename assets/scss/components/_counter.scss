@@ -1,9 +1,13 @@
 .mt-counter-section {
 	margin: 0 auto;
+	mask-size: cover;
 	max-width: 1920px;
 	padding-top: 240px;
 	margin-top: -140px;
 	padding-bottom: 120px;
+	mask-repeat: no-repeat;
+	mask-position: center center;
+	mask-image: url(../img/bg/mask-shape4.png);
 }
 .mt-counter-content {
 	margin: 0 auto;
@@ -22,5 +26,5 @@
 	p {
 		font-size: 18px;
 		color: var(--mt-title-color);
-	}
+	} 
 }

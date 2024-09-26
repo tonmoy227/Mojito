@@ -1,10 +1,22 @@
 .mt-hero-section-1 {
+	z-index: 2;
 	margin: 0 auto;
 	mask-size: cover;
 	max-width: 1920px;
+	position: relative;
 	mask-repeat: no-repeat;
 	mask-position: center center;
 	mask-image: url(../img/bg/mask-shape1.png);
+	&:before {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		content: '';
+		position: absolute;
+		background-color: rgba(0, 0, 0, .64);
+	}
 }
 .mt-hero-content {
 	padding: 280px 0px 165px;
@@ -41,18 +53,5 @@
 		text-align: center;
 		line-height: 1.385;
 		padding-bottom: 45px;
-	}
-}
-.mt-hero-section-1 {
-	z-index: 1;
-	&:before {
-		top: 0;
-		left: 0;
-		z-index: -1;
-		width: 100%;
-		height: 100%;
-		content: '';
-		position: absolute;
-		background-color: rgba(0, 0, 0, .64);
 	}
 }

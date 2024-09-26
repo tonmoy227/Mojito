@@ -214,190 +214,76 @@ Header Area
 		}
 	});
 
-		/*
-Service Slider
-====start====
-*/
-	var swiper2 = new Swiper(".vt-service-thumb", {
-		spaceBetween: 0,
-		slidesPerView: 6,
-		freeMode: true,
-		direction: 'vertical',
-		mousewheel: true,
-		speed: 1000,
-		pagination: {
-			el: ".vt-service-pagination",
-			clickable: true,
-		},
 
-	});
-	var swiper = new Swiper(".vt-service-slider", {
-		slidesPerView: 1,
-		spaceBetween: 10,
-		mousewheel: {
-			releaseOnEdges: true,
-		},
-		effect: 'fade',
-		speed: 1000,
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
-		thumbs: {
-			swiper: swiper2,
-		},
-		pagination: {
-			el: ".vt-service-pagination",
-			clickable: true,
-		},
-		on: {
-			slideChange: function () {
-				if (this.isEnd) {
-        // Customize behavior when reaching the end
-					console.log('Reached the last slide');
-				}
-			},
-			reachEnd: function () { 
-      // Optionally handle specific actions when reaching the end
-				console.log('End reached');
-			},
-			reachBeginning: function () {
-      // Optionally handle specific actions when reaching the beginning
-				console.log('Beginning reached');
-			}
-		}
 
-	});
-	
-			/*
-Service Slider 2
-====start====
-*/
-	if ($('.vt-service-slider-2').length > 0 ) {
-		var swiper2 = new Swiper(".vt-service-slider-2", {
-			slidesPerView: 3,
-			loop: true,
-			spaceBetween: 32,
-			roundLengths: true,
-			speed: 1000,
-			navigation: {
-				nextEl: ".vt-ser-next",
-				prevEl: ".vt-ser-prev",
-			},
-			breakpoints: {  
-				'1400': {
-					slidesPerView: 3,
-				},
-				'1300': {
-					slidesPerView: 3,
-				},
-				'1200': {
-					slidesPerView: 3,
-				},
-				'992': {
-					slidesPerView: 3,
-				},
-				'768': {
-					slidesPerView: 2,
-				},
-				'767': {
-					slidesPerView: 2 ,
-				},
-				'576': {
-					slidesPerView: 1,
-				},
-				'480': {
-					slidesPerView: 1,
-				},
-				'0': {
-					slidesPerView: 1,
-				},
-			},
-		});
-	};
-			/*
+/*
 Faq Active
 ====start====
 */
-	$(document).on('click', '.vt-faq-item-area .accordion-item', function(){
-		$(this).addClass('faq_active').siblings().removeClass('faq_active')
+
+	var selector = '.mt-testimonial-item';
+
+	$(selector).on('click', function(){
+		$(selector).removeClass('active');
+		$(this).addClass('active');
 	});
 	$('.counter').counterUp({
 		delay: 15,
 		time: 1500,
 	});
-				/*
-Testimonial Slider
-====start====
-*/
-	if ($('.vt-testimonial-slider').length > 0 ) {
-		var swiper2 = new Swiper(".vt-testimonial-slider", {
-			slidesPerView: 3,
-			loop: true,
-			spaceBetween: 32,
+
+	if ($('.mt-sponsor-slide').length > 0 ) {
+		var slider = new Swiper('.mt-sponsor-slide', {
+			spaceBetween: 110,
+			slidesPerView: 4,
 			roundLengths: true,
-			centeredSlides: true,
-			speed: 1000,
-			navigation: {
-				nextEl: ".vt-testi-next",
-				prevEl: ".vt-testi-prev",
-			},
-			pagination: {
-				el: ".vt-testi-pagination",
-				clickable: true,
-			},
-			breakpoints: {  
-				'1400': {
-					slidesPerView: 3,
-				},
-				'1300': {
-					slidesPerView: 3,
-				},
-				'1200': {
-					slidesPerView: 3,
-				},
-				'992': {
-					slidesPerView: 2,
-				},
-				'768': {
-					slidesPerView: 2,
-				},
-				'767': {
-					slidesPerView: 2 ,
-				},
-				'576': {
-					slidesPerView: 1,
-				},
-				'480': {
-					slidesPerView: 1,
-				},
-				'0': {
-					slidesPerView: 1,
-				},
-			},
-		});
-	};
-					/*
-Client Logo Slider
-====start====
-*/
-	if ($('.vt-contact-logo-slide').length > 0 ) {
-		var swiper2 = new Swiper(".vt-contact-logo-slide", {
 			loop: true,
-			speed: 1000,
-			slidesPerView: 3,
-			spaceBetween: 50,
-			roundLengths: true,
+			loopAdditionalSlides: 30,
 			autoplay: {
-				delay: 2500,
-				disableOnInteraction: false,
+				enabled: true,
+				delay: 6000
+			},
+			speed: 400,
+			breakpoints: {
+				'1600': {
+					slidesPerView: 4,
+				},
+				'1200': {
+					slidesPerView: 4,
+				},
+				'992': {
+					slidesPerView: 4,
+				},
+				'768': {
+					slidesPerView: 4,
+				},
+				'576': {
+					slidesPerView: 3,
+					spaceBetween: 50,
+				},
+				'0': {
+					slidesPerView: 2,
+				},
+			},
+		});
+	};
+
+	if ($(".mt-portfolio-slider").length) {
+		var swiper2 = new Swiper(".mt-portfolio-slider", {
+			slidesPerView: 4,
+			loop: true,
+			spaceBetween: 48,
+			speed: 1000,
+			navigation: {
+				nextEl: ".mt-port-next",
+				prevEl: ".mt-port-prev",
 			},
 			breakpoints: {  
 				'1400': {
-					slidesPerView: 3,
+					slidesPerView: 4,
 				},
 				'1300': {
-					slidesPerView: 3,
+					slidesPerView: 4,
 				},
 				'1200': {
 					slidesPerView: 3,
@@ -406,358 +292,18 @@ Client Logo Slider
 					slidesPerView: 3,
 				},
 				'768': {
-					slidesPerView: 3,
-				},
-				'767': {
-					slidesPerView: 3 ,
+					slidesPerView: 2,
 				},
 				'576': {
-					slidesPerView: 3,
+					slidesPerView: 1,
 				},
 				'480': {
-					slidesPerView: 2,
+					slidesPerView: 1,
 				},
 				'0': {
-					slidesPerView: 2,
+					slidesPerView: 1,
 				},
 			},
 		});
 	};
-	if ($('.vt-blog-dec-slide').length > 0 ) {
-		var swiper2 = new Swiper(".vt-blog-dec-slide", {
-			loop: true,
-			speed: 1000,
-			slidesPerView: 1,
-			spaceBetween: 1,
-			roundLengths: true,
-			navigation: {
-				nextEl: ".vt-video-prev",
-				prevEl: ".vt-video-next",
-			},
-		});
-	};
-					/*
-Txt-item-active
-====start====
-*/
-	jQuery(window).on('load', function(){
-		const boxes = gsap.utils.toArray('.txt_item_active');
-		boxes.forEach(svg => {
-			gsap.to(svg, {
-				scrollTrigger: {
-					trigger: svg,
-					start: "top 100%",
-					end: "bottom bottom",
-					toggleClass: "active",
-					duration: 3,
-					delay:1,
-					toggleActions: "play play play reverse",
-					once: true,
-				}
-			});
-		});
-	});
-
-				/*
-Testimonial Slider
-====start====
-*/
-	if ($('.vt-testimonial-slider-2').length > 0 ) {
-		var swiper2 = new Swiper(".vt-testimonial-slider-2", {
-			slidesPerView: 1,
-			loop: true,
-			spaceBetween: 0,
-			speed: 1000,
-			navigation: {
-				nextEl: ".vt-testi-next-2",
-				prevEl: ".vt-testi-prev-2",
-			},
-			pagination: {
-				el: ".vt-testi-pagination-2",
-				type: 'fraction',
-				formatFractionCurrent: function (number) {
-					if (number < 10) {
-						return '0' + number;
-					} else {
-						return number;
-					}
-				}
-
-			},
-		});
-	};
-
-				/*
-Service Scroll
-====start====
-*/
-	gsap.utils.toArray('.vt-service-content-6').forEach((el, index) => { 
-		let Vertex = gsap.timeline({
-			scrollTrigger: {
-				trigger: ".vt-service-section-6",
-				scrub: 6,
-				start: "top 20%",
-				end: "bottom 20%",
-				toggleActions: "play none none reverse", 
-				markers: false
-			}
-		})
-
-		Vertex
-		.set(el, {transformOrigin: 'top bottom'})
-		.fromTo(el, { x: 0  }, { x: -1200 , duration: 30, immediateRender: false})
-	});
-	jQuery(document).ready(function ($) {
-		$('#pills-tab[data-mouse="hover"] a').hover(function(){
-			$(this).tab('show');
-		});
-		$('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
-			var target = $(e.relatedTarget).attr('href');
-			$(target).removeClass('active');
-		})
-	});
-	$('.countdown_timer').each(function(){
-		$('[data-countdown]').each(function() {
-			var $this = $(this), finalDate = $(this).data('countdown');
-			$this.countdown(finalDate, function(event) {
-				var $this = $(this).html(event.strftime(''
-					+ '<li class="days_count"><strong>%D</strong><span>Days</span></li>'
-					+ '<li class="hours_count"><strong>%H</strong><span>Hours</span></li>'
-					+ '<li class="minutes_count"><strong>%M</strong><span>Mins</span></li>'
-					+ '<li class="seconds_count"><strong>%S</strong><span>Secs</span></li>'));
-			});
-		});
-	}); 
-					/*
-Animation
-====start====
-*/
-	gsap.registerPlugin(ScrollTrigger);
-	var st = jQuery(".tx-split-text");
-	if(st.length == 0) return;
-	gsap.registerPlugin(SplitText);
-	st.each(function(index, el) {
-		el.split = new SplitText(el, { 
-			type: "lines,words,chars",
-			linesClass: "split-line"
-		});
-		gsap.set(el, { perspective: 1000 });
-		if( jQuery(el).hasClass('banner_title_line') ){
-			gsap.set(el.split.words, {
-				opacity: 0,
-				y: 100,
-				ease: "circ.out",
-			});
-		}
-		el.anim = gsap.to(el.split.words, {
-			scrollTrigger: {
-				trigger: el,
-				start: "top 90%",
-			},
-			y: "0",
-			scale: 1,
-			opacity: 1,
-			delay:1,
-			duration: 1, 
-			stagger: 0.25,
-		});
-	});
-	gsap.utils.toArray(".vt-text p").forEach(e => {
-		let i = gsap.timeline({
-			scrollTrigger: {
-				trigger: e,
-				start: "top 90%",
-				duration: 2,
-				end: "bottom 60%",
-				scrub: !1,
-				markers: !1,
-				toggleActions: "play none none none"
-			}
-		}),
-		t = new SplitText(e, {
-			type: "lines"
-		});
-		gsap.set(e, {
-			perspective: 400
-		}), t.split({
-			type: "lines"
-		}), i.from(t.lines, {
-			duration: 1,
-			delay: .5,
-			opacity: 0,
-			rotationX: -80,
-			force3D: !0,
-			transformOrigin: "top center -50",
-			stagger: .1
-		})
-	})
-	// Title Animation
-	var st = $(".vt-title");
-	if(st.length == 0) return;
-	gsap.registerPlugin(SplitText);
-	st.each(function(index, el) {
-		el.split = new SplitText(el, { 
-			type: "lines,words,chars",
-			linesClass: "split-line"
-		});
-		gsap.set(el, { perspective: 1000  });
-
-		if( $(el).hasClass('vt-title-ani') ){
-			gsap.set(el.split.lines, {
-				opacity: 0,
-				rotationX: 90,
-				ease: "power2.out",
-			});
-		}
-		el.anim = gsap.to(el.split.lines, {
-			scrollTrigger: {
-				trigger: el,
-				start: "top 90%",
-			},
-			x: "0",
-			y: "0",
-			rotationX: 0,
-			scale: 1,
-			opacity: 1,
-			duration: 1, 
-			stagger: 0.2,
-		});
-	});
-	let imageappear = document.querySelectorAll(".log-image-appear1");
-	imageappear.forEach((container) => {
-		let image = container.querySelector(".log-img-rvl_1");
-		let ptx = gsap.timeline({
-			scrollTrigger: {
-				trigger: container,
-				toggleActions: "play none none none",
-				start: "top 90%",
-				end: "top 0%",
-			}
-		});
-		ptx.set(container, { autoAlpha: 1 });
-		ptx.from(container, 1.5, {
-			xPercent: 100,
-			ease: Power2.out
-		});
-		ptx.from(image, 1.5, {
-			xPercent: -100,
-			scale: 1.3,
-			delay: -1.5,
-			ease: Power2.out
-		});
-	});
-	gsap.utils.toArray(' .appear_top').forEach((el, index) => { 
-		let tlcta = gsap.timeline({
-			scrollTrigger: {
-				trigger: el,
-				scrub: 2,
-				start: "top 90%",
-				end: "top 70%",
-				toggleActions: "play none none reverse",
-				markers: false
-			}
-		})
-
-		tlcta
-		.set(el, {transformOrigin: 'center center'})
-		.from(el, { opacity: 1,  y: "+=150"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
-	});
-	gsap.utils.toArray(' .anim_left').forEach((el, index) => { 
-		let tlcta = gsap.timeline({
-			scrollTrigger: {
-				trigger: el,
-				scrub: 2,
-				start: "top 70%",
-				end: "top 90%",
-				toggleActions: "play none none reverse",
-				markers: false
-			}
-		})
-
-		tlcta
-		.set(el, {transformOrigin: 'center center'})
-		.from(el, { opacity: 1,  x: "+=985"}, {opacity: 1, x: 0, duration: 2, stagger: 0.2, immediateRender: false})
-	});
-	gsap.utils.toArray(' .anim_right').forEach((el, index) => { 
-		let tlcta = gsap.timeline({
-			scrollTrigger: {
-				trigger: el,
-				scrub: 2,
-				start: "top 90%",
-				end: "top 90%",
-				toggleActions: "play none none reverse",
-				markers: false
-			}
-		})
-
-		tlcta
-		.set(el, {transformOrigin: 'center center'})
-		.from(el, { opacity: 1,  x: "-=985"}, {opacity: 1, x: 0, duration: 2, stagger: 0.2, immediateRender: false})
-	});
-	gsap.utils.toArray(' .top_view').forEach((el, index) => { 
-		let tlcta = gsap.timeline({
-			scrollTrigger: {
-				trigger: el,
-				scrub: 2,
-				start: "top 90%",
-				end: "top 90%",
-				toggleActions: "play none none reverse",
-				markers: false
-			}
-		})
-
-		tlcta
-		.set(el, {transformOrigin: 'center center'})
-		.from(el, { opacity: 0,  y: "+=30"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
-	});
-	gsap.utils.toArray(' .appear_left').forEach((el, index) => { 
-		let tlcta = gsap.timeline({
-			scrollTrigger: {
-				trigger: el,
-				scrub: 2,
-				start: "top 90%",
-				end: "top 70%",
-				toggleActions: "play none none reverse",
-				markers: false
-			}
-		})
-
-		tlcta
-		.set(el, {transformOrigin: 'center center'})
-		.from(el, { opacity: 1,  x: "-=250"}, {opacity: 1, x: 0, duration: 1, immediateRender: false})
-	});
-	gsap.utils.toArray(' .vt-about-video').forEach((el, index) => { 
-		let tlcta = gsap.timeline({
-			scrollTrigger: {
-				trigger: el,
-				scrub: 2,
-				start: "top 50%",
-				end: "top 70%",
-				toggleActions: "play none none reverse",
-				markers: false
-			}
-		})
-
-		tlcta
-		.set(el, {transformOrigin: 'center center'})
-		.from(el, { opacity: 1,  width: "500", borderRadius: 400}, {opacity: 1, width: 1920, borderRadius: 0, duration: 2,stagger: 1, immediateRender: false})
-	});
-	gsap.utils.toArray(".img-parallax").forEach(function(container) {
-		let image = container.querySelector("img");
-
-		let tl = gsap.timeline({
-			scrollTrigger: {
-				trigger: container,
-				scrub: true,
-				pin: false,
-			},
-		}); 
-		tl.from(image, {
-			yPercent: -30,
-			ease: "none",
-		}).to(image, {
-			yPercent: 30,
-			ease: "none",
-		}); 
-	});
 })(jQuery);
