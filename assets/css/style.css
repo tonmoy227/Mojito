@@ -2654,3 +2654,51 @@ select:visited {
 }
 
 /*---------------------------------------------------- */
+/*Blog Section*/
+/*----------------------------------------------------*/
+.mt-blog-content {
+  gap: 30px 90px;
+}
+
+.mt-blog-text-area {
+  max-width: 430px;
+}
+.mt-blog-text-area .mt-section-title p {
+  padding-top: 15px;
+}
+
+.mt-blog-item-content {
+  gap: 24px;
+  max-width: 735px;
+}
+
+.mt-blog-item {
+  max-width: 356px;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0px 0px 117px 0px rgba(196, 196, 196, 0.28);
+          box-shadow: 0px 0px 117px 0px rgba(196, 196, 196, 0.28);
+}
+.mt-blog-item .item-meta {
+  color: var(--mt-title-color);
+  bottom: 18px;
+  left: 40px;
+  line-height: 1;
+  font-weight: 700;
+  padding: 12px 20px;
+  font-size: 12px;
+  position: absolute;
+  border-radius: 30px;
+  background: var(--mt-gradient);
+}
+.mt-blog-item .item-text {
+  padding: 30px 45px;
+}
+.mt-blog-item .item-text .blog_title {
+  font-size: 22px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+/*---------------------------------------------------- */
