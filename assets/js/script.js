@@ -306,4 +306,13 @@ Faq Active
 			},
 		});
 	};
+	jQuery('.mt-marquee-active').marquee({
+		gap: 0,
+		speed: 80,
+		delayBeforeStart: 0,
+		direction: 'left',
+		duplicated: true,
+		pauseOnHover: true,
+		startVisible:true,
+	});
 })(jQuery);

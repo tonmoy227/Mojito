@@ -282,6 +282,7 @@ select:visited {
 .mt-section-title .sec_title {
   font-size: 64px;
   font-weight: 700;
+  letter-spacing: -2px;
 }
 .mt-5 {
   margin-top: 5px;
@@ -2699,6 +2700,58 @@ select:visited {
   font-size: 22px;
   font-weight: 700;
   padding-bottom: 10px;
+}
+
+/*---------------------------------------------------- */
+/*Marquee Section*/
+/*----------------------------------------------------*/
+.mt-marquee-section {
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, right top, from(rgb(247, 84, 206)), to(rgb(47, 43, 255)));
+  background: linear-gradient(90deg, rgb(247, 84, 206) 0%, rgb(47, 43, 255) 100%);
+}
+
+.mt-marquee-active {
+  display: flow-root;
+  padding: 14px 0px 10px;
+}
+.mt-marquee-active h3 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0px 40px;
+  position: relative;
+  display: inline-block;
+}
+.mt-marquee-active h3:before {
+  top: 6px;
+  left: -10px;
+  font-size: 16px;
+  content: "\f666";
+  font-weight: 400;
+  position: absolute;
+  font-family: "Font Awesome 6 Pro";
+}
+
+/*---------------------------------------------------- */
+/*Team Section*/
+/*----------------------------------------------------*/
+.mt-team-section {
+  background-color: #000000;
+}
+
+.mt-team-top-content .mt-section-title {
+  max-width: 480px;
+}
+.mt-team-top-content .mt-section-title .sec_title {
+  color: #fff;
+}
+.mt-team-top-content .top-text-btn {
+  max-width: 415px;
+}
+.mt-team-top-content .top-text-btn p {
+  color: #fff;
+  padding-bottom: 30px;
 }
 
 /*---------------------------------------------------- */

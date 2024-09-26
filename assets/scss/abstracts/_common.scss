@@ -234,6 +234,7 @@ select:visited {
     .sec_title {
         font-size: 64px;
         font-weight: 700;
+        letter-spacing: -2px;
         span {
             @extend%gradient-text;
         }
