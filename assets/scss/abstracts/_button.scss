@@ -68,6 +68,11 @@
 			@extend%gradient-text;
 		}
 	}
+	&.ver_2 {
+		i {
+			margin-left: 20px;
+		}
+	}
 }
 .mt-btn-2 {
 	a {
