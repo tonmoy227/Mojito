@@ -5,7 +5,6 @@
 	margin: 0 auto;
 	max-width: 1920px;
 	position: absolute;
-	padding: 20px 25px;
 	.navbar-nav {
 		display: block;
 	}
@@ -155,7 +154,9 @@
 			}
 		}
 	}
-	&.header_style_one {
+	&.header_style_one,
+	&.header_style_two {
+		padding: 20px 15px 20px 25px;
 		.mt-header-content {
 			border-radius: 50px;
 			border: 2px solid #fff;
@@ -174,5 +175,23 @@
 			}
 		}
 		
+	}
+	&.header_style_two {
+		.mt-header-content {
+			padding: 0;
+			border: none;
+			backdrop-filter: blur(0);
+			.header-search-offcanvas {
+				gap: 0px 80px;
+				button {
+					color: #fff;
+					width: 52px;
+					border: none;
+					height: 52px;
+					border-radius: 100%;
+					background-color: #000000;
+				}
+			}
+		}
 	}
 }

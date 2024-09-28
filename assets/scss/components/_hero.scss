@@ -55,3 +55,154 @@
 		padding-bottom: 45px;
 	}
 }
+/*Home Page 2*/
+/*---------------------*/
+.mt-hero-section-2 {
+	overflow: hidden;
+	padding-top: 265px;
+	background-color: #131a20;
+	.mt-hero-social {
+		top: 0;
+		right: 0;
+		width: 93px;
+		height: 100%;
+		background: linear-gradient( -180deg, rgb(99,255,75) 0%, rgb(0,255,239) 100%);
+		.item-social {
+			left: 0;
+			right: 0;
+			top: 30%;
+			text-align: center;
+			position: absolute;
+			writing-mode: horizontal-tb;
+			a {
+				color: #000000;
+				display: block;
+				margin: 15px 0px;
+			}
+		}
+	}
+}
+.mt-hero-content-2 {
+	margin: 0 auto;
+	max-width: 1350px;
+	padding-bottom: 155px;
+	.hero-img {
+		bottom: 0;
+		z-index: 1;
+		right: 35px;
+		position: absolute;
+		.item-shape-1 {
+			top: -35px;
+			opacity: .6;
+			z-index: -1;
+			right: -35px;
+		}
+		.item-shape-2 {
+			bottom: -35px;
+			opacity: .6;
+			z-index: -1;
+			left: -35px;
+		}
+	}
+	.hero-shape-2 {
+		right: 0;
+		top: 80px;
+	}
+	.mt-hero-text {
+		max-width: 980px;
+		.hero-shape-1 {
+			right: 0;
+			top: 80px;
+		}
+		.hero-slug {
+			margin-bottom: 28px;
+			i {
+				margin-left: 10px;
+				@extend%gradient-text;
+			}
+			span {
+				font-size: 13px;
+				padding: 5px 20px;
+				border-radius: 40px;
+				display: inline-block;
+				border: 1px solid #547c12;
+				@extend%gradient-text;
+			}
+		}
+		.hero_title {
+			color: #fff;
+			font-size: 90px;
+			font-weight: 700;
+			span {
+				@extend%gradient-text;
+			}
+		}
+		p {
+			color: #d6d6d6;
+			max-width: 715px;
+			font-weight: 300;
+			padding-top: 18px;
+		}
+		.hero-progress-bar {
+			width: 100%;
+			max-width: 350px;
+		}
+		.hero-progress-wrap {
+			gap: 15px;
+			.skill-set-percent {
+				width: 100%;
+				max-width: 350px;
+			}
+			.skill-set-percent h4 {
+				top: 13px;
+				z-index: 1;
+				left: 25px;
+				color: #000000;
+				font-size: 18px;
+				font-weight: 700;
+				position: absolute;
+			}
+			.skill-set-percent .progress {
+				height: 45px;
+				border-radius: 0;
+				margin-bottom: 6px;
+				overflow: visible;
+				position: relative;
+				border-radius: 30px;
+				background-color: transparent;
+				&:last-child {
+					margin-bottom: 0;
+					.progress-bar {
+						background: var(--mt-gradient);
+					}
+				}
+			}
+			.skill-set-percent .progress span {
+				top: 10px;
+				right: 50px;
+				font-size: 17px;
+				color: #000000;
+				font-weight: 700;
+				position: relative;
+			}
+			.skill-set-percent .progress-bar {
+				top: 0px;
+				width: 0;
+				left: 0px;
+				float: left;
+				height: 100%;
+				position: relative;
+				border-radius: 30px;
+				background-color: rgb(157, 163, 222);
+				-webkit-transition: 1s all ease-in-out;
+				transition: 1s all ease-in-out;
+			}
+			.play-icon {
+				width: 110px;
+				height: 110px;
+				border-radius: 100%;
+				background: var(--mt-gradient);
+			}
+		}
+	}
+}
