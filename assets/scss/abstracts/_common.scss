@@ -239,6 +239,18 @@ select:visited {
             @extend%gradient-text;
         }
     }
+    .subtitle-2 {
+        font-size: 13px;
+        padding: 4px 20px;
+        border-radius: 30px;
+        margin-bottom: 15px;
+        display: inline-block;
+        border: 1px solid #909397;
+    }
+    &.text-center {
+        margin: 0 auto;
+        max-width: 640px;
+    }
 }
 // txa-common-css-start
 

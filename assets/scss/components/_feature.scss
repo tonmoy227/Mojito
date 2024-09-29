@@ -1,0 +1,22 @@
+.mt-feature-img {
+	max-width: 650px;
+	.item-img {
+		overflow: hidden;
+		border-radius: 20px;
+	}
+	.item-text {
+		li {
+			font-size: 17px;
+			font-weight: 700;
+			margin-right: 40px;
+			color: var(--mt-title-color);
+			&:last-child {
+				margin-right: 0;
+			}
+			i {
+				@extend%gradient-text;
+				margin-right: 10px;
+			}
+		}
+	}
+}

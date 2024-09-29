@@ -90,14 +90,33 @@
 .mt-btn-3 {
 	a {
 		color: #fff;
+		line-height: 1;
 		font-weight: 500;
 		padding: 18px 35px;
 		border-radius: 40px;
+		position: relative;
 		display: inline-block;
-		background: linear-gradient( 90deg, rgb(155,0,255) 0%, rgb(27,149,248) 100%);;
+		background: linear-gradient( 90deg, rgb(155,0,255) 0%, rgb(27,149,248) 100%);
 		i {
 			margin-left: 5px;
 			transform: rotate(-45deg);
+		}
+	}
+	&.ver_2 {
+		a {
+			color: var(--mt-title-color);
+			z-index: 1;
+			&:before {
+				top: 2px;
+				left: 2px;
+				width: 98%;
+				z-index: -1;
+				height: 93%;
+				content: "";
+				border-radius: 40px;
+				position: absolute;
+				background-color: #fff;
+			}
 		}
 	}
 }
