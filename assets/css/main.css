@@ -21,7 +21,7 @@
   --mt-gradient: linear-gradient( 90deg, rgb(99,255,75) 0%, rgb(0,255,239) 100%);
 }
 
-.mt-copyright-wrap .copyright-social a i, .mt-footer-widget .menu-widget li a:before, .mt-feature-img .item-text li i, .mt-hero-content-2 .mt-hero-text .hero_title span, .mt-hero-content-2 .mt-hero-text .hero-slug span, .mt-hero-content-2 .mt-hero-text .hero-slug i, .mt-hero-text-1 .hero_title span, .mt-btn-1 a i, .mt-btn-1 a span, .header-cta-btn a span, .mt-section-title .sec_title span, .mt-section-title .subtitle {
+.mt-copyright-wrap .copyright-social a i, .mt-footer-widget .menu-widget li a:before, .mt-feature-img .item-text li i, .mt-about-section-2 .mt-section-title .subtitle-2, .mt-hero-content-2 .mt-hero-text .hero_title span, .mt-hero-content-2 .mt-hero-text .hero-slug span, .mt-hero-content-2 .mt-hero-text .hero-slug i, .mt-hero-text-1 .hero_title span, .mt-btn-1 a i, .mt-btn-1 a span, .header-cta-btn a span, .mt-section-title .sec_title span, .mt-section-title .subtitle {
   background: var(--mt-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2403,6 +2403,15 @@ select:visited {
   text-decoration: underline;
 }
 
+/*Home Page 2 About*/
+/*----------------------------------------------------*/
+.mt-about-section-2 .mt-section-title .subtitle-2 {
+  font-weight: 500;
+}
+.mt-about-section-2 .mt-section-title .sec_title {
+  color: #fff;
+}
+
 /*---------------------------------------------------- */
 /*Counter Section*/
 /*----------------------------------------------------*/
@@ -3164,6 +3173,10 @@ select:visited {
 /*---------------------------------------------------- */
 /*Feature Section*/
 /*----------------------------------------------------*/
+.mt-feature-content {
+  gap: 30px 55px;
+}
+
 .mt-feature-img {
   max-width: 650px;
 }
@@ -3182,6 +3195,30 @@ select:visited {
 }
 .mt-feature-img .item-text li i {
   margin-right: 10px;
+}
+
+.mt-feature-text {
+  max-width: 570px;
+}
+
+.mt-feature-item {
+  padding: 30px 0px 27px;
+  border-bottom: 2px solid var(--mt-title-color);
+}
+.mt-feature-item .item-icon {
+  width: 45px;
+  margin-right: 18px;
+}
+.mt-feature-item .item-text {
+  width: 350px;
+}
+.mt-feature-item .item-text h3 {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--mt-title-color);
+}
+.mt-feature-item .item-text p {
+  font-size: 15px;
 }
 
 /*---------------------------------------------------- */

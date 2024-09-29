@@ -1,3 +1,6 @@
+.mt-feature-content {
+	gap: 30px 55px;
+}
 .mt-feature-img {
 	max-width: 650px;
 	.item-img {
@@ -17,6 +20,28 @@
 				@extend%gradient-text;
 				margin-right: 10px;
 			}
+		}
+	}
+}
+.mt-feature-text {
+	max-width: 570px;
+}
+.mt-feature-item {
+	padding: 30px 0px 27px;
+	border-bottom: 2px solid var(--mt-title-color);
+	.item-icon {
+		width: 45px;
+		margin-right: 18px;
+	}
+	.item-text {
+		width: 350px;
+		h3 {
+			font-size: 25px;
+			font-weight: 700;
+			color: var(--mt-title-color);
+		}
+		p {
+			font-size: 15px;
 		}
 	}
 }

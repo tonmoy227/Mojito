@@ -173,3 +173,16 @@
 		}
 	}
 }
+/*Home Page 2 About*/
+/*----------------------------------------------------*/
+.mt-about-section-2 {
+	.mt-section-title {
+		.subtitle-2 {
+			font-weight: 500;
+			@extend%gradient-text;
+		}
+		.sec_title {
+			color: #fff;
+		}
+	}
+}
