@@ -2475,6 +2475,10 @@ select:visited {
 
 /*Home Page 2 About 3*/
 /*----------------------------------------------------*/
+.mt-about-content-3 {
+  gap: 20px 30px;
+}
+
 .mt-about-text-3 {
   max-width: 575px;
 }
@@ -2541,6 +2545,38 @@ select:visited {
   line-height: 1.2;
   font-size: 20px;
   font-weight: 700;
+}
+
+.mt-about-img-wrap-3 {
+  z-index: 1;
+  width: 100%;
+  max-width: 685px;
+  padding-top: 85px;
+}
+.mt-about-img-wrap-3:before {
+  top: 0;
+  right: 0;
+  z-index: -1;
+  content: "";
+  width: 470px;
+  height: 515px;
+  position: absolute;
+  border-radius: 30px;
+  background-color: #242527;
+}
+.mt-about-img-wrap-3 .item-img-2 {
+  top: 75px;
+  left: 35px;
+  -webkit-box-shadow: 0px 2px 62px 0px rgba(0, 0, 0, 0.22);
+          box-shadow: 0px 2px 62px 0px rgba(0, 0, 0, 0.22);
+}
+.mt-about-img-wrap-3 .item-img-3 {
+  right: 80px;
+  bottom: 30px;
+  overflow: hidden;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 2px 62px 0px rgba(0, 0, 0, 0.22);
+          box-shadow: 0px 2px 62px 0px rgba(0, 0, 0, 0.22);
 }
 
 /*---------------------------------------------------- */
@@ -3716,6 +3752,41 @@ select:visited {
   width: 115px;
   -webkit-transition-delay: 300ms;
           transition-delay: 300ms;
+}
+
+/*---------------------------------------------------- */
+/*Pricing Section*/
+/*----------------------------------------------------*/
+.mt-pricing-section .mt-section-title {
+  max-width: 800px;
+}
+
+.mt-price-item {
+  border-radius: 20px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 51px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 51px 0px rgba(0, 0, 0, 0.1);
+}
+.mt-price-item .item-serial {
+  width: 80px;
+  height: 80px;
+  color: #191917;
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 100%;
+  background-color: #f6f6f6;
+}
+.mt-price-item .item-text {
+  color: #161414;
+  font-size: 35px;
+  max-width: 225px;
+  font-weight: 700;
+}
+.mt-price-item .item-img-view {
+  width: 190px;
+}
+.mt-price-item .item-desc {
+  max-width: 490px;
 }
 
 /*---------------------------------------------------- */
