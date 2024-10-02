@@ -188,6 +188,25 @@
 }
 /*Home Page 2 About*/
 /*----------------------------------------------------*/
+.mt-about-img-grp {
+	top: 70px;
+	left: 40px;
+	position: absolute;
+	.img_1 {
+		width: 225px;
+		height: 225px;
+		overflow: hidden;
+		margin-left: 50px;
+		margin-bottom: 12px;
+		border-radius: 100%;
+	}
+	.img_2 {
+		width: 172px;
+		height: 172px;
+		overflow: hidden;
+		border-radius: 100%;
+	}
+}
 .mt-about-text-2 {
 	max-width: 1090px;
 	.mt-section-title {
@@ -215,6 +234,78 @@
 				font-weight: 300;
 				font-size: 23px;
 			}
+			.mt-btn-3 {
+				a {
+					color: #fff;
+					&:before {
+						background-color: #232323;
+					}
+				}
+			}
+		}
+	}
+}
+/*Home Page 2 About 3*/
+/*----------------------------------------------------*/
+.mt-about-text-3 {
+	max-width: 575px;
+	.mt-section-title {
+		p {
+			padding-top: 14px;
+		}
+	}
+}
+.mt-about-list-area {
+	gap: 20px 40px;
+	.item-list {
+		margin-top: 28px;
+		li {
+			color: #0e0e12;
+			font-size: 17px;
+			position: relative;
+			font-weight: 700;
+			margin-bottom: 16px;
+			padding-left: 35px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:before {
+				top: 0;
+				left: 0;
+				width: 28px;
+				height: 28px;
+				display: flex;
+				content: '\f00c';
+				font-size: 15px;
+				position: absolute;
+				border-radius: 100%;
+				align-items: center;
+				justify-content: center;
+				background-color: #ececec;
+				font-family: 'Font Awesome 6 Free';
+			}
+		}
+	}
+	.mt-about-exp {
+		width: 265px;
+		height: 190px;
+		border-radius: 40px;
+		border: 1px solid #98e209;
+		.item-text {
+			max-width: 175px;
+		}
+		h3 {
+			color: #191917;
+			line-height: 1;
+			font-size: 80px;
+			font-weight: 700;
+			padding-bottom: 5px;
+		}
+		p {
+			color: #000000;
+			line-height: 1.2;
+			font-size: 20px;
+			font-weight: 700;
 		}
 	}
 }

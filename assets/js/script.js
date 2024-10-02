@@ -327,4 +327,50 @@ Faq Active
 
 		});
 	};
+	// services-1
+	if($('.mt-service-slide').length) {
+		let slider = new Swiper('.mt-service-slide', {
+			loop: true,
+			spaceBetween: 20,
+			direction: 'vertical',
+			speed: 500,
+			autoplay: {
+				delay: 5000,
+			},
+
+			navigation: {
+				nextEl: ".mt-ser-next",
+				prevEl: ".mt-ser-prev",
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+				},
+				576: {
+					slidesPerView: 2,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 3,
+				},
+				1200: {
+					slidesPerView: 3,
+				},
+				1400: {
+					slidesPerView: 3,
+				},
+				1600: {
+					slidesPerView: 3,
+				},
+			},
+
+		});
+	}
+	var ltn__active_item = $('.feature-list-item')
+	ltn__active_item.mouseover(function() {
+		ltn__active_item.removeClass('active');
+		$(this).addClass('active');
+	});
 })(jQuery);
