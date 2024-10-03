@@ -105,3 +105,43 @@
 		}
 	}
 }
+/*Home Page 2  Service Section/
+/*----------------------------------------------------*/
+.mt-service-item-3 {
+	padding: 30px 40px;
+	border-radius: 12px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	.item-icon {
+		width: 86px;
+		height: 86px;
+		margin-right: 25px;
+	}
+	.item-text {
+		span {
+			color: #161414;
+			font-size: 15px;
+			display: block;
+			font-weight: 600;
+			padding-bottom: 5px;
+		}
+		.ser_title {
+			color: #161414;
+			font-size: 32px;
+			font-weight: 700;
+			a {
+				padding-bottom: 1px;
+			}
+		}
+	}
+}
+.mt-bottom-text {
+	p {
+		color: #161414;
+		font-size: 20px;
+		font-weight: 700;
+		a {
+			text-decoration: underline;
+		}
+	}
+}

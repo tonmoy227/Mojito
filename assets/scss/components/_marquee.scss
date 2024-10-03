@@ -1,6 +1,9 @@
 .mt-marquee-section {
 	overflow: hidden;
-	background: linear-gradient( 90deg, rgb(247,84,206) 0%, rgb(47,43,255) 100%);;
+	background: linear-gradient( 90deg, rgb(247,84,206) 0%, rgb(47,43,255) 100%);
+	&.ver_2 {
+		background: var(--mt-gradient);
+	}
 }
 .mt-marquee-active {
 	display: flow-root;
@@ -17,9 +20,23 @@
 			left: -10px;
 			font-size: 16px;
 			content: "\f666";
-			font-weight: 400;
+			font-weight: 900;
 			position: absolute;
-			font-family: "Font Awesome 6 Pro";
+			font-family: "Font Awesome 6 free";
+		}
+	}
+	&.ver_2 {
+		padding: 50px 0px 45px;
+		h3 {
+			color: #191917;
+			font-size: 65px;
+			font-weight: 700;
+			text-transform: capitalize;
+			&:before {
+				top: 20px;
+				left: -20px;
+				font-size: 30px;
+			}
 		}
 	}
 } 

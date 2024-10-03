@@ -2747,6 +2747,44 @@ select:visited {
           transform: rotate(45deg);
 }
 
+/*Home Page 2  Service Section/
+/*----------------------------------------------------*/
+.mt-service-item-3 {
+  padding: 30px 40px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+.mt-service-item-3 .item-icon {
+  width: 86px;
+  height: 86px;
+  margin-right: 25px;
+}
+.mt-service-item-3 .item-text span {
+  color: #161414;
+  font-size: 15px;
+  display: block;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.mt-service-item-3 .item-text .ser_title {
+  color: #161414;
+  font-size: 32px;
+  font-weight: 700;
+}
+.mt-service-item-3 .item-text .ser_title a {
+  padding-bottom: 1px;
+}
+
+.mt-bottom-text p {
+  color: #161414;
+  font-size: 20px;
+  font-weight: 700;
+}
+.mt-bottom-text p a {
+  text-decoration: underline;
+}
+
 /*---------------------------------------------------- */
 /*Testimonial Section*/
 /*----------------------------------------------------*/
@@ -3005,6 +3043,8 @@ select:visited {
           transform: translateY(-50%);
 }
 
+/*Home Page 2  Client Section/
+/*----------------------------------------------------*/
 .mt-client-content {
   margin-top: 50px;
   border: 1px solid #F2F2F2;
@@ -3192,6 +3232,97 @@ select:visited {
   padding-bottom: 160px;
 }
 
+/*Home Page 2  Portfolio Section/
+/*----------------------------------------------------*/
+.mt-portfolio-content-2 {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+.mt-portfolio-wrap {
+  max-width: 1600px;
+}
+
+.mt-portfolio-top .mt-section-title {
+  max-width: 460px;
+}
+.mt-portfolio-top .mt-section-title p {
+  padding-top: 10px;
+}
+
+.mt-portfolio-item-wrap {
+  gap: 30px;
+}
+
+.mt-portfolio-item-2 {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.mt-portfolio-item-2:before {
+  top: 0;
+  content: "";
+  opacity: 0.7;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  position: absolute;
+  background: var(--mt-gradient);
+  -webkit-transform: scale3d(0.5, 0, 0.5);
+          transform: scale3d(0.5, 0, 0.5);
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.mt-portfolio-item-2 .item-text {
+  left: 10px;
+  opacity: 0;
+  right: 10px;
+  bottom: -50px;
+  width: 95%;
+  margin: 0 auto;
+  position: absolute;
+  visibility: hidden;
+  padding: 18px 30px;
+  background-color: #fff;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.mt-portfolio-item-2 .item-text span {
+  color: #191917;
+  font-size: 16px;
+  font-weight: 700;
+}
+.mt-portfolio-item-2 .item-text .project_title {
+  color: #191917;
+  font-size: 26px;
+  font-weight: 700;
+}
+.mt-portfolio-item-2 .item-text .project_title a {
+  padding-bottom: 0;
+}
+.mt-portfolio-item-2 .item-text .item_arrow {
+  top: 0;
+  right: 0;
+  width: 55px;
+  height: 100%;
+  background-color: #191917;
+}
+.mt-portfolio-item-2 .item-text .item_arrow i {
+  color: #fff;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.mt-portfolio-item-2:hover:before {
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+.mt-portfolio-item-2:hover .item-text {
+  opacity: 1;
+  bottom: 10px;
+  visibility: visible;
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+
 /*---------------------------------------------------- */
 /*Blog Section*/
 /*----------------------------------------------------*/
@@ -3248,6 +3379,9 @@ select:visited {
   background: -webkit-gradient(linear, left top, right top, from(rgb(247, 84, 206)), to(rgb(47, 43, 255)));
   background: linear-gradient(90deg, rgb(247, 84, 206) 0%, rgb(47, 43, 255) 100%);
 }
+.mt-marquee-section.ver_2 {
+  background: var(--mt-gradient);
+}
 
 .mt-marquee-active {
   display: flow-root;
@@ -3266,9 +3400,23 @@ select:visited {
   left: -10px;
   font-size: 16px;
   content: "\f666";
-  font-weight: 400;
+  font-weight: 900;
   position: absolute;
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 6 free";
+}
+.mt-marquee-active.ver_2 {
+  padding: 50px 0px 45px;
+}
+.mt-marquee-active.ver_2 h3 {
+  color: #191917;
+  font-size: 65px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.mt-marquee-active.ver_2 h3:before {
+  top: 20px;
+  left: -20px;
+  font-size: 30px;
 }
 
 /*---------------------------------------------------- */
