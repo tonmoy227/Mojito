@@ -3,6 +3,10 @@
 }
 .mt-contact-content {
 	gap: 30px 62px;
+	@media #{$lg,$md,$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 .mt-contact-form {
 	max-width: 650px;
@@ -10,6 +14,12 @@
 	margin-top: -60px;
 	border-radius: 15px;
 	padding: 75px 60px 65px;
+	@media #{$lg,$md,$xs} {
+		margin-top: 60px
+	}
+	@media #{$xs} {
+		padding: 40px 20px 40px;
+	}
 	.mt-section-title {
 		margin-bottom: 30px;
 		.sec_title {
@@ -50,6 +60,10 @@
 }
 .mt-contact-text {
 	padding-top: 120px;
+	@media #{$lg,$md,$xs} {
+		padding-top: 0;
+		max-width: 650px;
+	}
 	.mt-section-title {
 		.sec_title {
 			color: #fff;

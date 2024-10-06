@@ -10,11 +10,15 @@
 	mask-image: url(../img/bg/mask-shape4.png);
 }
 .mt-counter-content {
+	gap: 20px;
 	margin: 0 auto;
 	max-width: 1140px;
+	@media #{$md,$xs} {
+		justify-content: center !important;
+	}
 }
 .mt-counter-item {
-	width: 310px;
+	width: 305px;
 	height: 135px;
 	padding-left: 55px;
 	border-radius: 10px;

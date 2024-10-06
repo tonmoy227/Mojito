@@ -1,5 +1,6 @@
 .mt-portfolio-section {
 	z-index: 1;
+	overflow: hidden;
 	.title-text-bg {
 		top: 70px;
 		left: 70px;
@@ -13,9 +14,13 @@
 }
 .mt-portfolio-slider {
 	margin: 0px 45px;
+	@media #{$md,$xs} {
+		margin: 0px 20px;
+	}
 }
 .mt-portfolio-item {
 	max-width: 414px;
+	margin: 0 auto;
 	.item-img {
 		overflow: hidden;
 		border-radius: 20px;

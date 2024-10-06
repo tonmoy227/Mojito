@@ -3,6 +3,7 @@
 	background: var(--mt-gradient);
 }
 .mt-cta-content {
+	gap: 20px;
 	h3 {
 		color: #000000;
 		font-size: 72px;
@@ -21,7 +22,7 @@
 				margin-left: 10px;
 				-webkit-text-fill-color: inherit;
 			}
-		}
+		} 
 	}
 }
 /*Bottom CTA*/
@@ -32,11 +33,24 @@
 	padding: 0px 65px;
 	border-radius: 80px;
 	background: var(--mt-gradient);
+	&.ver_2 {
+		margin-top: 0;
+		position: relative;
+		margin-bottom: -60px;
+	}
+	@media #{$lg,$md,$xs} {
+		gap: 30px;
+		flex-wrap: wrap;
+		padding: 30px;
+	}
 }
 .mt-cta-info {
 	gap: 10px;
 	padding: 35px 0px;
 	position: relative;
+	@media #{$lg,$md,$xs} {
+		padding: 0;
+	}
 	&:before {
 		top: 0;
 		width: 2px;
@@ -45,6 +59,9 @@
 		right: -130px;
 		position: absolute;
 		background-color: #7ab900;
+		@media #{$xl,$lg,$md,$xs} {
+			display: none;
+		}
 	}
 	.item-icon {
 		width: 53px;

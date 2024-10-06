@@ -199,10 +199,8 @@ select:visited {
     padding: 0;
     z-index: 1;
 }
-@media (min-width: 1300px) {
-    .container.mt-container-1 {
-        max-width: 1350px;
-    }
+.container.mt-container-1 {
+    max-width: 1350px;
 }
 .tx-tab-btn {
     .nav-tabs .nav-item.show .nav-link,

@@ -1,8 +1,17 @@
 .mt-blog-content {
 	gap: 30px 90px;
+	@media #{$xl,$lg,$md,$xs} {
+		gap: 30px 30px;
+	}
+	@media #{$lg,$md,$xs} {
+		flex-wrap: wrap;
+	}
 }
 .mt-blog-text-area {
 	max-width: 430px;
+	@media #{$lg,$md,$xs} {
+		max-width: 735px;
+	}
 	.mt-section-title {
 		p {
 			padding-top: 15px;
@@ -12,6 +21,10 @@
 .mt-blog-item-content {
 	gap: 24px;
 	max-width: 735px;
+	@media #{$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 .mt-blog-item {
 	max-width: 356px;

@@ -8,6 +8,7 @@
 	mask-image: url(../img/bg/mask-shape3.png);
 }
 .mt-testimonial-top {
+	gap: 20px 30px;
 	margin-bottom: 40px;
 	.top-text {
 		font-size: 23px;
@@ -21,15 +22,24 @@
 .mt-testimonial-content {
 	gap: 20px;
 	max-width: 1250px;
+	@media #{$md,$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 .mt-testimonial-item {
 	width: 100%;
-	width: 145px;
+	max-width: 145px;
 	height: 540px;
 	overflow: hidden;
 	cursor: pointer;
 	border-radius: 20px;
 	transition: all 500ms ease;
+	@media #{$md,$xs} {
+		width: 100%;
+		height: auto;
+		max-width: 100%;
+	}
 	&.active {
 		width: 100%;
 		max-width: 922px;
@@ -53,6 +63,10 @@
 			visibility: visible;
 			transform: scaleX(1);
 			padding: 78px 50px 60px 75px;
+			@media #{$xs} {
+				max-width: 100%;
+				padding: 50px 30px 50px 30px;
+			}
 			.item-icon {
 				transform: scale(1.0);
 			}
@@ -100,6 +114,22 @@
 			height: 100%;
 			object-fit: cover;
 		}
+		@media #{$md} {
+			width: 330px;
+			&:before,
+			&:after {
+				transition-delay: 700ms;
+			}
+			&:before {
+				top: -50px;
+			}
+			&:after {
+				bottom: -50px;
+			}
+		}
+		@media #{$xs} {
+			display: none;
+		}
 	}
 	.item-text {
 		width: 0;
@@ -112,6 +142,7 @@
 		transition: all 500ms ease;
 		transform-origin: left;
 		align-content: space-between;
+
 		.item-icon {
 			top: 35px;
 			left: -35px;
@@ -134,6 +165,9 @@
 				justify-content: center;
 				color: var(--mt-title-color);
 				background: var(--mt-gradient);
+			}
+			@media #{$xs} {
+				display: none;
 			}
 		}
 		h3 {
@@ -165,6 +199,34 @@
 			span {
 				font-size: 14px;
 			}
+		}
+		@media #{$md,$xs} {
+			opacity: 1;
+			width: 100%;
+			max-width: 588px;
+			visibility: visible;
+			transform: scaleX(1);
+			padding: 78px 50px 60px 75px;
+			.item-icon {
+				transform: scale(1.0);
+			}
+			.item-title {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+				transition-delay: 500ms;
+			}
+			.rate-name {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+				transition-delay: 500ms;
+			}
+		}
+		@media #{$xs} {
+			width: 100%;
+			max-width: 100%;
+			padding: 50px 30px 50px 30px;
 		}
 	}
 }

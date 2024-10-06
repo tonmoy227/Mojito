@@ -13,6 +13,17 @@
 	mask-position: center center;
 	mask-image: url(../img/bg/mask-shape2.png);
 }
+.mt-about-content-1 {
+	gap: 30px 60px;
+	@media #{$lg,$md,$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.mt-about-tab-content {
+	width: 100%;
+	max-width: 635px;
+}
 .mt-about-tab-btn {
 	border-radius: 50px;
 	display: inline-block;
@@ -66,10 +77,19 @@
 		overflow: hidden;
 		border-radius: 6px;
 		background-color: #f1efe7;
+		@media #{$xs} {
+			flex-wrap: wrap;
+			padding-bottom: 30px;
+			justify-content: center;
+		}
 		.item-icon {
 			width: 280px;
 			height: 240px;
 			background-color: #fff;
+			@media #{$xs} {
+				width: 100%;
+				margin-bottom: 15px;
+			}
 			.m-icon {
 				width: 85px;
 				height: 85px;
@@ -89,6 +109,9 @@
 			height: 100%;
 			max-width: 340px;
 			padding-left: 50px;
+			@media #{$xs} { 
+				padding-left: 12px;
+			}
 			li {
 				font-weight: 700;
 				font-size: 21px;
@@ -129,6 +152,9 @@
 }
 .mt-about-client {
 	margin-bottom: 30px;
+	@media #{$xs} { 
+		flex-wrap: wrap;
+	}
 	.item-text {
 		margin-left: 20px;
 		li {
@@ -142,8 +168,9 @@
 	}
 }
 .mt-about-text-wrap {
+	width: 100%;
 	margin-top: 15px;
-	margin-left: 30px;
+	max-width: 640px;
 	h3 {
 		font-size: 23px;
 		font-weight: 600;
@@ -154,6 +181,12 @@
 .mt-about-cta {
 	gap: 30px 55px;
 	margin-top: 25px;
+	@media #{$xl,$lg,$md} {
+		gap: 30px 20px;
+	}
+	@media #{$xs} { 
+		flex-wrap: wrap;
+	}
 	.cta-info {
 		width: 100%;
 		max-width: 220px;

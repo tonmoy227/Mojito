@@ -2,9 +2,19 @@
 	gap: 0px 80px;
 	margin: 0 auto;
 	max-width: 1140px;
+	@media #{$lg,$md,$xs} {
+		gap: 20px 30px;
+	}
+	@media #{$md,$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 .mt-service-text-area {
 	max-width: 480px;
+	@media #{$md,$xs} {
+		max-width: 100%;
+	}
 	.mt-section-title {
 		margin-bottom: 45px;
 		p {
@@ -28,6 +38,9 @@
 	width: 100%;
 	max-width: 570px;
 	margin-top: 48px;
+	@media #{$md,$xs} {
+		max-width: 100%;
+	}
 	.accordion-item,
 	.accordion-button:not(.collapsed),
 	.accordion-button {
@@ -51,6 +64,9 @@
 		padding: 20px 0px 18px;
 		transition: all 500ms ease;
 		color: var(--mt-title-color);
+		@media #{$xxs} {
+			font-size: 26px;
+		}
 		span {
 			display: flex;
 			max-width: 85%;
@@ -96,7 +112,7 @@
 		border-radius: 100%;
 		background-image: none;
 		justify-content: center;
-		font-family: 'Font Awesome 5 Pro';
+		font-family: 'Font Awesome 5 Free';
 	}
 	.accordion-button:not(.collapsed) { 
 		color: var(--mt-title-color);

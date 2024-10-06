@@ -373,4 +373,7 @@ Faq Active
 		ltn__active_item.removeClass('active');
 		$(this).addClass('active');
 	});
+	$(document).on('click', '.mt-faq-accordion .accordion-item', function(){
+		$(this).addClass('faq_active').siblings().removeClass('faq_active')
+	});
 })(jQuery);
