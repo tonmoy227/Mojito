@@ -368,6 +368,18 @@ Faq Active
 
 		});
 	}
+	if ($(".mt-team-slider").length) {
+		var swiper2 = new Swiper(".mt-team-slider", {
+			slidesPerView: 1,
+			loop: true,
+			spaceBetween: 0,
+			speed: 1000,
+			navigation: {
+				nextEl: ".mt-team-next",
+				prevEl: ".mt-team-prev",
+			},
+		});
+	};
 	var ltn__active_item = $('.feature-list-item')
 	ltn__active_item.mouseover(function() {
 		ltn__active_item.removeClass('active');
