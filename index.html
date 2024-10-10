@@ -21,8 +21,10 @@
   </head>
   <body class="home-1">
   	<div id="preloader">
-  		<div class="preloader-logo">
-  			<!-- <img src="assets/img/shape/logo_shape.svg" alt=""> -->
+  		<div class="preloader-wrap">
+  			<div class="loading headline">
+  				<h3 class="loading-text loader_text loader_text_ani">MOJITO</h3>
+  			</div>
   		</div>
   	</div>
 
@@ -107,7 +109,7 @@
 		<div class="container mt-container-1">
 			<div class="mt-hero-content">
 				<div class="mt-hero-text-1 headline pera-content">
-					<h1 class="hero_title">Mojito Digital <span>Agency</span></h1>
+					<h1 class="hero_title title_text title_text_ani">Mojito Digital <span>Agency</span></h1>
 					<p>Crafting compelling digital experiences that captivate audiences and drive meaningful connections.</p>
 					<div class="mt-btn-1 text-uppercase text-center">
 						<a href="#"><span>Let’s get Started</span> <i class="fa-regular fa-plus"></i></a>
@@ -1023,5 +1025,78 @@
 	<script src="assets/js/ScrollTrigger.min.js"></script>
 	<script src="assets/js/SplitText.min.js"></script>
 	<script src="assets/js/script.js"></script>
+	<script>
+		if($('.loader_text').length) {
+			var txasplit2 = $(".loader_text");
+
+			if(txasplit2.length == 0) ; gsap.registerPlugin(SplitText); txasplit2.each(function(index, el) {
+
+				el.split = new SplitText(el, { 
+					type: "lines,words,chars",
+					linesClass: "split-line"
+				});
+
+				if( $(el).hasClass('loader_text_ani') ){
+					gsap.set(el.split.chars, {
+						opacity: 0,
+					});
+				}
+
+				el.anim = gsap.to(el.split.chars, {
+					scrollTrigger: {
+						trigger: el,
+						start: "top 90%",
+						end: "top 60%",
+						markers: false,
+						scrub: 2,
+					},
+
+					xPercent: 0,
+					yPercent: 0,
+					color: "inherit",
+					opacity: 1,
+					duration: .7,
+					stagger: 0.2,
+				});
+
+			});
+		}
+	</script>
+	<script>
+		if($('.title_text').length) {
+			var txasplit2 = $(".title_text");
+			if(txasplit2.length == 0) ; gsap.registerPlugin(SplitText); txasplit2.each(function(index, el) {
+
+				el.split = new SplitText(el, { 
+					type: "lines",
+					linesClass: "split-line"
+				});
+
+				if( $(el).hasClass('title_text_ani') ){
+					gsap.set(el.split.lines, {
+						opacity: 0,
+					});
+				}
+
+				el.anim = gsap.to(el.split.lines, {
+					scrollTrigger: {
+						trigger: el,
+						start: "top 90%",
+						end: "top 60%",
+						markers: false,
+						scrub: 2,
+					},
+
+					xPercent: 0,
+					yPercent: 0,
+					color: "inherit",
+					opacity: 1,
+					duration: .7,
+					stagger: 0.2,
+				});
+
+			});
+		}
+	</script>
 </body>
 </html>   

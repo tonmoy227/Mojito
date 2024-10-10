@@ -32,3 +32,53 @@
 		color: var(--mt-title-color);
 	} 
 }
+/*Home Page 3 Counter Section*/
+/*------------------------------------------*/
+.mt-counter-item-3 {
+	gap: 15px;
+	position: relative;
+	&:before {
+		top: 0;
+		right: -75px;
+		content: '';
+		width: 2px;
+		height: 110px;
+		position: absolute;
+		background-color: #98e209;
+		transform: rotate(-45deg);
+	}
+	&:last-child {
+		&:before {
+			display: none;
+		}
+	}
+	&:nth-child(even) {
+		&:before {
+			right: -55px;
+			transform: rotate(45deg);
+		}
+	}
+	.item-icon {
+		width: 52px;
+		height: 52px;
+		border-radius: 100%;
+		background: var(--mt-gradient);
+		img {
+			width: 25px;
+			height: 25px;
+		}
+	}
+	.item-text {
+		h3 {
+			line-height: 1;
+			font-size: 57px;
+			font-weight: 700;
+			padding-bottom: 5px;
+			color: var(--mt-title-color);
+		}
+		p {
+			line-height: 1.2;
+			max-width: 150px;
+		}
+	}
+}

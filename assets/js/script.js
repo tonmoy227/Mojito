@@ -24,9 +24,14 @@ Last change:    00/00/00
 preloader
 ====start====
 */
-	jQuery(window).on('load', function(){
-		jQuery('#preloader').fadeOut('slow',function(){jQuery(this).remove();});
-	});
+	let preloader = document.querySelector("#preloader");
+	
+	if (preloader) {
+		preloader.classList.add("preloaded");
+		setTimeout(function () {
+			
+		}, 1000 ) ;
+	}
 	setTimeout(() => {
 		var a = document.querySelectorAll(".btn-spin a");
 		a.forEach(function (a) {
@@ -380,6 +385,84 @@ Faq Active
 			},
 		});
 	};
+	if($('.mt-portfolio-slider-3').length) {
+		let slider = new Swiper('.mt-portfolio-slider-3', {
+			loop: true,
+			spaceBetween: 32,
+			speed: 500,
+			autoplay: {
+				delay: 5000,
+			},
+
+			navigation: {
+				nextEl: ".mt-port-next",
+				prevEl: ".mt-port-prev",
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+				},
+				576: {
+					slidesPerView: 2,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 3,
+				},
+				1200: {
+					slidesPerView: 3,
+				},
+				1400: {
+					slidesPerView: 3,
+				},
+				1600: {
+					slidesPerView: 3,
+				},
+			},
+
+		});
+	}
+	// services-1
+	if($('.mt-blog-slider').length) {
+		let slider = new Swiper('.mt-blog-slider', {
+			loop: true,
+			spaceBetween: 20,
+			speed: 500,
+			autoplay: {
+				delay: 5000,
+			},
+			pagination: {
+				el: ".blog-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+				},
+				576: {
+					slidesPerView: 2,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 3,
+				},
+				1200: {
+					slidesPerView: 3,
+				},
+				1400: {
+					slidesPerView: 3,
+				},
+				1600: {
+					slidesPerView: 3,
+				},
+			},
+
+		});
+	}
 	var ltn__active_item = $('.feature-list-item')
 	ltn__active_item.mouseover(function() {
 		ltn__active_item.removeClass('active');

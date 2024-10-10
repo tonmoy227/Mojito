@@ -1,0 +1,38 @@
+.mt-video-play-section {
+	z-index: 1;
+	&:before {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		content: '';
+		position: absolute;
+		background-color:  rgba(6, 9, 23, .5);
+	}
+}
+.mt-video-play-content {
+	margin: 0 auto;
+	max-width: 660px;
+	padding-top: 165px;
+	padding-bottom: 120px;
+	.play-icon {
+		margin-bottom: 20px;
+	}
+	.play-text {
+		h2 {
+			color: #fff;
+			font-size: 60px;
+			font-weight: 700;
+			padding-bottom: 20px; 
+		}
+		li {
+			color: #fff;
+			font-weight: 700;
+			margin: 0px 15px;
+			i {
+				margin-right: 5px;
+			}
+		}
+	}
+}
