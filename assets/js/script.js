@@ -471,4 +471,87 @@ Faq Active
 	$(document).on('click', '.mt-faq-accordion .accordion-item', function(){
 		$(this).addClass('faq_active').siblings().removeClass('faq_active')
 	});
+	jQuery(window).on('load', function(){
+		if($('.title_text').length) {
+			gsap.utils.toArray(".title_text").forEach(e => {
+				let i = gsap.timeline({
+					scrollTrigger: {
+						trigger: e,
+						start: "top 90%",
+						duration: 2,
+						end: "bottom 60%",
+						scrub: !1,
+						markers: !1,
+						toggleActions: "play none none none"
+					}
+				}),
+				t = new SplitText(e, {
+					type: "lines"
+				});
+				gsap.set(e, {
+					perspective: 400
+				}), t.split({
+					type: "lines"
+				}), i.from(t.lines, {
+					duration: 1,
+					delay: .5,
+					opacity: 0,
+					rotationX: -80,
+					force3D: !0,
+					transformOrigin: "top center -50",
+					stagger: .1
+				})
+			})
+		}
+		const active_card = gsap.utils.toArray('.txt_item_active');
+		active_card.forEach(svg => {
+			gsap.to(svg, {
+				scrollTrigger: {
+					trigger: svg,
+					start: "top 100%",
+					end: "bottom bottom",
+					toggleClass: "active",
+					duration: 3,
+					delay:1,
+					toggleActions: "play play play reverse",
+					once: true,
+				}
+			});
+		});
+		let splitTextLines = gsap.utils.toArray(".mt-text p");
+		splitTextLines.forEach(splitTextLine => {
+			const tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: splitTextLine,
+					start: 'top 90%',
+					duration: 2,
+					end: 'bottom 60%',
+					scrub: false,
+					markers: false,
+					toggleActions: 'play none none none'
+				}
+			});
+
+			const itemSplitted = new SplitText(splitTextLine, { type: "lines" });
+			gsap.set(splitTextLine, { perspective: 400 });
+			itemSplitted.split({ type: "lines" })
+			tl.from(itemSplitted.lines, { duration: 1, delay: 0.5, opacity: 0, top: 20, force3D: true, transformOrigin: "top center -50", stagger: 0.1 });
+		});
+		gsap.utils.toArray(' .appear_top').forEach((el, index) => {
+			let tlcta = gsap.timeline({
+				scrollTrigger: {
+					trigger: el,
+					scrub: 2,
+					start: "top 100%",
+					end: "top 0%",
+					toggleActions: "play none none reverse",
+					markers: false
+				}
+			})
+
+			tlcta
+			.set(el, {transformOrigin: 'center center'})
+			.from(el, { opacity: 1,  y: "+=250"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+		});
+	});
 })(jQuery);

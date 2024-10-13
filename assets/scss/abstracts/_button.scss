@@ -20,12 +20,21 @@
 		display: flex;
 		line-height: 1;
 		align-items: center;
+		position: relative;
 		white-space: nowrap;
 		justify-content: center;
 		border-radius: 50px;
 		background-color: #000;
-		border: 2px solid transparent;
+		border: 2px solid #1aaf2675;
 		background-clip: padding-box;
+		&:before {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			content: '';
+			position: absolute;
+		}
 		span {
 			padding: 20px 50px;
 			display: inline-block;
@@ -56,25 +65,52 @@
 }
 .mt-btn-1 {
 	a {
+		z-index: 1;
+		overflow: hidden;
 		padding: 15px 40px;
-		display: inline-block;
+		position: relative;
 		border-radius: 50px;
+		display: inline-block;
 		border: 2px solid #40ff85;
 		span {
+			z-index: -1;
+			color: #35ff97;
+			position: relative;
 			display: inline-block;
-			@extend%gradient-text;
+			transition: all 500ms ease;
 		}
 		i {
-			margin-left: 20px;
-			@extend%gradient-text;
+			color: #35ff97;
+			margin-left: 15px;
+			transform: rotate(-45deg);
+			transition: all 500ms ease;
 		}
 		@media #{$xs} {
 			padding: 15px 30px;
 		}
-	}
-	&.ver_2 {
-		i {
-			margin-left: 20px;
+		&:before {
+			left: 0;
+			z-index: -1;
+			bottom: 0;
+			width: 100%;
+			content: '';
+			height: 0%;
+			position: absolute;
+			border-radius: 50px;
+			background: var(--mt-gradient); 
+			transition:  0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		}
+		&:hover {
+			span {
+				color: #000;
+			}
+			i {
+				color: #000;
+				transform: rotate(0deg);
+			}
+			&:before {
+				height: 100%;
+			}
 		}
 	}
 }
@@ -91,12 +127,17 @@
 		}
 	}
 }
+@keyframes btn_shine {
+	100% {
+		left: 200%;
+	}
+}
 .mt-btn-3 {
 	a {
 		color: #fff;
 		line-height: 1;
 		font-weight: 500;
-		padding: 18px 35px;
+		padding: 20px 35px;
 		border-radius: 40px;
 		position: relative;
 		display: inline-block;
@@ -104,6 +145,29 @@
 		i {
 			margin-left: 5px;
 			transform: rotate(-45deg);
+			transition: all 500ms ease;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: -200%;
+			width: 200%;
+			height: 100%;
+			-webkit-transform: skewX(-20deg);
+			-khtml-transform: skewX(-20deg);
+			transform: skewX(-20deg);
+			background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(255, 255, 255, 0.4)), to(transparent));
+			background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent);
+		}
+		&:hover {
+			i {
+				transform: rotate(0);
+			}
+			&:after {
+				animation: btn_shine 1.2s ease;
+				animation-delay: 0.1s;
+			}
 		}
 	}
 	&.ver_2 {

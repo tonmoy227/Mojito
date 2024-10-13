@@ -26,7 +26,8 @@
 	max-width: 990px;
 	.hero_title {
 		color: #fff;
-		line-height: 1.03;
+		overflow: hidden;
+		line-height: 1.1;
 		font-size: 152px;
 		@media #{$lg,$md,$sm} { 
 			font-size: 100px;
@@ -44,7 +45,8 @@
 			font-size: 45px;
 			text-align: center;
 		}
-		span {
+		.mt_gradient {
+			font-weight: 400;
 			@extend%gradient-text;
 			padding-left: 200px;
 			position: relative;
@@ -55,13 +57,22 @@
 				top: 50%;
 				left: 0;
 				height: 7px;
-				width: 155px;
+				width: 0px;
 				content: '';
 				position: absolute;
 				transform: translateY(-50%);
 				background: var(--mt-gradient);
+				transition: all 800ms ease;
 				@media #{$lg,$md,$sm,$xs} { 
 					display: none;
+				}
+			}
+		}
+		&.active {
+			.mt_gradient {
+				&:before {
+					width: 155px;
+					transition-delay: 1500ms;
 				}
 			}
 		}
@@ -71,10 +82,11 @@
 		margin: 0 auto;
 		font-size: 26px;
 		max-width: 700px;
+		font-weight: 300;
 		padding-top: 35px;
 		text-align: center;
 		line-height: 1.385;
-		padding-bottom: 45px;
+		padding-bottom: 50px;
 	}
 }
 /*Home Page 2*/

@@ -28,7 +28,7 @@
 	border-radius: 50px;
 	display: inline-block;
 	padding: 12px 0px 8px;
-	border: 2px solid var(--mt-main-color);
+	border: 2px solid #9b00ff;
 	.nav-item {
 		margin: 0px 19px;
 	}
@@ -60,9 +60,10 @@
 				position: absolute;
 				border-radius: 50px;
 				transition: 500ms var(--cube-1);
-				background: var(--mt-gradient);
+				background: var(--mt-gradient-2);
 			}
 			&.active {
+				color: #fff;
 				&:before {
 					left: 0;
 					width: 100%;
@@ -96,7 +97,7 @@
 				margin: 0 auto;
 				margin-bottom: 10px;
 				border-radius: 100%;
-				background: var(--mt-gradient);
+				background: var(--mt-gradient-2);
 			}
 			span {
 				font-size: 27px;
@@ -127,7 +128,7 @@
 					height: 10px;
 					position: absolute;
 					border-radius: 100%;
-					background: var(--mt-gradient);
+					background: var(--mt-gradient-2);
 				}
 				&:last-child {
 					margin-bottom: 0;
@@ -169,7 +170,7 @@
 }
 .mt-about-text-wrap {
 	width: 100%;
-	margin-top: 15px;
+	margin-top: 50px;
 	max-width: 640px;
 	h3 {
 		font-size: 23px;

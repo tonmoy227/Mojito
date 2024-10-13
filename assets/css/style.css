@@ -19,10 +19,17 @@
   --cube-1: cubic-bezier(0.55, 0.085, 0, 0.99);
   --cube-2: all .25s cubic-bezier(.645,.045,.355,1);
   --mt-gradient: linear-gradient(90deg, #63ff49, #05fff6);
+  --mt-gradient-2: linear-gradient(90deg, #9d00ff, #0099f8);
 }
 
-.mt-copyright-wrap .copyright-social a i, .mt-footer-widget .menu-widget li a:before, .mt-why-choose-wrap-2 .item-wc-feature .feature-list-item:before, .mt-why-choose-wrap-2 .item-text .mt-section-title .subtitle-2 span, .mt-feature-img .item-text li i, .mt-testi-item-3 .item-img:before, .mt-service-content-4 .mt-section-title .subtitle-2, .mt-about-text-2 .mt-section-title .subtitle-2, .mt-hero-text-3 .hero-subtitlte span, .mt-hero-content-2 .mt-hero-text .hero_title span, .mt-hero-content-2 .mt-hero-text .hero-slug span, .mt-hero-content-2 .mt-hero-text .hero-slug i, .mt-hero-text-1 .hero_title span, .mt-header-section.header_style_one .mt-header-action .header-cta .item-text span, .mt-header-section.header_style_two .mt-header-action .header-cta .item-text span, .mt-btn-1 a i, .mt-btn-1 a span, .header-cta-btn a span, .mt-section-title .sec_title span, .mt-section-title .subtitle {
+.mt-copyright-wrap .copyright-social a i, .mt-footer-widget .menu-widget li a:before, .mt-why-choose-wrap-2 .item-wc-feature .feature-list-item:before, .mt-why-choose-wrap-2 .item-text .mt-section-title .subtitle-2 span, .mt-feature-img .item-text li i, .mt-testi-item-3 .item-img:before, .mt-service-content-4 .mt-section-title .subtitle-2, .mt-about-text-2 .mt-section-title .subtitle-2, .mt-hero-text-3 .hero-subtitlte span, .mt-hero-content-2 .mt-hero-text .hero_title span, .mt-hero-content-2 .mt-hero-text .hero-slug span, .mt-hero-content-2 .mt-hero-text .hero-slug i, .mt-hero-text-1 .hero_title .mt_gradient, .mt-header-section.header_style_one .mt-header-action .header-cta .item-text span, .mt-header-section.header_style_two .mt-header-action .header-cta .item-text span, .header-cta-btn a span, .mt-section-title .sec_title span, .mt-section-title .subtitle {
   background: var(--mt-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mt-section-title.ver_2 .sec_title span, .mt-section-title.ver_2 .subtitle, .mt-section-title .sec_title.ver_2 span {
+  background: var(--mt-gradient-2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -360,7 +367,6 @@ select:visited {
   margin: 0 auto;
   max-width: 640px;
 }
-
 .mt-5 {
   margin-top: 5px;
 }
@@ -1763,14 +1769,23 @@ select:visited {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   white-space: nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 50px;
   background-color: #000;
-  border: 2px solid transparent;
+  border: 2px solid rgba(26, 175, 38, 0.4588235294);
   background-clip: padding-box;
+}
+.header-cta-btn a:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
 }
 .header-cta-btn a span {
   padding: 20px 50px;
@@ -1801,24 +1816,58 @@ select:visited {
 }
 
 .mt-btn-1 a {
+  z-index: 1;
+  overflow: hidden;
   padding: 15px 40px;
-  display: inline-block;
+  position: relative;
   border-radius: 50px;
+  display: inline-block;
   border: 2px solid #40ff85;
 }
 .mt-btn-1 a span {
+  z-index: -1;
+  color: #35ff97;
+  position: relative;
   display: inline-block;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 .mt-btn-1 a i {
-  margin-left: 20px;
+  color: #35ff97;
+  margin-left: 15px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 @media (max-width: 767px) {
   .mt-btn-1 a {
     padding: 15px 30px;
   }
 }
-.mt-btn-1.ver_2 i {
-  margin-left: 20px;
+.mt-btn-1 a:before {
+  left: 0;
+  z-index: -1;
+  bottom: 0;
+  width: 100%;
+  content: "";
+  height: 0%;
+  position: absolute;
+  border-radius: 50px;
+  background: var(--mt-gradient);
+  -webkit-transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.mt-btn-1 a:hover span {
+  color: #000;
+}
+.mt-btn-1 a:hover i {
+  color: #000;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.mt-btn-1 a:hover:before {
+  height: 100%;
 }
 
 .mt-btn-2 a {
@@ -1833,11 +1882,22 @@ select:visited {
   margin-left: 18px;
 }
 
+@-webkit-keyframes btn_shine {
+  100% {
+    left: 200%;
+  }
+}
+
+@keyframes btn_shine {
+  100% {
+    left: 200%;
+  }
+}
 .mt-btn-3 a {
   color: #fff;
   line-height: 1;
   font-weight: 500;
-  padding: 18px 35px;
+  padding: 20px 35px;
   border-radius: 40px;
   position: relative;
   display: inline-block;
@@ -1848,6 +1908,31 @@ select:visited {
   margin-left: 5px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.mt-btn-3 a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -200%;
+  width: 200%;
+  height: 100%;
+  -webkit-transform: skewX(-20deg);
+  -khtml-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(255, 255, 255, 0.4)), to(transparent));
+  background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent);
+}
+.mt-btn-3 a:hover i {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+.mt-btn-3 a:hover:after {
+  -webkit-animation: btn_shine 1.2s ease;
+          animation: btn_shine 1.2s ease;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 .mt-btn-3.ver_2 a {
   color: var(--mt-title-color);
@@ -2177,7 +2262,8 @@ select:visited {
 }
 .mt-hero-text-1 .hero_title {
   color: #fff;
-  line-height: 1.03;
+  overflow: hidden;
+  line-height: 1.1;
   font-size: 152px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px) {
@@ -2204,40 +2290,49 @@ select:visited {
     text-align: center;
   }
 }
-.mt-hero-text-1 .hero_title span {
+.mt-hero-text-1 .hero_title .mt_gradient {
+  font-weight: 400;
   padding-left: 200px;
   position: relative;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 767px) {
-  .mt-hero-text-1 .hero_title span {
+  .mt-hero-text-1 .hero_title .mt_gradient {
     padding-left: 0;
   }
 }
-.mt-hero-text-1 .hero_title span:before {
+.mt-hero-text-1 .hero_title .mt_gradient:before {
   top: 50%;
   left: 0;
   height: 7px;
-  width: 155px;
+  width: 0px;
   content: "";
   position: absolute;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background: var(--mt-gradient);
+  -webkit-transition: all 800ms ease;
+  transition: all 800ms ease;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 767px) {
-  .mt-hero-text-1 .hero_title span:before {
+  .mt-hero-text-1 .hero_title .mt_gradient:before {
     display: none;
   }
+}
+.mt-hero-text-1 .hero_title.active .mt_gradient:before {
+  width: 155px;
+  -webkit-transition-delay: 1500ms;
+          transition-delay: 1500ms;
 }
 .mt-hero-text-1 p {
   color: #fff;
   margin: 0 auto;
   font-size: 26px;
   max-width: 700px;
+  font-weight: 300;
   padding-top: 35px;
   text-align: center;
   line-height: 1.385;
-  padding-bottom: 45px;
+  padding-bottom: 50px;
 }
 
 /*Home Page 2*/
@@ -2518,7 +2613,7 @@ select:visited {
   border-radius: 50px;
   display: inline-block;
   padding: 12px 0px 8px;
-  border: 2px solid var(--mt-main-color);
+  border: 2px solid #9b00ff;
 }
 .mt-about-tab-btn .nav-item {
   margin: 0px 19px;
@@ -2553,7 +2648,10 @@ select:visited {
   border-radius: 50px;
   -webkit-transition: 500ms var(--cube-1);
   transition: 500ms var(--cube-1);
-  background: var(--mt-gradient);
+  background: var(--mt-gradient-2);
+}
+.mt-about-tab-btn .nav-tabs .nav-link.active {
+  color: #fff;
 }
 .mt-about-tab-btn .nav-tabs .nav-link.active:before {
   left: 0;
@@ -2593,7 +2691,7 @@ select:visited {
   margin: 0 auto;
   margin-bottom: 10px;
   border-radius: 100%;
-  background: var(--mt-gradient);
+  background: var(--mt-gradient-2);
 }
 .mt-about-tab-text .mt-about-tab-list .item-icon span {
   font-size: 27px;
@@ -2627,7 +2725,7 @@ select:visited {
   height: 10px;
   position: absolute;
   border-radius: 100%;
-  background: var(--mt-gradient);
+  background: var(--mt-gradient-2);
 }
 .mt-about-tab-text .mt-about-tab-list .item-list li:last-child {
   margin-bottom: 0;
@@ -2668,7 +2766,7 @@ select:visited {
 
 .mt-about-text-wrap {
   width: 100%;
-  margin-top: 15px;
+  margin-top: 50px;
   max-width: 640px;
 }
 .mt-about-text-wrap h3 {

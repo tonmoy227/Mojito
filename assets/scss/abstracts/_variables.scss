@@ -11,12 +11,18 @@
         --mt-main-color: #56ff61;
         --cube-1: cubic-bezier(0.55, 0.085, 0, 0.99);
         --cube-2: all .25s cubic-bezier(.645,.045,.355,1);
-        --mt-gradient:  linear-gradient(90deg, #63ff49, #05fff6);;
+        --mt-gradient:  linear-gradient(90deg, #63ff49, #05fff6);
+        --mt-gradient-2:  linear-gradient(90deg, #9d00ff, #0099f8);;
 
     }
 
     %gradient-text {
         background: var(--mt-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+     %gradient-text-2 {
+        background: var(--mt-gradient-2);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
