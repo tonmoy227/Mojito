@@ -1,5 +1,12 @@
 .mt-feature-content {
 	gap: 30px 55px;
+	@media #{$xl} {
+		gap: 30px;
+	}
+	@media #{$lg,$md,$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 .mt-feature-img {
 	max-width: 650px;
@@ -24,24 +31,40 @@
 	}
 }
 .mt-feature-text {
+	overflow: hidden;
 	max-width: 570px;
 }
 .mt-feature-item {
+	gap: 18px;
 	padding: 30px 0px 27px;
 	border-bottom: 2px solid var(--mt-title-color);
 	.item-icon {
 		width: 45px;
-		margin-right: 18px;
 	}
 	.item-text {
 		width: 350px;
 		h3 {
 			font-size: 25px;
 			font-weight: 700;
+			padding-bottom: 5px;
 			color: var(--mt-title-color);
 		}
 		p {
 			font-size: 15px;
+		}
+	}
+	.icon-arrow {
+		top: 50%;
+		right: 0;
+		color: #000;
+		font-size: 24px;
+		position: absolute;
+		transform: translateY(-50%);
+		i {
+			transform: rotate(-45deg);
+		}
+		@media #{$xxxs} {
+			display: none;
 		}
 	}
 }

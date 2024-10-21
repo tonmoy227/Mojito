@@ -13,7 +13,7 @@
 	}
 }
 .mt-portfolio-slider {
-	margin: 0px 45px;
+	padding: 0px 45px;
 	@media #{$md,$xs} {
 		margin: 0px 20px;
 	}
@@ -23,8 +23,13 @@
 	margin: 0 auto;
 	.item-img {
 		overflow: hidden;
+		margin-top: 15px;
 		border-radius: 20px;
-		margin-bottom: 18px;
+		margin-bottom: 25px;
+		transition: all .3s cubic-bezier(.55,.055,.675,.19);
+		img {
+			transition: all .3s cubic-bezier(.55,.055,.675,.19);
+		}
 	}
 	.item-text {
 		.project_title {
@@ -33,6 +38,7 @@
 			padding-bottom: 8px;
 		}
 		.port_cate {
+			margin-top: 10px;
 			a {
 				font-size: 13px;
 				line-height: 1;
@@ -45,16 +51,48 @@
 			}
 		}
 	}
+	&:hover {
+		.item-img {
+			box-shadow: 0 1px 20px 8px #0000004d;
+			img {
+				transform: scale(1.05);
+			}
+		}
+	}
 }
 .mt-port-nav {
 	gap: 25px;
 	div {
+		z-index: 1;
 		width: 85px;
 		height: 85px;
 		font-size: 24px;
+		overflow: hidden;
+		position: relative;
 		border-radius: 100%; 
 		color: var(--mt-title-color);
+		transition: all 500ms ease;
 		border: 2px solid var(--mt-title-color);
+		&:before {
+			top: 0;
+			left: 0;
+			z-index: -1;
+			width: 100%;
+			content: '';
+			height: 100%;
+			position: absolute;
+			transform: scale(0);
+			border-radius: 100%;
+			transition: all 500ms ease;
+			background: var(--mt-gradient-2);
+		}
+		&:hover {
+			color: #fff;
+			border: 2px solid transparent;
+			&:before {
+				transform: scale(1);
+			}
+		}
 	}
 }
 .mt-portfolio-nav-arrow {
@@ -64,6 +102,12 @@
 }
 /*Home Page 2  Portfolio Section/
 /*----------------------------------------------------*/
+.mt-portfolio-section-2 {
+	padding-left: 15px;
+	@media #{$md,$sm,$xs} {
+		padding: 0px 15px;
+	}
+}
 .mt-portfolio-content-2 {
 	margin: 0 auto;
 	max-width: 1920px;
@@ -72,8 +116,16 @@
 	max-width: 1600px;
 }
 .mt-portfolio-top {
+	gap: 20px;
+	@media #{$lg,$md,$sm,$xs} {
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
 	.mt-section-title {
 		max-width: 460px;
+		@media #{$xl,$lg,$md,$sm,$xs} {
+			max-width: 390px;
+		}
 		p {
 			padding-top: 10px;
 		}
@@ -81,10 +133,19 @@
 }
 .mt-portfolio-item-wrap {
 	gap: 30px;
+	@media #{$md,$sm,$xs} {
+		flex-wrap: wrap;
+	}
 }
 .mt-portfolio-item-2 {
 	overflow: hidden;
 	border-radius: 10px;
+	@media #{$md,$sm,$xs} {
+		width: 30%;
+	}
+	@media #{$xs} {
+		width: 100%
+	}
 	&:before {
 		top: 0;
 		content: '';
@@ -97,16 +158,26 @@
 		transform: scale3d(.5, 0, .5);
 		transition: all 500ms ease;
 	}
+	.item-img {
+		@media #{$md,$sm,$xs} {
+			height: 100%;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
 	.item-text {
 		left: 10px;
 		opacity: 0;
 		right: 10px;
 		bottom: -50px;
-		width: 95%;
 		margin: 0 auto;
+		max-width: 90%;
 		position: absolute;
 		visibility: hidden;
-		padding: 18px 30px;
+		padding: 18px 20px;
 		background-color: #fff;
 		transition: all 500ms ease;
 		span {
@@ -128,9 +199,15 @@
 			width: 55px;
 			height: 100%;
 			background-color: #191917;
+			@media #{$xxl} {
+				width: 30px;
+			}
 			i {
 				color: #fff;
 				transform: rotate(-45deg);
+			}
+			@media #{$xl,$lg,$md,$sm,$xs} {
+				display: none !important;
 			}
 		}
 	}
@@ -231,5 +308,84 @@
 		.port-shape {
 			bottom: -100%;
 		}
+	}
+}
+/*Home Page 4  Portfolio Section/
+/*----------------------------------------------------*/
+.mt-portfolio-item-4 {
+	margin-bottom: 40px;
+	.item-img {
+		margin-bottom: 25px;
+	}
+	.item-text {
+		max-width: 485px;
+		.item-cate {
+			margin-bottom: 10px;
+			a {
+				color: #616161;
+				position: relative;
+				margin-right: 20px;
+				&:last-child {
+					margin-right: 0;
+					&:before {
+						display: none;
+					}
+				}
+				&:before {
+					top: -2px;
+					right: -16px;
+					content: '/';
+					color: #616161;
+					position: absolute;
+				}
+			}
+		}
+		.port_title {
+			font-size: 45px;
+			font-weight: 700;
+			padding-bottom: 10px;
+			color: var(--mt-title-color);
+		}
+		.read_more {
+			font-size: 17px;
+			font-weight: 700;
+			display: inline-block;
+			position: relative;
+			color: var(--mt-title-color);
+			i {
+				margin-left: 10px;
+				transition: all 500ms ease;
+			}
+			&:before {
+				left: 0;
+				right: 0;
+				bottom: 0;
+				content: '';
+				width: 0%;
+				height: 2px;
+				margin: 0 auto;
+				position: absolute;
+				transition: all 500ms ease;
+				background-color: var(--mt-title-color);
+			}
+			&:hover {
+				&:before {
+					width: 100%;
+				}
+				i {
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+}
+.read_more_btn {
+	a {
+		width: 195px;
+		height: 195px;
+		font-weight: 700;
+		border-radius: 100%;
+		color: var(--mt-title-color);
+		background: var(--mt-gradient);
 	}
 }

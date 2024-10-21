@@ -1,10 +1,20 @@
 .mt-team-service-content {
 	gap: 30px 65px;
+	@media #{$lg,$md,$sm,$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 .mt-team-content-2 {
 	z-index: 1;
 	max-width: 640px;
 	position: relative;
+	@media #{$xl,$lg} {
+		max-width: 530px;
+	}
+	@media #{$xs} {
+		display: block !important;
+	}
 	.mt-ser-slider-nav {
 		left: 0;
 		top: 50%;
@@ -13,6 +23,11 @@
 		right: 0;
 		position: absolute;
 		transform: translateY(-50%);
+		@media #{$xs} {
+			margin-top: 40px;
+			position: static;
+			transform: translateY(0);
+		}
 		div {
 			width: 35px;
 			height: 35px;
@@ -34,6 +49,11 @@
 		transform: translateY(-50%);
 		background: var(--mt-gradient);
 	}
+	@media #{$xs} {
+		&:before {
+			display: none;
+		}
+	}
 }
 .mt-team-item-2 {
 	z-index: 2;
@@ -45,6 +65,10 @@
 		border-radius: 100%;
 		border: 13px solid #fff;
 		background-color: #dddbde;
+		@media #{$xl,$lg} {
+			width: 260px;
+			height: 260px;
+		}
 		img {
 			width: 100%;
 			height: 100%;
@@ -84,6 +108,12 @@
 }
 .mt-service-slide {
 	height: 600px;
+	@media #{$xs} {
+		height: auto;
+	}
+	@media #{$xxs} {
+		height: auto;
+	}
 }
 .swiper-slide-active {
 	.mt-service-item {

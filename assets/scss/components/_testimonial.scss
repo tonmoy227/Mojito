@@ -35,6 +35,7 @@
 	cursor: pointer;
 	border-radius: 20px;
 	transition: all 500ms ease;
+	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 	@media #{$md,$xs} {
 		width: 100%;
 		height: auto;
@@ -100,7 +101,7 @@
 			margin: 0 auto;
 			position: absolute;
 			border-radius: 100%;
-			background: var(--mt-gradient);
+			background: var(--mt-gradient-2);
 			transition: all 500ms ease;
 		}
 		&:before {
@@ -142,7 +143,6 @@
 		transition: all 500ms ease;
 		transform-origin: left;
 		align-content: space-between;
-
 		.item-icon {
 			top: 35px;
 			left: -35px;
@@ -156,6 +156,7 @@
 			justify-content: center;
 			transition: all 500ms ease;
 			i {
+				color: #fff;
 				width: 65px;
 				height: 65px;
 				display: flex;
@@ -163,8 +164,7 @@
 				border-radius: 100%;
 				align-items: center;
 				justify-content: center;
-				color: var(--mt-title-color);
-				background: var(--mt-gradient);
+				background: var(--mt-gradient-2);
 			}
 			@media #{$xs} {
 				display: none;
@@ -227,6 +227,13 @@
 			width: 100%;
 			max-width: 100%;
 			padding: 50px 30px 50px 30px;
+		}
+	}
+}
+.mt-testimonial-content {
+	&.active {
+		.mt-testimonial-item {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 		}
 	}
 }

@@ -35,7 +35,11 @@
 			padding-left: 24px;
 			margin-bottom: 18px;
 			border: 2px solid #212e3a;
+			transition: all 500ms ease;
 			background-color: transparent;
+			&:focus {
+				border: 2px solid #14ee62;
+			}
 		}
 		textarea {
 			height: 135px;
@@ -50,10 +54,14 @@
 			border-radius: 40px;
 			text-transform: uppercase;
 			border: 2px solid #14ee62;
+			transition: all 500ms ease;
 			background-color: transparent;
 			i {
 				margin-left: 5px;
 				transform: rotate(-45deg);
+			}
+			&:hover {
+				background-color: #14ee62;
 			}
 		}
 	}
@@ -71,7 +79,7 @@
 		p {
 			color: #fff;
 			font-weight: 300;
-			padding-top: 16px;
+			padding-top: 24px;
 		}
 	}
 	.contact-number {
@@ -83,7 +91,7 @@
 			-webkit-text-stroke-width: 1px;
 			-webkit-text-stroke-color: #fff;
 		}
-		span {
+		p {
 			left: 0;
 			top: 50%;
 			color: #fff;

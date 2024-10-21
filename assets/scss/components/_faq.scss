@@ -1,7 +1,12 @@
 .mt-faq-content {
 	gap: 20px 45px;
+	overflow: hidden;
 	.mt-faq-text-area {
 		max-width: 520px;
+	}
+	@media #{$lg,$md,$sm,$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 }
 .mt-faq-accordion {
@@ -91,6 +96,9 @@
 		background-image: none;
 		justify-content: center;
 		font-family: 'Font Awesome 5 free';
+		@media #{$xxs} {
+			right: 15px;
+		}
 	}
 	.accordion-button:not(.collapsed) { 
 		color: var(--mt-title-color);

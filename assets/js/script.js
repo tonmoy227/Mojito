@@ -350,9 +350,11 @@ Faq Active
 			breakpoints: {
 				0: {
 					slidesPerView: 1,
+					direction: 'horizontal',
 				},
 				576: {
 					slidesPerView: 2,
+					direction: 'horizontal',
 				},
 				768: {
 					slidesPerView: 2,
@@ -503,6 +505,43 @@ Faq Active
 				})
 			})
 		}
+		if($('.txaa-split-text-3').length) {
+			var txasplit2 = $(".txaa-split-text-3");
+			
+			if(txasplit2.length == 0) ; gsap.registerPlugin(SplitText); txasplit2.each(function(index, el) {
+				
+				el.split = new SplitText(el, { 
+					type: "lines",
+					linesClass: "split-line"
+				});
+				
+				if( $(el).hasClass('txaa-split-text-3-ani') ){
+					gsap.set(el.split.lines, {
+						color: "#3533ff",
+						yPercent: -100,
+					});
+				}
+				
+				el.anim = gsap.to(el.split.lines, {
+					scrollTrigger: {
+						trigger: el,
+						start: "top 90%",
+						end: "top 70%",
+						markers: false,
+						scrub: 1,
+					},
+					
+					xPercent: 0,
+					yPercent: 0,
+					color: "inherit",
+					opacity: 1,
+					duration: .7,
+					stagger: 0.2,
+				});
+				
+			});
+		}
+
 		const active_card = gsap.utils.toArray('.txt_item_active');
 		active_card.forEach(svg => {
 			gsap.to(svg, {
@@ -552,6 +591,70 @@ Faq Active
 			tlcta
 			.set(el, {transformOrigin: 'center center'})
 			.from(el, { opacity: 1,  y: "+=250"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+		});
+		gsap.utils.toArray(' .appear_left_1').forEach((el, index) => {
+			let tlcta = gsap.timeline({
+				scrollTrigger: {
+					trigger: el,
+					scrub: 2,
+					start: "top 100%",
+					end: "top 0%",
+					toggleActions: "play none none reverse",
+					markers: false
+				}
+			})
+
+			tlcta
+			.set(el, {transformOrigin: 'center center'})
+			.from(el, { opacity: 1,  x: "-=350"}, {opacity: 1, x: 0, duration: 1, immediateRender: false})
+		});
+		gsap.utils.toArray(' .appear_left_2').forEach((el, index) => {
+			let tlcta = gsap.timeline({
+				scrollTrigger: {
+					trigger: el,
+					scrub: 2,
+					start: "top 100%",
+					end: "top 0%",
+					toggleActions: "play none none reverse",
+					markers: false
+				}
+			})
+
+			tlcta
+			.set(el, {transformOrigin: 'center center'})
+			.from(el, { opacity: 1,  x: "-=250"}, {opacity: 1, x: 0, duration: 1, immediateRender: false})
+		});
+		gsap.utils.toArray(' .appear_right_1').forEach((el, index) => {
+			let tlcta = gsap.timeline({
+				scrollTrigger: {
+					trigger: el,
+					scrub: 2,
+					start: "top 100%",
+					end: "top 0%",
+					toggleActions: "play none none reverse",
+					markers: false
+				}
+			})
+
+			tlcta
+			.set(el, {transformOrigin: 'center center'})
+			.from(el, { opacity: 1,  x: "+=250"}, {opacity: 1, x: 0, duration: 1, immediateRender: false})
+		});
+		gsap.utils.toArray(' .appear_right_2').forEach((el, index) => {
+			let tlcta = gsap.timeline({
+				scrollTrigger: {
+					trigger: el,
+					scrub: 2,
+					start: "top 100%",
+					end: "top 0%",
+					toggleActions: "play none none reverse",
+					markers: false
+				}
+			})
+
+			tlcta
+			.set(el, {transformOrigin: 'center center'})
+			.from(el, { opacity: 1,  x: "+=350"}, {opacity: 1, x: 0, duration: 1, immediateRender: false})
 		});
 	});
 })(jQuery);

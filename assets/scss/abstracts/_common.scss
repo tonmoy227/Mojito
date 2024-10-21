@@ -272,9 +272,16 @@ select:visited {
 	.sec_title {
 		font-size: 64px;
 		font-weight: 700;
+		line-height: 1.05;
 		letter-spacing: -2px;
 		span {
 			@extend%gradient-text;
+		}
+		@media #{$md,$sm,$xs} {
+			font-size: 50px;
+		}
+		@media #{$xxs} {
+			font-size: 30px;
 		}
 		&.ver_2 {
 			span {
