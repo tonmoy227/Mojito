@@ -116,18 +116,26 @@
 	}
 	.mt-faq-img-wrap {
 		gap: 30px;
+		@media #{$sm,$xs} {
+			flex-wrap: wrap;
+		}
 		.item-img {
 			overflow: hidden;
 			border-radius: 10px;
 		}
 	}
 	.mt-faq-list {
+		gap: 15px 20px;
+		@media #{$lg,$md,$sm,$xs} {
+			flex-wrap: wrap;
+		}
 		li {
 			gap: 10px;
 			display: flex;
 			color: #2b3132;
 			font-size: 19px;
 			font-weight: 700;
+			margin-bottom: 10px;
 			align-items: center;
 			i {
 				width: 25px;
@@ -144,12 +152,22 @@
 }
 .mt-faq-content-3 {
 	gap: 20px 60px;
+	@media #{$xl,$lg,$md,$sm,$xs} {
+		gap: 20px 30px;
+	}
+	@media #{$lg,$md,$sm,$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 .mt-faq-accordion-3 {
 	max-width: 620px;
 	.mt-faq-title {
 		padding: 40px 60px;
 		background: var(--mt-gradient);
+		@media #{$sm,$xs} {
+			padding: 20px 30px;
+		}
 		span {
 			display: block;
 			color: #000000;
@@ -160,6 +178,9 @@
 			color: #000000;
 			font-size: 35px;
 			font-weight: 700;
+			@media #{$sm,$xs} {
+				font-size: 25px;
+			}
 		}
 	}
 	.accordion-item,
@@ -195,6 +216,9 @@
 		padding: 30px 40px 28px;
 		transition: all 500ms ease;
 		color: var(--mt-title-color);
+		@media #{$sm,$xs} {
+			padding: 20px 30px;
+		}
 		span {
 			display: flex;
 			max-width: 85%;
@@ -240,6 +264,9 @@
 		background-image: none;
 		justify-content: center;
 		font-family: 'Font Awesome 5 free';
+		@media #{$sm,$xs} {
+			right: 15px;
+		}
 	}
 	.accordion-button:not(.collapsed) { 
 		color: var(--mt-title-color);

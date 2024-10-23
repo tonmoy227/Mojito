@@ -141,6 +141,7 @@
 		padding: 20px 35px;
 		border-radius: 40px;
 		position: relative;
+		white-space: nowrap;
 		display: inline-block;
 		background: linear-gradient( 90deg, rgb(155,0,255) 0%, rgb(27,149,248) 100%);
 		i {
@@ -178,7 +179,7 @@
 			padding: 22px 35px;
 			&:before {
 				top: 2px;
-				left: 2px;
+				right: 2px;
 				width: 98%;
 				z-index: -1;
 				height: 93%;
@@ -186,6 +187,13 @@
 				border-radius: 40px;
 				position: absolute;
 				background-color: #fff;
+				transition: all 500ms ease;
+			}
+			&:hover {
+				color: #fff;
+				&:before {
+					width: 0;
+				}
 			}
 		}
 	}

@@ -49,6 +49,9 @@
 	left: 0;
 	max-width: 580px;
 	position: absolute;
+	@media #{$lg,$md,$xs} {
+		position: static;
+	}
 	h3 {
 		color: #fff;
 		font-size: 30px;
@@ -77,17 +80,40 @@
 .mt-team-slider-wrap {
 	width: 	100%;
 	max-width: 900px;
+	@media #{$lg,$md,$xs} {
+		padding-top: 50px;
+	}
+}
+.mt-team-slider-area {
+	@media #{$lg,$md,$xs} {
+		justify-content: center !important;
+	}
 }
 .mt-team-item-3 {
 	width: 	100%;
 	max-width: 900px;
 	padding-bottom: 190px;
+	@media #{$md,$xs} {
+		padding-bottom: 40px;
+	}
 	.team-img {
 		padding-right: 130px;
+		@media #{$xl} {
+			padding-right: 90px;
+		}
+		@media #{$md,$xs} {
+			padding-right: 0;
+			margin-bottom: 30px;
+			justify-content: center !important;
+		}
 		.item-img {
 			width: 456px;
 			height: 455px;
 			position: relative;
+			@media #{$md,$xs} {
+				width: auto;
+				height: auto;
+			}
 			&:before {
 				left: 0;
 				right: 0;
@@ -105,27 +131,45 @@
 		left: 0;
 		bottom: -28px;
 		position: absolute;
+		@media #{$md,$xs} {
+			position: static;
+			text-align: center;
+		}
 		h3 {
 			color: #fff;
 			line-height: 1;
 			font-weight: 700;
 			font-size: 	190px;
+			@media #{$md,$xs} {
+				font-size: 50px;
+			}
 			span {
 				display: block;
 				padding-left: 260px;
 				transform: translateY(-40px);
+				@media #{$md,$xs} {
+					padding-left: 0;
+					transform: translateY(0px);
+				}
 			}
 		}
 	}
 }
 .mt-team-slider-nav {
 	gap: 20px;
+	@media #{$md,$xs} {
+		justify-content: center;
+	}
 	div {
 		color: #fff;
 		height: 80px;
 		width: 	80px;
 		border-radius: 100%;
 		border: 2px solid #fff;	
+		@media #{$md,$xs} {
+			width: 50px;
+			height: 50px;
+		}
 	}
 }
 /*Home Page 4  Team Section/

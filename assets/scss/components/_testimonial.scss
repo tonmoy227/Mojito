@@ -240,25 +240,66 @@
 /*Testimonial 3 Section Home Page 3*/
 /*-------------------------------*/
 .mt-testimonial-content-3 {
-	gap: 30px 85px;
+	gap: 30px 60px;
+	overflow: hidden;
+	@media #{$xl,$lg,$md,$sm,$xs} {
+		gap: 30px 30px;
+	}
+	@media #{$lg,$md,$sm,$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 .mt-testimonial-thumb {
 	max-width: 420px;
+	@media #{$xl,$lg,$md,$sm,$xs} {
+		padding-top: 0;
+	}
+	@media #{$lg,$md,$sm,$xs} {
+		max-width: 100%;
+	}
 }
 .testimonial-thumbs-area {
+	@media #{$xl,$lg,$md,$sm,$xs} {
+		margin-top: 30px;
+	}
+	@media #{$lg,$md,$sm,$xs} {
+		max-width: 420px;
+	}
 	.testi-thumb {
 		width: 120px;
 		height: 132px;
 		overflow: hidden;
 		border-radius: 20px;
 		background-color: #f0f0f0;
+		@media #{$xxs} {
+			width: 80px;
+			height: 80px;
+		}
 	}
 }
 .mt-testimonial-slide-wrap {
 	max-width: 815px;
+	@media #{$xl} {
+		max-width: 700px;
+		padding-top: 20px;
+	}
+	@media #{$lg,$md,$sm,$xs} {
+		max-width: 100%;
+	}
 }
 .mt-testi-item-3 {
 	gap: 30px 45px;
+	overflow: hidden;
+	padding-left: 20px;
+	@media #{$xl,$lg,$md,$sm,$xs} {
+		gap: 30px 20px;
+		justify-content: center;
+	}
+	@media #{$md,$sm,$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 	.item-img {
 		position: relative;
 		&:before {
@@ -280,6 +321,9 @@
 	}
 	.item-text {
 		max-width: 375px;
+		@media #{$md,$sm,$xs} {
+			max-width: 100%;
+		}
 		p {
 			color: #152830;
 			font-weight: 700;

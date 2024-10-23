@@ -405,13 +405,13 @@ Faq Active
 					slidesPerView: 1,
 				},
 				576: {
-					slidesPerView: 2,
+					slidesPerView: 1,
 				},
 				768: {
 					slidesPerView: 2,
 				},
 				992: {
-					slidesPerView: 3,
+					slidesPerView: 2,
 				},
 				1200: {
 					slidesPerView: 3,
@@ -430,11 +430,8 @@ Faq Active
 	if($('.mt-blog-slider').length) {
 		let slider = new Swiper('.mt-blog-slider', {
 			loop: true,
-			spaceBetween: 20,
+			spaceBetween: 25,
 			speed: 500,
-			autoplay: {
-				delay: 5000,
-			},
 			pagination: {
 				el: ".blog-pagination",
 				clickable: true,
@@ -575,6 +572,22 @@ Faq Active
 			gsap.set(splitTextLine, { perspective: 400 });
 			itemSplitted.split({ type: "lines" })
 			tl.from(itemSplitted.lines, { duration: 1, delay: 0.5, opacity: 0, top: 20, force3D: true, transformOrigin: "top center -50", stagger: 0.1 });
+		});
+		gsap.utils.toArray(' .zoom_EL').forEach((el, index) => {
+			let tlcta = gsap.timeline({
+				scrollTrigger: {
+					trigger: el,
+					scrub: 1,
+					start: "top 100%",
+					end: "top 0%",
+					toggleActions: "play none none reverse",
+					markers: false
+				}
+			})
+
+			tlcta
+			.set(el, {transformOrigin: 'center center'})
+			.from(el, { opacity: 1,  scale: ".5"}, {opacity: 1, scale: 1, duration: 1, immediateRender: false})
 		});
 		gsap.utils.toArray(' .appear_top').forEach((el, index) => {
 			let tlcta = gsap.timeline({

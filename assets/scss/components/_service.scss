@@ -176,6 +176,23 @@
 }
 /*Home Page 2  Service Section/
 /*----------------------------------------------------*/
+@keyframes icon-bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-10px);
+		-ms-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+	60% {
+		-webkit-transform: translateY(-5px);
+		-ms-transform: translateY(-5px);
+		transform: translateY(-5px);
+	}
+}
 .mt-service-item-3 {
 	padding: 30px 40px;
 	border-radius: 12px;
@@ -206,6 +223,11 @@
 			}
 		}
 	}
+	&:hover {
+		.item-icon {
+			animation: icon-bounce 0.8s ease-out infinite;
+		}
+	}
 }
 .mt-bottom-text {
 	p {
@@ -230,6 +252,9 @@
 		width: 	100%;
 		overflow: hidden;
 		background-color: #19191a;
+		@media #{$lg,$md,$sm,$xs} {
+			height: 100%;
+		}
 	}
 }
 .mt-service-content-4 {
@@ -249,6 +274,10 @@
 	.nav-item {
 		margin-right: 75px;
 		margin-bottom: 75px;
+		@media #{$md,$sm,$xs} {
+			margin-right: 40px;
+			margin-bottom: 40px;
+		}
 	}
 	.nav-link {
 		padding: 0;
@@ -256,6 +285,7 @@
 		line-height: 1;
 		font-size: 50px;
 		font-weight: 700;
+		text-align: left;
 		strong {
 			position: relative;
 			&:before {
@@ -271,6 +301,12 @@
 				transition: all 500ms ease;
 			}
 		}
+		@media #{$md,$sm,$xs} {
+			font-size: 40px;
+		}
+		@media #{$xxs} {
+			font-size: 28px;
+		}
 		&.active {
 			color: #4aff74;
 			strong {
@@ -284,6 +320,10 @@
 			color: #fff;
 			font-size: 20px;
 			position: relative;
+			@media #{$md,$sm,$xs} {
+				top: -20px;
+				margin-right: 10px;
+			}
 		}
 	}
 }
@@ -291,12 +331,23 @@
 .mt-service-tab-desc {
 	margin-top: -115px;
 	padding-left: 190px;
+	@media #{$xl,$lg,$md,$sm,$xs} {
+		margin-top: 0px;
+		padding-left: 0;
+	}
 }
 .mt-service-item-4 {
 	gap: 20px 55px;
+	@media #{$sm,$xs} {
+		flex-wrap: wrap;
+	}
 	.item-text {
 		max-width: 320px;
 		padding-top: 170px;
+		@media #{$sm,$xs} {
+			max-width: 100%;
+			padding-top: 40px;
+		}
 		.item-title {
 			gap: 15px;
 			margin-bottom: 10px;
@@ -330,6 +381,9 @@
 			width: 150px;
 			position: absolute;
 			background: var(--mt-gradient);
+			@media #{$sm,$xs} {
+				display: none;
+			}
 		}
 	}
 }

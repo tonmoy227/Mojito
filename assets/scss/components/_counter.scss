@@ -34,6 +34,12 @@
 }
 /*Home Page 3 Counter Section*/
 /*------------------------------------------*/
+.mt-counter-section-3 {
+	overflow: hidden;
+}
+.mt-counter-content-3 {
+	gap: 20px;
+}
 .mt-counter-item-3 {
 	gap: 15px;
 	position: relative;
@@ -46,6 +52,9 @@
 		position: absolute;
 		background-color: #98e209;
 		transform: rotate(-45deg);
+		@media #{$xl,$lg,$md,$sm,$xs} {
+			display: none;
+		}
 	}
 	&:last-child {
 		&:before {
@@ -75,6 +84,9 @@
 			font-weight: 700;
 			padding-bottom: 5px;
 			color: var(--mt-title-color);
+			@media #{$xl,$lg,$md,$sm,$xs} {
+				font-size: 50px;
+			}
 		}
 		p {
 			line-height: 1.2;

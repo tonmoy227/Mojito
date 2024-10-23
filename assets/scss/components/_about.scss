@@ -239,12 +239,24 @@
 		margin-left: 50px;
 		margin-bottom: 12px;
 		border-radius: 100%;
+		transform: scale(0);
+		transition: all 700ms ease;
+		&.active {
+			transform: scale(1);
+			transition-delay: 700ms;
+		}
 	}
 	.img_2 {
 		width: 172px;
 		height: 172px;
 		overflow: hidden;
 		border-radius: 100%;
+		transform: scale(0);
+		transition: all 700ms ease;
+		&.active {
+			transform: scale(1);
+			transition-delay: 800ms;
+		}
 	}
 }
 .mt-about-content-wrap {
@@ -397,31 +409,63 @@
 	width: 100%;
 	max-width: 685px;
 	padding-top: 85px;
+	.item-img-1 {
+		transition: all 800ms ease;
+		transform: translateX(100px);
+	}
 	&:before {
 		top: 0;
 		right: 0;
 		z-index: -1;
 		content: '';
 		width: 470px;
-		height: 515px;
+		height: 0px;
 		position: absolute;
 		border-radius: 30px;
 		background-color: #242527;
+		transition: all 800ms ease;
 		@media #{$sm,$xs} {
 			display: none;
 		}
 	}
 	.item-img-2 {
+		z-index: 1;
 		top: 75px;
+		opacity: 0;
 		left: 35px;
+		transform: translateX(100px);
+		transition: all 800ms ease;
 		box-shadow: 0px 2px 62px 0px rgba(0, 0, 0, 0.22);
 	}
 	.item-img-3 {
+		z-index: 1;
 		right: 80px;
 		bottom: 30px;
+		opacity: 0;
 		overflow: hidden;
 		border-radius: 20px;
+		transform: translateX(100px);
+		transition: all 800ms ease;
 		box-shadow: 0px 2px 62px 0px rgba(0, 0, 0, 0.22);
+	}
+	&.active {
+		&:before {
+			height: 515px;
+			transition-delay: 900ms;
+		}
+		.item-img-1 {
+			transform: translateX(0px);
+		}
+		.item-img-2 {
+			opacity: 1;
+			transform: translateX(0px);
+			transition-delay: 500ms;
+		}
+		.item-img-3 {
+			opacity: 1;
+			transform: translateX(0px);
+			transition-delay: 700ms;
+		}
 	}
 }
 
@@ -429,6 +473,10 @@
 /*----------------------------------------------------*/
 .mt-about-content-4 {
 	gap: 30px 45px;
+	@media #{$lg,$md,$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 .mt-about-text-4 {
 	max-width: 800px;
@@ -439,6 +487,10 @@
 .mt-about-img-4 {
 	.inner-img {
 		gap: 30px;
+		@media #{$xs} {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 		.item-img {
 			img {
 				overflow: hidden;
@@ -447,6 +499,9 @@
 		}
 		.item-img-2 {
 			transform: translateY(-108px);
+			@media #{$lg,$md,$xs} {
+				transform: translateY(0px);
+			}
 		}
 	}
 }
@@ -464,11 +519,21 @@
 .mt-item-counter {
 	padding-bottom: 35px;
 	border-bottom: 1px solid #ececec;
+	@media #{$xs} {
+		gap: 15px 30px;
+		flex-wrap: wrap;
+	}
 	.item-counter {
 		h3 {
 			color: #191917;
 			font-size: 65px;
 			font-weight: 700;
+			@media #{$xs} {
+				font-size: 50px;
+			}
+			@media #{$xxs} {
+				font-size: 40px;
+			}
 		}
 		p {
 			color: #313030;

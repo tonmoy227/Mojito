@@ -230,6 +230,11 @@
 	margin: 50px auto 0;
 }
 .mt-portfolio-slider-nav {
+	@media #{$xxxl,$xxl,$xl,$lg,$md,$sm,$xs} {
+		gap: 15px;
+		margin-top: 40px;
+		justify-content: center;
+	}
 	div {
 		top: 50%;
 		width: 60px;
@@ -240,6 +245,10 @@
 		border-radius: 100%;
 		border: 2px solid #0c3e27;
 		transform: translateY(-50%);
+		@media #{$xxxl,$xxl,$xl,$lg,$md,$sm,$xs} {
+			position: static;
+			transform: translateY(0%);
+		}
 	}
 	.mt-port-prev {
 		left: -30px;
@@ -249,6 +258,7 @@
 	}
 }
 .mt-portfolio-item-3 {
+	margin: 0 auto;
 	max-width: 510px;
 	overflow: hidden;
 	border-radius: 30px;
@@ -263,6 +273,10 @@
 		left: 40px;
 		bottom: 40px;
 		position: absolute;
+		@media #{$xs} {
+			left: 20px;
+			bottom: 20px;
+		}
 		.port-cate {
 			z-index: 1;
 			font-size: 15px;

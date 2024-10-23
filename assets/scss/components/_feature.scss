@@ -13,6 +13,12 @@
 	.item-img {
 		overflow: hidden;
 		border-radius: 20px;
+		transition: all 800ms ease;
+		clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+		&.active {
+			transition-delay: 500ms;
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		}
 	}
 	.item-text {
 		li {
@@ -37,7 +43,25 @@
 .mt-feature-item {
 	gap: 18px;
 	padding: 30px 0px 27px;
-	border-bottom: 2px solid var(--mt-title-color);
+	position: relative;
+	&:before {
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 0%;
+		height: 2px;
+		content: '';
+		margin: 0 auto;
+		position: absolute;
+		transition: all 700ms ease;
+		background-color: var(--mt-title-color);
+	}
+	&.active {
+		&:before {
+			width: 100%;
+			transition-delay: 700ms;
+		}
+	}
 	.item-icon {
 		width: 45px;
 	}
