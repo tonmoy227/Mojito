@@ -321,6 +321,9 @@
 	}
 	&.header_style_four {
 		padding: 40px 30px 20px;
+		@media #{$xxs} {
+			padding: 20px 15px 20px;
+		}
 		.mt-header-content {
 			position: relative;
 			.mt-header-trigger {
@@ -350,9 +353,16 @@
 				max-width: 200px;
 				position: absolute;
 				transform: translateY(-50%);
+				@media #{$xxs} {
+					left: auto;
+					max-width: 120px;
+				}
 			}
 			.header-action {
 				gap: 30px;
+				@media #{$md,$sm,$xs} {
+					display: none !important;
+				}
 				button {
 					border: none;
 					font-size: 20px;

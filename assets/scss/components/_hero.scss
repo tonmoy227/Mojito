@@ -396,10 +396,26 @@
 	.hero_shape_1 {
 		left: 0;
 		top: -40%;
+		transform: scaleY(0);
+		transform-origin: top;
+		transition: all 900ms ease;
 	}
 	.hero_shape_2 {
 		left: 0;
 		bottom: -40%;
+		transform: scaleY(0);
+		transform-origin: bottom;
+		transition: all 900ms ease;
+	}
+	&.active {
+		.hero_shape_1 {
+			transform: scaleY(1);
+			transition-delay: 700ms;
+		}
+		.hero_shape_2 {
+			transform: scaleY(1);
+			transition-delay: 800ms;
+		}
 	}
 }
 .mt-hero-text-3 {
@@ -483,13 +499,32 @@
 		.item-img {
 			overflow: hidden;
 			border-radius: 20px;
+			img {
+				transform: scale(1.4);
+				transition: all 1200ms ease;
+			}
 		}
 		.item-bottom {
-			left: -90px;
+			opacity: 0;
+			left: -180px;
 			bottom: -90px;
 			position: absolute;
+			transition: all 800ms ease;
 			@media #{$xs} {
 				display: none;
+			}
+		}
+		&.active {
+			.item-img {
+				img {
+					transform: scale(1);
+					transition-delay: 500ms;
+				}
+			}
+			.item-bottom {
+				opacity: 1;
+				left: -90px;
+				transition-delay: 700ms;
 			}
 		}
 	}
@@ -497,21 +532,63 @@
 /*Home Page 4*/
 /*---------------------*/
 .mt-hero-section-4 {
+	z-index: 1;
+	overflow: hidden;
 	padding: 275px 0px 160px;
 	background-color: #e4ebfc;
+	@media #{$xxs} {
+		padding: 150px 0px 80px;
+	}
+	.hero-shape-1 {
+		top: 0;
+		left: 0;
+	}
+	.hero-shape-2 {
+		right: 0;
+		z-index: -1;
+		bottom: -60%;
+	}
 }
 .mt-hero-content-4 {
 	margin: 0 auto;
-	max-width: 1310px;
+	max-width: 1340px;
+	padding: 0px 15px;
 	.mt-hero-text-4 {
 		gap: 30px 60px;
 		margin-bottom: 120px;
+		@media #{$xxs} {
+			margin-bottom: 60px;
+		}
+		@media #{$lg,$md,$sm,$xs} {
+			justify-content: center;
+		}
+		.item-text-img {
+			.item-img {
+				@media #{$lg,$md,$sm,$xs} {
+					text-align: center;
+				}
+			}
+		}
 	}
 	.item-text {
 		max-width: 755px;
+		@media #{$lg,$md,$sm,$xs} {
+			margin: 0 auto;
+		}
 		.play-icon {
 			right: 0;
 			top: -110px;
+			-webkit-animation-name: spin;
+			animation-name: spin;
+			-webkit-animation-duration: 5000ms;
+			animation-duration: 5000ms;
+			-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;
+			animation-timing-function: linear;
+			@media #{$lg,$md,$sm,$xs} {
+				display: none;
+			}
 		}
 		.sm_img {
 			right: 0;
@@ -520,15 +597,40 @@
 			width: 	125px;
 			overflow: hidden;
 			border-radius: 50px;
+			@media #{$xl} {
+				right: -15px;
+			}
+			@media #{$lg,$md,$sm,$xs} {
+				display: none;
+			}
 		}
 		.hero_title {
 			font-size: 90px;
 			font-weight: 700;
 			max-width: 580px;
 			color: var(--mt-title-color);
+			@media #{$lg,$md,$sm,$xs} {
+				max-width: 100%;
+				text-align: center;
+			}
+			@media #{$sm,$xs} {
+				font-size: 60px;
+			}
+			@media #{$xxs} {
+				font-size: 50px;
+
+			}
+			@media #{$xxxs} {
+				font-size: 40px;
+
+			}
 		}
 		.item-btn-desc {
 			gap: 20px 65px; 
+			@media #{$md,$sm,$xs} {
+				flex-wrap: wrap;
+				justify-content: center;
+			}
 			.item-desc {
 				max-width: 495px;
 			}
@@ -536,9 +638,36 @@
 	}
 	.item-img-area {
 		z-index: 2;
+		@media #{$lg,$md,$sm,$xs} {
+			display: none;
+		}
+		.inner-img-1 {
+			overflow: hidden;
+			img {
+				transform: scale(1.5);
+				transition: all 800ms ease;
+			}
+		}
 		.inner-img-2 {
 			right: 0;
 			bottom: 0;
+			transition: all 800ms ease;
+			clip-path: polygon(100% 0, 100% 0, 0 100%, 0 100%);
+			@media #{$xl,$lg,$md,$sm,$xs} {
+				right: -100px;
+			}
+		}
+		&.active {
+			.inner-img-1 {
+				img {
+					transform: scale(1);
+					transition-delay: 800ms;
+				}
+			}
+			.inner-img-2 { 
+				transition-delay: 1200ms;
+				clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+			}
 		}
 	}
 	.item-count {
@@ -566,6 +695,10 @@
 		padding: 0px 55px;
 		position: relative;
 		display: inline-block;
+		@media #{$xxs} {
+			font-size: 30px;
+			padding: 0px 30px;
+		}
 		&:before {
 			content: '';
 			width: 51px;
@@ -575,6 +708,11 @@
 			background-size: cover;
 			background-position: center;
 			background-image: url(../img/icon/star.png);
+			@media #{$xxs} {
+				width: 40px;
+				height: 40px;
+				right: -20px;
+			}
 		}
 	}
 }

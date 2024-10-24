@@ -381,6 +381,10 @@ Faq Active
 			loop: true,
 			spaceBetween: 0,
 			speed: 1000,
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true
+			},
 			navigation: {
 				nextEl: ".mt-team-next",
 				prevEl: ".mt-team-prev",
@@ -426,6 +430,91 @@ Faq Active
 
 		});
 	}
+	let egxt4_thumb = new Swiper('.mt-testi-thumb-active', {
+		spaceBetween: 24,
+		loop: false,
+		speed: 1000,
+		slidesPerView: 3,
+		breakpoints: {
+			320: {
+				slidesPerView: 3,
+			},
+			576: {
+				slidesPerView: 3,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+			1400: {
+				slidesPerView: 3,
+			},
+			1600: {
+				slidesPerView: 3,
+			},
+
+		}
+	});
+	let egxt4 = new Swiper('.mt-testimonial-slide', {
+		loop: true,
+		spaceBetween: 0,
+		rtl: false,
+		slidesPerView: 1,
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true
+		},
+		thumbs: {
+			swiper: egxt4_thumb,
+		},
+	});
+	let testi_thumb = new Swiper('.mt-testimonial-img-thumb', {
+		spaceBetween: 0,
+		loop: true,
+		speed: 1000,
+		centeredSlides: true,
+		slidesPerView: 3,
+		effect: "cards",
+		breakpoints: {
+			320: {
+				slidesPerView: 3,
+			},
+			576: {
+				slidesPerView: 3,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+			1400: {
+				slidesPerView: 3,
+			},
+			1600: {
+				slidesPerView: 3,
+			},
+
+		}
+	});
+	let test_slide = new Swiper('.mt-testimonial-slide-4', {
+		loop: true,
+		spaceBetween: 0,
+		rtl: false,
+		slidesPerView: 1,
+
+		thumbs: {
+			swiper: testi_thumb,
+		},
+	});
 	// services-1
 	if($('.mt-blog-slider').length) {
 		let slider = new Swiper('.mt-blog-slider', {
@@ -589,6 +678,7 @@ Faq Active
 			.set(el, {transformOrigin: 'center center'})
 			.from(el, { opacity: 1,  scale: ".5"}, {opacity: 1, scale: 1, duration: 1, immediateRender: false})
 		});
+
 		gsap.utils.toArray(' .appear_top').forEach((el, index) => {
 			let tlcta = gsap.timeline({
 				scrollTrigger: {
@@ -668,6 +758,55 @@ Faq Active
 			tlcta
 			.set(el, {transformOrigin: 'center center'})
 			.from(el, { opacity: 1,  x: "+=350"}, {opacity: 1, x: 0, duration: 1, immediateRender: false})
+		});
+		gsap.utils.toArray(".img-zoom").forEach(function (container) {
+			let image = container.querySelector("img");
+			let tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: container,
+					scrub: true,
+					pin: false,
+				},
+			});
+			tl.from(image, {
+				scale: 1.5,
+				filter: "grayscale(1)",
+				ease: "none",
+			}).to(image, {
+				scale: 1,
+				filter: "grayscale(0)",
+				ease: "none",
+			});
+		});
+		gsap.registerPlugin(ScrollTrigger);
+		var st = jQuery(".tx-split-text");
+		if(st.length == 0) return;
+		gsap.registerPlugin(SplitText);
+		st.each(function(index, el) {
+			el.split = new SplitText(el, { 
+				type: "lines,words,chars",
+				linesClass: "split-line"
+			});
+			gsap.set(el, { perspective: 1000 });
+			if( jQuery(el).hasClass('banner_title_line') ){
+				gsap.set(el.split.words, {
+					opacity: 0,
+					x: 100,
+					ease: "circ.out",
+				});
+			}
+			el.anim = gsap.to(el.split.words, {
+				scrollTrigger: {
+					trigger: el,
+					start: "top 90%",
+				},
+				x: "0",
+				scale: 1,
+				opacity: 1,
+				delay:1,
+				duration: 1, 
+				stagger: 0.25,
+			});
 		});
 	});
 })(jQuery);

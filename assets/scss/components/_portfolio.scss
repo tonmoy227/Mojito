@@ -237,6 +237,7 @@
 	}
 	div {
 		top: 50%;
+		z-index: 1;
 		width: 60px;
 		z-index: 2;
 		height: 60px;
@@ -245,9 +246,28 @@
 		border-radius: 100%;
 		border: 2px solid #0c3e27;
 		transform: translateY(-50%);
+		&:before {
+			top: 0;
+			left: 0;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			content: '';
+			position: absolute;
+			border-radius: 100%;
+			transform: scale(0);
+			background: var(--mt-gradient);
+			transition: all 500ms ease;
+		}
 		@media #{$xxxl,$xxl,$xl,$lg,$md,$sm,$xs} {
 			position: static;
 			transform: translateY(0%);
+		}
+		&:hover {
+			border: 2px solid transparent;
+			&:before {
+				transform: scale(1);
+			}
 		}
 	}
 	.mt-port-prev {
@@ -278,6 +298,7 @@
 			bottom: 20px;
 		}
 		.port-cate {
+			opacity: 0;
 			z-index: 1;
 			font-size: 15px;
 			font-weight: 700;
@@ -289,10 +310,15 @@
 			display: inline-block;
 			color: var(--mt-title-color);
 			background: var(--mt-gradient);
+			transform: translateY(-10px);
+			transition: all 500ms ease;
 		}
 		.port_title {
+			opacity: 0;
 			display: flex;
 			align-items: center;
+			transform: translateY(10px);
+			transition: all 500ms ease;
 			a {
 				display: flex;
 				font-size: 21px;
@@ -322,17 +348,44 @@
 		.port-shape {
 			bottom: -100%;
 		}
+		.item-text {
+			.port-cate {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+			.port_title {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
 	}
 }
 /*Home Page 4  Portfolio Section/
 /*----------------------------------------------------*/
+.mt-portfolio-content-4 {
+	@media #{$xl,$lg,$md,$sm,$xs} {
+		.pl-90 {
+			padding-left: 0;
+		}
+	}
+}
 .mt-portfolio-item-4 {
 	margin-bottom: 40px;
+	@media #{$md,$sm,$xs} {
+		text-align: center;
+	}
 	.item-img {
 		margin-bottom: 25px;
+		overflow: hidden;
+		img {
+			transition: all 500ms ease;
+		}
 	}
 	.item-text {
 		max-width: 485px;
+		@media #{$md,$sm,$xs} {
+			margin: 0 auto;
+		}
 		.item-cate {
 			margin-bottom: 10px;
 			a {
@@ -359,6 +412,9 @@
 			font-weight: 700;
 			padding-bottom: 10px;
 			color: var(--mt-title-color);
+			@media #{$xxs} {
+				font-size: 26px;
+			}
 		}
 		.read_more {
 			font-size: 17px;
@@ -392,8 +448,20 @@
 			}
 		}
 	}
+	&:hover {
+		.item-img {
+			img {
+				filter: grayscale(1);
+				transform: scale(1.1);
+			}
+		}
+	}
 }
 .read_more_btn {
+	@media #{$md,$sm,$xs} {
+		display: flex;
+		justify-content: center;
+	}
 	a {
 		width: 195px;
 		height: 195px;
@@ -401,5 +469,14 @@
 		border-radius: 100%;
 		color: var(--mt-title-color);
 		background: var(--mt-gradient);
+		@media #{$md,$sm,$xs} {
+			justify-content: center;
+		}
+		&:hover {
+			animation: shake 150ms 2 linear;
+			-moz-animation: shake 150ms 2 linear;
+			-webkit-animation: shake 150ms 2 linear;
+			-o-animation: shake 150ms 2 linear;
+		}
 	}
 }

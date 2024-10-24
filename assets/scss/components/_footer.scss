@@ -150,6 +150,7 @@
 	}
 }
 .mt-footer-section-4 {
+	overflow: hidden;
 	background-color: #1a1b1d;
 	.mt-footer-copyright {
 		color: #fff;
@@ -169,10 +170,24 @@
 	width: 100%;
 	max-width: 840px;
 	padding-left: 45px;
+	@media #{$lg,$md,$xs} { 
+		padding-left: 20px;
+	}
+}
+.mt-footer-widget-area {
+	@media #{$xs} {
+		gap: 20px;
+		flex-wrap: wrap;
+	}
 }
 .mt-newslatter-insta-widget {
+	gap: 20px;
 	width: 100%;
 	justify-content: space-between;
+	@media #{$md,$xs} {
+		flex-wrap: wrap;
+		justify-content: start;
+	}
 	.mt-footer-widget-4 {
 		width: 100%;
 		display: flex;
@@ -190,6 +205,9 @@
 		max-width: 440px;
 		padding-right: 35px;
 		border-right: 1px solid #2a2a2d;
+		@media #{$md,$xs} {
+			border: none;
+		}
 		.logo-text {
 			font-size: 17px;
 		}
@@ -228,6 +246,10 @@
 	}
 	.menu-widget {
 		margin-bottom: 54px;
+		@media #{$md,$xs} {
+			gap: 20px;
+			flex-wrap: wrap;
+		}
 		li {
 			margin-bottom: 15px;
 			a {
@@ -245,6 +267,13 @@
 					position: absolute;
 					font-family: 'Font Awesome 5 Free';
 					transform: rotate(-45deg);
+					transition: all 500ms ease;
+				}
+				&:hover {
+					color: #36ff95; 
+					&:before {
+						transform: rotate(0);
+					}
 				}
 			}
 		}
@@ -285,6 +314,10 @@
 			overflow: hidden;
 			border-radius: 10px;
 			margin-right: 10px;
+			@media #{$lg,$md,$xs} {
+				height: 80px;
+				width: 80px;
+			}
 			&:last-child {
 				margin-right: 0;
 			}

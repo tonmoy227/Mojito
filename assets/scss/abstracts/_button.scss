@@ -197,4 +197,10 @@
 			}
 		}
 	}
+	&.ver_3 {
+		a {
+			color: var(--mt-title-color);
+			background: var(--mt-gradient);
+		}
+	}
 }

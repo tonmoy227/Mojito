@@ -74,6 +74,9 @@
 				font-size: 20px;
 				margin-right: 12px;
 			}
+			&:hover {
+				color: #63ff49;
+			}
 		}
 	}
 }
@@ -107,9 +110,12 @@
 			justify-content: center !important;
 		}
 		.item-img {
+			opacity: 0;
 			width: 456px;
 			height: 455px;
 			position: relative;
+			clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+			transition: all 700ms ease;
 			@media #{$md,$xs} {
 				width: auto;
 				height: auto;
@@ -120,10 +126,11 @@
 				bottom: 0;
 				content: '';
 				height: 1px;
-				width: 100%;
+				width: 0%;
 				margin: 0 auto;
 				position: absolute;
 				background-color: #98e209;
+				transition: all 1000ms ease;
 			}
 		}
 	}
@@ -136,10 +143,14 @@
 			text-align: center;
 		}
 		h3 {
+			opacity: 0;
 			color: #fff;
 			line-height: 1;
 			font-weight: 700;
 			font-size: 	190px;
+			visibility: hidden;
+			transition: all 1200ms ease;
+			clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
 			@media #{$md,$xs} {
 				font-size: 50px;
 			}
@@ -155,6 +166,27 @@
 		}
 	}
 }
+.swiper-slide-active {
+	.mt-team-item-3 {
+		.item-img {
+			opacity: 1;
+			transition-delay: 500ms;
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+			&:before {
+				width: 100%;
+				transition-delay: 1200ms;
+			}
+		}
+		.team-text {
+			h3 {
+				opacity: 1;
+				visibility: visible;
+				transition-delay: 500ms;
+				clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+			}
+		}
+	}
+}
 .mt-team-slider-nav {
 	gap: 20px;
 	@media #{$md,$xs} {
@@ -165,10 +197,15 @@
 		height: 80px;
 		width: 	80px;
 		border-radius: 100%;
-		border: 2px solid #fff;	
+		border: 2px solid #fff;
+		transition: all 500ms ease;	
 		@media #{$md,$xs} {
 			width: 50px;
 			height: 50px;
+		}
+		&:hover {
+			color: var(--mt-title-color);
+			background-color: #fff;
 		}
 	}
 }
@@ -179,21 +216,25 @@
 }
 .mt-team-item-4 {
 	overflow: hidden;
+	margin-bottom: 30px;
 	background-color: #fff;
 	border-radius: 150px 150px 20px 20px;
 	.item-icon {
 		right: 25px;
-		bottom: 70px;
+		bottom: 40px;
+		transition: all 500ms ease;
 		a {
-			color: #fff;
 			width: 45px;
 			height: 45px;
 			display: flex;
 			margin: 8px 0px;
 			align-items: center;
 			border-radius: 100%;
+			transform: scale(0);
 			justify-content: center;
+			color: var(--mt-title-color);
 			background: var(--mt-gradient);
+			transition: all 500ms ease;
 		}
 	}
 	.item-text {
@@ -208,4 +249,13 @@
 			font-size: 16px;
 		}
 	}
+	&:hover {
+		.item-icon {
+			bottom: 70px;
+			a {
+				transform: scale(1.0);
+			}
+		}
+	}
+
 }

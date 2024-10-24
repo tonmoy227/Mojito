@@ -138,6 +138,17 @@
 }
 /*Home Page 4  Client Section/
 /*----------------------------------------------------*/
+@keyframes shake {
+	0% {
+		transform: translate(3px, 0);
+	}
+	50% {
+		transform: translate(-3px, 0);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
 .mt-sponsor-section-3 {
 	background-color: #e4eafc;
 }
@@ -146,8 +157,22 @@
 	padding: 60px;
 	flex-wrap: wrap;
 	background-color: #fff;
+	@media #{$md,$xs,$xxs} {
+		padding: 30px;
+		justify-content: center;
+	}
 	.sponsor-item {
 		width: 25%;
+		border: 1px solid #e9e9e9;
+		@media #{$md} {
+			width: 33.33%;
+		}
+		@media #{$xs,$xxs} {
+			width: 50%;
+		}
+		@media #{$xxs} {
+			width: 100%;
+		}
 		.inner-img {
 			width: 100%;
 			display: flex;
@@ -155,7 +180,20 @@
 			padding: 30px;
 			align-items: center;
 			justify-content: center;
-			border: 1px solid #e9e9e9;
+			@media #{$xs,$xxs} {
+				height: 120px;
+			}
+			@media #{$xxs} {
+				height: 185px;
+			}
+		}
+		&:hover {
+			.inner-img {
+				animation: shake 150ms 2 linear;
+				-moz-animation: shake 150ms 2 linear;
+				-webkit-animation: shake 150ms 2 linear;
+				-o-animation: shake 150ms 2 linear;
+			}
 		}
 	}
 }
