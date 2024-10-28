@@ -76,6 +76,33 @@
 					font-family: "Font Awesome 6 Free";
 					@extend%gradient-text;
 				}
+				span {
+					display: inline-block;
+					position: relative;
+					transition: all 500ms ease;
+					&:after {
+						left: 0;
+						right: 0;
+						width: 0%;
+						bottom: -2px;
+						content: '';
+						height: 1px;
+						margin: 0 auto;
+						position: absolute;
+						background: var(--mt-gradient);
+						transition: all 500ms ease;
+					}
+				}
+				&:hover {
+					span {
+						letter-spacing: .5px;
+						;
+						&:after {
+							width: 100%;
+							margin: 0 auto;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -108,9 +135,18 @@
 				width: 70px;
 				border: none;
 				height: 60px;
+				padding: 0;
 				position: absolute;
 				color: var(--mt-title-color);
 				background: var(--mt-gradient);
+				i {
+					transition: all 500ms ease;
+				}
+				&:hover {
+					i {
+						transform: scale(1.1);
+					}
+				}
 			}
 		}
 	}
@@ -142,9 +178,13 @@
 			color: var(--mt-title-color);
 			font-size: 18px;
 			font-weight: 600;
+			transition: all 500ms ease;
 			i {
-				margin-left: 5px;
+				margin-right: 5px;
 				@extend%gradient-text;
+			}
+			&:hover {
+				letter-spacing: 1px;
 			}
 		}
 	}

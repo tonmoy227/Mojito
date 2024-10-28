@@ -1,7 +1,6 @@
 .mt-testimonial-section {
 	margin: 0 auto;
 	mask-size: cover;
-	max-width: 1920px;
 	mask-repeat: no-repeat;
 	background-color: #e8e6dc;
 	mask-position: center center;
@@ -101,7 +100,7 @@
 			margin: 0 auto;
 			position: absolute;
 			border-radius: 100%;
-			background: var(--mt-gradient-2);
+			background: var(--mt-gradient);
 			transition: all 500ms ease;
 		}
 		&:before {
@@ -156,7 +155,7 @@
 			justify-content: center;
 			transition: all 500ms ease;
 			i {
-				color: #fff;
+				color: var(--mt-title-color);
 				width: 65px;
 				height: 65px;
 				display: flex;
@@ -164,7 +163,7 @@
 				border-radius: 100%;
 				align-items: center;
 				justify-content: center;
-				background: var(--mt-gradient-2);
+				background: var(--mt-gradient);
 			}
 			@media #{$xs} {
 				display: none;
@@ -422,5 +421,10 @@
 			color: #6e6e6e;
 			font-size: 17px;
 		}
+	}
+}
+.swiper-slide-thumb-active {
+	.mt-testi-img-4 {
+		height: 100%;
 	}
 }

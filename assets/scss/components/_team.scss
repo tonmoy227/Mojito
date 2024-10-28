@@ -1,6 +1,16 @@
 .mt-team-section {
+	z-index: 1;
 	overflow: hidden;
 	background-color: #000000;
+	.mt-team-shape {
+		top: 0;
+		right: 0;
+		z-index: -1;
+		position: absolute;
+		@media #{$lg,$md,$xs} {
+			display: none;
+		}
+	}
 }
 .mt-team-top-content {
 	.mt-section-title {

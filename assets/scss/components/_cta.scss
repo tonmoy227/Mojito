@@ -8,6 +8,12 @@
 		color: #000000;
 		font-size: 72px;
 		font-weight: 700;
+		@media #{$md,$sm,$xs} {
+			font-size: 60px;
+		}
+		@media #{$xxs} {
+			font-size: 45px;
+		}
 	}
 	.mt-btn-1 {
 		a {

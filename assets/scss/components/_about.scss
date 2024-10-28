@@ -4,14 +4,13 @@
 	z-index: 1;
 	margin: 0 auto;
 	mask-size: cover;
-	max-width: 1920px;
 	margin-top: -150px;
 	position: relative;
 	padding-top: 270px;
 	padding-bottom: 140px;
 	mask-repeat: no-repeat;
 	mask-position: center center;
-	mask-image: url(../img/bg/mask-shape2.png);
+	mask-image: url(../img/bg/mask-shape2.png); 
 }
 .mt-about-content-1 {
 	gap: 30px 60px;
@@ -29,6 +28,10 @@
 	display: inline-block;
 	padding: 12px 0px 8px;
 	border: 2px solid #9b00ff;
+	&.ver_2 {
+		padding: 0;
+		border: none;
+	}
 	.nav-item {
 		margin: 0px 19px;
 	}
@@ -60,10 +63,10 @@
 				position: absolute;
 				border-radius: 50px;
 				transition: 500ms var(--cube-1);
-				background: var(--mt-gradient-2);
+				background: var(--mt-gradient);
 			}
 			&.active {
-				color: #fff;
+				color: var(--mt-title-color);
 				&:before {
 					left: 0;
 					width: 100%;
@@ -97,7 +100,7 @@
 				margin: 0 auto;
 				margin-bottom: 10px;
 				border-radius: 100%;
-				background: var(--mt-gradient-2);
+				background: var(--mt-gradient);
 			}
 			span {
 				font-size: 27px;
@@ -128,7 +131,7 @@
 					height: 10px;
 					position: absolute;
 					border-radius: 100%;
-					background: var(--mt-gradient-2);
+					background: var(--mt-gradient);
 				}
 				&:last-child {
 					margin-bottom: 0;
@@ -553,6 +556,17 @@
 		p {
 			color: #313030;
 			font-weight: 300;
+		}
+	}
+}
+/*About Page Section*/
+/*----------------------------------------------------*/
+.mt-about-tab-section {
+	.mt-section-title {
+		max-width: 1130px;
+		.sec_title {
+			line-height: 1;
+			font-size: 65px;
 		}
 	}
 }

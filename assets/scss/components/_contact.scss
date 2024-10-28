@@ -8,6 +8,30 @@
 		justify-content: center;
 	}
 }
+.mt-contact-play {
+	gap: 20px;
+	.play-icon {
+		a {
+			color: #fff;
+			height: 45px;
+			width: 75px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	.play-text {
+		max-width: 330px;
+		h3 {
+			color: #24ffb3;
+			font-size: 22px;
+			font-weight: 600;
+		}
+		p {
+			color: #fff;
+		}
+	}
+}
 .mt-contact-form {
 	max-width: 650px;
 	overflow: hidden;
