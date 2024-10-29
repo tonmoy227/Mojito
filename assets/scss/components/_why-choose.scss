@@ -26,8 +26,9 @@
 	}
 }
 .mt-why-choose-wrap-2 {
-	max-width: 1040px;
+	width: 100%;
 	gap: 30px 90px;
+	max-width: 1045px;
 	@media #{$xl,$lg,$md,$sm,$xs} {
 		gap: 30px 30px;
 	}
@@ -51,6 +52,7 @@
 		}
 	}
 	.item-text {
+		width: 100%;
 		max-width: 565px;
 		.mt-section-title {
 			.subtitle-2 {

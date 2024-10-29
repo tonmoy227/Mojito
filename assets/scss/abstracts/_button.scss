@@ -43,6 +43,9 @@
 			@media #{$lg} {
 				padding: 20px 30px;
 			}
+			@media #{$md,$xs} { 
+				padding: 15px 30px;
+			}
 		}
 	}
 	.btn-glow {
@@ -72,6 +75,9 @@
 		border-radius: 50px;
 		display: inline-block;
 		border: 2px solid #40ff85;
+		@media #{$xs} {
+			padding: 12px 30px;
+		}
 		span {
 			z-index: -1;
 			color: #35ff97;
@@ -84,9 +90,6 @@
 			margin-left: 15px;
 			transform: rotate(-45deg);
 			transition: all 500ms ease;
-		}
-		@media #{$xs} {
-			padding: 15px 30px;
 		}
 		&:before {
 			left: 0;
@@ -122,6 +125,9 @@
 		display: inline-block;
 		color: var(--mt-title-color);
 		background: var(--mt-gradient);
+		@media #{$xxs} {
+			padding: 12px 30px;
+		}
 		i {
 			margin-left: 18px;
 		}
@@ -144,6 +150,9 @@
 		white-space: nowrap;
 		display: inline-block;
 		background: linear-gradient( 90deg, rgb(155,0,255) 0%, rgb(27,149,248) 100%);
+		@media #{$xxs} {
+			padding: 15px 25px;
+		}
 		i {
 			margin-left: 5px;
 			transform: rotate(-45deg);
@@ -182,7 +191,7 @@
 				right: 2px;
 				width: 98%;
 				z-index: -1;
-				height: 93%;
+				height: 94%;
 				content: "";
 				border-radius: 40px;
 				position: absolute;

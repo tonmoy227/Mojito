@@ -27,13 +27,21 @@
 	border-radius: 50px;
 	display: inline-block;
 	padding: 12px 0px 8px;
-	border: 2px solid #9b00ff;
+	border: 2px solid #56ff61;
+	@media #{$xxs} {
+		border: none;
+	}
 	&.ver_2 {
 		padding: 0;
 		border: none;
 	}
 	.nav-item {
 		margin: 0px 19px;
+		@media #{$xxs} {
+			margin: 8px 0px;
+			width: 100%;
+			text-align: center;
+		}
 	}
 	.nav-tabs {
 		.nav-link,
@@ -335,6 +343,9 @@
 }
 /*Home Page 2 About 3*/
 /*----------------------------------------------------*/
+.mt-about-section-3 {
+	overflow: hidden;
+}
 .mt-about-content-3 {
 	gap: 20px 30px;
 	@media #{$lg,$md,$sm,$xs} {

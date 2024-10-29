@@ -32,8 +32,8 @@
 	gap: 15px;
 	left: 45px;
 	bottom: 100px;
-	@media #{$xxxl,$xxl,$xl,$lg,$md,$sm,$xs} {
-		display: none;
+	@media #{$md,$sm,$xs} {
+		display: none !important;
 	}
 	.item-icon {
 		color: #fff;
@@ -142,13 +142,35 @@
 			max-width: 420px;
 		}
 		a {
-			display: block;
 			font-weight: 700;
 			margin-top: 10px;
+			position: relative;
+			display: inline-block;
 			color: var(--mt-title-color);
 			i {
 				font-size: 14px;
 				transform: rotate(-45deg);
+				transition: all 500ms ease;
+			}
+			&:before {
+				bottom: 0;
+				width: 0%;
+				left: 0;
+				right: 0;
+				height: 1px;
+				content: '';
+				margin: 0 auto;
+				position: absolute;
+				transition: all 500ms ease;
+				background-color: var(--mt-title-color);
+			}
+			&:hover {
+				&:before {
+					width: 100%;
+				}
+				i {
+					transform: rotate(0deg);
+				}
 			}
 		}
 	}
@@ -166,6 +188,9 @@
 		background-image: none;
 		justify-content: center;
 		font-family: 'Font Awesome 5 Free';
+		@media #{$xxs} {
+			right: 0;
+		}
 	}
 	.accordion-button:not(.collapsed) { 
 		color: var(--mt-title-color);
@@ -389,7 +414,7 @@
 }
 .mt-service-section-5 {
 	margin-top: -75px;
-	padding-top: 260px;
+	padding-top: 250px;
 	background-color: #f6f6f6;
 }
 .mt-service-item-title {
@@ -446,11 +471,17 @@
 		}
 		p {
 			padding-top: 8px;
+			transition: all 500ms ease;
 		}
 	}
 	&:hover {
 		.item-icon {
 			animation: bounceIn 1s;
+		}
+		.item-text {
+			p {
+				color: var(--mt-title-color);
+			}
 		}
 		&:before {
 			width: 100%;

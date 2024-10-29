@@ -1,6 +1,9 @@
 .mt-cta-section {
 	padding: 110px 0px;
 	background: var(--mt-gradient);
+	@media #{$xs} {
+		padding: 60px 0px;
+	}
 }
 .mt-cta-content {
 	gap: 20px;
@@ -8,8 +11,11 @@
 		color: #000000;
 		font-size: 72px;
 		font-weight: 700;
-		@media #{$md,$sm,$xs} {
-			font-size: 60px;
+		@media #{$md} {
+			font-size: 55px;
+		}
+		@media #{$xs} {
+			font-size: 50px;
 		}
 		@media #{$xxs} {
 			font-size: 45px;

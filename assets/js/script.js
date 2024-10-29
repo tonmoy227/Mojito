@@ -19,7 +19,41 @@ Last change:    00/00/00
 		lenis.raf(time * 1000)
 	});
 	gsap.ticker.lagSmoothing(0);
+	if($('.loader_text').length) {
+		var txasplit2 = $(".loader_text");
 
+		if(txasplit2.length == 0) ; gsap.registerPlugin(SplitText); txasplit2.each(function(index, el) {
+
+			el.split = new SplitText(el, { 
+				type: "lines,words,chars",
+				linesClass: "split-line"
+			});
+
+			if( $(el).hasClass('loader_text_ani') ){
+				gsap.set(el.split.chars, {
+					opacity: 0,
+				});
+			}
+
+			el.anim = gsap.to(el.split.chars, {
+				scrollTrigger: {
+					trigger: el,
+					start: "top 90%",
+					end: "top 60%",
+					markers: false,
+					scrub: 2,
+				},
+
+				xPercent: 0,
+				yPercent: 0,
+				color: "inherit",
+				opacity: 1,
+				duration: .7,
+				stagger: 0.2,
+			});
+
+		});
+	}
 	/*
 preloader
 ====start====
@@ -163,26 +197,6 @@ Header Area
 			jQuery(this).toggleClass("active"),
 			jQuery(this).parent().find("> .dropdown-menu").toggleClass("active"),
 			jQuery(this).parent().find("> .dropdown-menu").slideToggle());
-	});
-	jQuery(window).on('scroll', function() {
-		if (jQuery(window).scrollTop() > 250) {
-			jQuery('.log-header-section').addClass('sticky-on')
-		} else {
-			jQuery('.log-header-section').removeClass('sticky-on')
-		}
-	});
-	$(function(o){
-		0 < o(".navSidebar-button").length &&
-		o(".navSidebar-button").on("click", function (e) {
-			e.preventDefault(), e.stopPropagation(), o(".info-group").addClass("isActive");
-		}),
-		0 < o(".close-side-widget").length &&
-		o(".close-side-widget").on("click", function (e) {
-			e.preventDefault(), o(".info-group").removeClass("isActive");
-		}),
-		o(".xs-sidebar-widget").on("click", function (e) {
-			e.stopPropagation();
-		})
 	});
 	// offcanvas-start
 	$('.offcanvas_toggle').on('click', function() {
@@ -465,10 +479,6 @@ Faq Active
 		spaceBetween: 0,
 		rtl: false,
 		slidesPerView: 1,
-		effect: 'fade',
-		fadeEffect: {
-			crossFade: true
-		},
 		thumbs: {
 			swiper: egxt4_thumb,
 		},
@@ -476,16 +486,23 @@ Faq Active
 	let testi_thumb = new Swiper('.mt-testimonial-img-thumb', {
 		spaceBetween: 0,
 		loop: true,
-		speed: 1000,
+		speed: 500,
+		allowTouchMove: false,
 		centeredSlides: true,
 		slidesPerView: 3,
-		effect: "cards",
+		navigation: {
+			nextEl: ".mt-test-next-4",
+			prevEl: ".mt-test-prev-4",
+		},
 		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
 			320: {
-				slidesPerView: 3,
+				slidesPerView: 1,
 			},
 			576: {
-				slidesPerView: 3,
+				slidesPerView: 1,
 			},
 			768: {
 				slidesPerView: 3,
@@ -507,10 +524,17 @@ Faq Active
 	});
 	let test_slide = new Swiper('.mt-testimonial-slide-4', {
 		loop: true,
-		spaceBetween: 0,
-		rtl: false,
 		slidesPerView: 1,
-
+		speed: 500,
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true
+		},
+		allowTouchMove: false,
+		navigation: {
+			nextEl: ".mt-test-next-4",
+			prevEl: ".mt-test-prev-4",
+		},
 		thumbs: {
 			swiper: testi_thumb,
 		},

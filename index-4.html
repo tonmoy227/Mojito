@@ -23,16 +23,19 @@
   	<div id="preloader">
   		<div class="preloader-wrap">
   			<div class="loading headline">
-  				<h3 class="loading-text loader_text loader_text_ani">MOJITO</h3> 
+  				<h3 class="loading-text loader_text loader_text_ani">MOJITO</h3>
   			</div>
   		</div>
+  	</div>
+  	<div class="up">
+  		<a href="#" class="scrollup text-center"><i class="fa-solid fa-arrow-up"></i></a>
   	</div>
 
 <!-- Start of Header section
 	============================================= --> 
 	<header id="mt-header" class="mt-header-section header_style_four  txa_sticky_header">
 		<div class="mt-header-content d-flex justify-content-between">
-			<div class="mt-header-trigger">
+			<div class="mt-header-trigger open_mobile_menu">
 				<span></span>
 				<span></span>
 				<span></span>
@@ -41,7 +44,7 @@
 				<a href="#"><img src="assets/img/logo/logo-3.png" alt=""></a>
 			</div>
 			<div class="header-action d-flex justify-content-between">
-				<button><i class="fas fa-search"></i></button>
+				<button class="search_btn_toggle"><i class="fas fa-search"></i></button>
 				<div class="cta-wrap d-flex align-items-center">
 					<div class="item-icon d-flex justify-content-center align-items-center">
 						<i class="fas fa-phone-alt"></i>
@@ -54,14 +57,125 @@
 			</div>
 		</div>
 	</header>
+	<!-- Mobile Menu -->
+	<div class="mobile_menu lenis lenis-smooth position-relative">
+		<div class="mobile_menu_wrap">
+			<div class="mobile_menu_overlay open_mobile_menu"></div>
+			<div class="mobile_menu_content ver_2">
+				<div class="mobile_menu_close open_mobile_menu">
+					<i class="fas fa-times"></i>
+				</div>
+				<div class="m-brand-logo">
+					<a href="#"><img src="assets/img/logo/logo-2.svg" alt=""></a> 
+				</div>
+				<div class="mobile-search-bar position-relative">
+					<form action="#">
+						<input type="text" name="search" placeholder="Keywords">
+						<button><i class="fas fa-search"></i></button>
+					</form>
+				</div>
+				<nav class="mobile-main-navigation  clearfix ul-li">
+					<ul id="m-main-nav" class="nav navbar-nav clearfix">
+						<li class="dropdown active">
+							<a href="!#">Home</a>
+							<ul class="dropdown-menu clearfix">
+								<li><a class="active" href="index.html">Home Page 1</a></li>
+								<li><a href="index-2.html">Home Page 2</a></li>
+								<li><a href="index-3.html">Home Page 3</a></li>
+								<li><a href="index-4.html">Home Page 4</a></li>
+							</ul>
+						</li>
+						<li><a href="about.html">Solutions</a></li>
+						<li><a href="about.html">About</a></li>
+						<li class="dropdown">
+							<a href="!#">Pages</a>
+							<ul class="dropdown-menu clearfix">
+								<li><a href="service.html">Services</a></li>
+								<li class="dropdown">
+									<a href="service-single.html">Services Details</a>
+									<ul class="dropdown-menu clearfix">
+										<li><a href="service-single.html">Construction </a></li>
+										<li><a href="service-single-2.html">Architect Design</a></li>
+										<li><a href="service-single-3.html">Interior Design</a></li>
+										<li><a href="service-single-4.html">3D Animation</a></li>
+										<li><a href="service-single-5.html">House Renovation</a></li>
+										<li><a href="service-single-6.html">Ideas & Inspiration</a></li>
+									</ul>
+								</li>
+								<li><a href="team.html">Team Page</a></li>
+								<li class="dropdown">
+									<a href="service-single.html">Blog</a>
+									<ul class="dropdown-menu clearfix">
+										<li><a href="service-single.html">Construction</a></li>
+										<li><a href="service-single-2.html">Architect Design</a></li>
+										<li><a href="service-single-3.html">Interior Design</a></li>
+										<li><a href="service-single-4.html">3D Animation</a></li>
+										<li><a href="service-single-5.html">House Renovation</a></li>
+										<li><a href="service-single-6.html">Ideas & Inspiration</a></li>
+									</ul>
+								</li>
+								<li><a href="faq.html">FAQ Page</a></li>
+								<li><a href="pricing.html">Pricing Page</a></li>
+								<li><a href="testimonial.html">Testimonial Page</a></li>
+								<li><a href="contact.html">Contact Page</a></li>
+								<li><a href="booking.html">Booking Page</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="!#">Shop</a>
+							<ul class="dropdown-menu clearfix"> 
+								<li><a href="shop.html">Shop Page </a></li>
+								<li><a href="shop-single.html">Shop Details</a></li>
+							</ul>
+						</li>
+						<li><a href="about.html">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="ptx-mobile-header-social text-center">
+					<a href="#"> <i class="fab fa-instagram"></i></a>
+					<a href="#"> <i class="fab fa-linkedin-in"></i></a>
+					<a href="#"> <i class="fab fa-facebook"></i></a>
+					<a href="#"> <i class="fab fa-youtube"></i></a>
+				</div>
+			</div>
+		</div>
+		<!-- /Mobile-Menu -->
+	</div>
+	<!-- search-popup -->
+	<div class="txa-search-box search_box_active ">
+
+		<div class="txa-search-container">
+			<div class="txa-search-wrap text-center mb-55">
+				<h5 class="txa-search-title fx-heading-1 fx-font-500">Search</h5>
+				<form action="#" class="txa-search-form">
+					<input class="txa-search-form-input" type="text" placeholder="What are you looking for?...">
+				</form>
+			</div>
+
+			<div class="txa-search-tag-wrap text-center">
+				<h6 class="txa-search-tag-title fx-font-400 fx-heading-1">People also search for:</h6>
+				<div class="txa-search-tag d-inline-flex flex-wrap  ">
+					<a href="#" aria-label="name" class="txa-search-tag-item fx-heading-1 fx-font-500" >Corporate</a>
+					<a href="#" aria-label="name" class="txa-search-tag-item fx-heading-1 fx-font-500" >Business</a>
+					<a href="#" aria-label="name" class="txa-search-tag-item fx-heading-1 fx-font-500" >Consulting</a>
+					<a href="#" aria-label="name" class="txa-search-tag-item fx-heading-1 fx-font-500" >Finance</a>
+					<a href="#" aria-label="name" class="txa-search-tag-item fx-heading-1 fx-font-500" >Reports</a>
+				</div>
+			</div>
+		</div>
+
+		<button aria-label="search-close" type="button" class="txa-search-box-close search_box_close">
+			<i class="fa-solid fa-xmark"></i>
+		</button>
+	</div>
 <!-- End of Header section
 	============================================= -->
 
 <!-- Start of Hero  section
 	============================================= -->
 	<section id="mt-hero-4" class="mt-hero-section-4 position-relative">
-		<span class="hero-shape-1 position-absolute"><img src="assets/img/shape/cirle-shape2.png" alt=""></span>
-		<span class="hero-shape-2 position-absolute"><img src="assets/img/shape/circle-shape.png" alt=""></span>
+		<span class="hero-shape-1 position-absolute wow slideInLeft"  data-wow-delay="800ms" data-wow-duration="1000ms"><img src="assets/img/shape/cirle-shape2.png" alt=""></span>
+		<span class="hero-shape-2 position-absolute wow slideInRight"  data-wow-delay="900ms" data-wow-duration="1000ms"><img src="assets/img/shape/circle-shape.png" alt=""></span>
 		<div class="mt-hero-content-4">
 			<div class="mt-hero-text-4 d-flex headline pera-content position-relative">
 				<div class="item-text-img">
@@ -72,7 +186,7 @@
 						<div class="play-icon position-absolute">
 							<a href="#"><img src="assets/img/hero/play.png" alt=""></a>
 						</div>
-						<div class="sm_img position-absolute">
+						<div class="sm_img position-absolute wow zoomIn"  data-wow-delay="900ms" data-wow-duration="1000ms">
 							<img src="assets/img/hero/sm.jpg" alt="">
 						</div>
 						<h1 class="hero_title title_text title_text_ani">Transforming
@@ -422,9 +536,9 @@
 
 <!-- Start of Testimonial  section
 	============================================= -->
-	<!-- <section id="mt-testimonial-4" class="mt-testimonial-section-4">
+	<section id="mt-testimonial-4" class="mt-testimonial-section-4 pt-110">
 		<div class="container mt-container-1">
-			<div class="mt-testimonial-content-4 d-flex">
+			<div class="mt-testimonial-content-4 d-flex align-items-center">
 				<div class="mt-testimonial-img-wrap-4">
 					<div class="mt-testimonial-img-thumb swiper-container">
 						<div class="swiper-wrapper">
@@ -440,10 +554,24 @@
 							</div>
 							<div class="swiper-slide">
 								<div class="mt-testi-img-4">
+									<img src="assets/img/about/tst3.jpg" alt="">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="mt-testi-img-4">
+									<img src="assets/img/about/tst1.jpg" alt="">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="mt-testi-img-4">
 									<img src="assets/img/about/tst2.jpg" alt="">
 								</div>
 							</div>
-
+							<div class="swiper-slide">
+								<div class="mt-testi-img-4">
+									<img src="assets/img/about/tst3.jpg" alt="">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -479,12 +607,45 @@
 									</div>
 								</div>
 							</div>
+							<div class="swiper-slide">
+								<div class="mt-testimonial-item-4 headline pera-content">
+									<p>“Crafting compelling digital experiences that captivate audiences and drive meaningful connections. Our digital agency combines innovation, strategy, and expertise to fuel your online success. the other hand ....</p>
+									<div class="mt-testi-author mt-55">
+										<h3>Alina Kolaminov</h3>
+										<span>Marketing Agent</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="mt-testimonial-item-4 headline pera-content">
+									<p>“Crafting compelling digital experiences that captivate audiences and drive meaningful connections. Our digital agency combines innovation, strategy, and expertise to fuel your online success. the other hand ....</p>
+									<div class="mt-testi-author mt-55">
+										<h3>Alina Kolaminov</h3>
+										<span>Marketing Agent</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="mt-testimonial-item-4 headline pera-content">
+									<p>“Crafting compelling digital experiences that captivate audiences and drive meaningful connections. Our digital agency combines innovation, strategy, and expertise to fuel your online success. the other hand ....</p>
+									<div class="mt-testi-author mt-55">
+										<h3>Alina Kolaminov</h3>
+										<span>Marketing Agent</span>
+									</div>
+								</div>
+							</div>
 						</div>
+					</div>
+				</div>
+				<div class="mt-testimonial-nav-4">
+					<div class="nav-wrap">
+						<div class="mt-test-prev-4"><i class="fa-solid fa-chevron-left"></i></div>
+						<div class="mt-test-next-4"><i class="fa-solid fa-chevron-right"></i></div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section> -->	
+	</section>	
 <!-- End of Testimonial  section
 	============================================= -->
 
@@ -926,5 +1087,20 @@
 	<script src="assets/js/ScrollTrigger.min.js"></script>
 	<script src="assets/js/SplitText.min.js"></script>
 	<script src="assets/js/script.js"></script>
+	<script>
+		const carousel = document.getElementById('myCarousel');
+		const items = carousel.querySelectorAll('.carousel-item');
+
+		function centerActiveItem() {
+			items.forEach((item, index) => {
+				item.classList.remove('active');
+			});
+			const middleIndex = Math.floor(items.length / 2);
+			items[middleIndex].classList.add('active');
+		}
+
+		centerActiveItem();
+		window.addEventListener('resize', centerActiveItem);
+	</script>
 </body>
 </html>           

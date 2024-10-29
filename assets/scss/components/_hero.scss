@@ -368,6 +368,14 @@
 				background: var(--mt-gradient);
 			}
 		}
+		.mt-btn-3 {
+			a {
+				padding: 23px 35px;
+				@media #{$xxs} {
+					padding: 15px 25px;
+				}
+			}
+		}
 		&.active {
 			.hero-shape-1 {
 				transition-delay: 1500ms;

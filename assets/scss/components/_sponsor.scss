@@ -19,6 +19,9 @@
 		position: absolute;
 		transform: translateY(100%);
 		transition: 500ms var(--cube-1);
+		@media #{$xs,$xxs} {
+			display: none;
+		}
 	}
 	&:hover {
 		.img_1 {

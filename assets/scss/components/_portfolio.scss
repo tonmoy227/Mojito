@@ -10,12 +10,15 @@
 		font-weight: 700;
 		position: absolute;
 		color: var(--mt-title-color);
+		@media #{$lg,$md,$xs} {
+			display: none;
+		}
 	}
 }
 .mt-portfolio-slider {
 	padding: 0px 45px;
-	@media #{$md,$xs} {
-		margin: 0px 20px;
+	@media #{$lg,$md,$xs} {
+		margin: 0px 0px;
 	}
 }
 .mt-portfolio-item {
@@ -44,7 +47,7 @@
 				line-height: 1;
 				font-weight: 700;
 				padding: 6px 10px;
-				margin-right: 3px;
+				margin: 3px;
 				border-radius: 30px;
 				display: inline-block;
 				border: 2px solid var(--mt-title-color);
@@ -62,6 +65,9 @@
 }
 .mt-port-nav {
 	gap: 25px;
+	@media #{$lg,$md,$xs} {
+		gap: 15px;
+	}
 	div {
 		z-index: 1;
 		width: 85px;
@@ -73,6 +79,10 @@
 		color: var(--mt-title-color);
 		transition: all 500ms ease;
 		border: 2px solid var(--mt-title-color);
+		@media #{$lg,$md,$xs} {
+			height: 60px;
+			width: 60px;
+		}
 		&:before {
 			top: 0;
 			left: 0;
@@ -97,8 +107,15 @@
 }
 .mt-portfolio-nav-arrow {
 	margin: 0 auto;
-	max-width: 1260px;
+	padding: 0px 15px;
+	max-width: 1290px;
 	padding-bottom: 160px;
+	@media #{$lg,$md,$xs} {
+		padding-bottom: 30px;
+	}
+	@media #{$xs} {
+		justify-content: center !important;
+	}
 }
 /*Home Page 2  Portfolio Section/
 /*----------------------------------------------------*/
@@ -241,11 +258,12 @@
 		width: 60px;
 		z-index: 2;
 		height: 60px;
-		color: #0c3e27;
+		color: #fff;
 		position: absolute;
 		border-radius: 100%;
-		border: 2px solid #0c3e27;
+		border: 2px solid #fff;
 		transform: translateY(-50%);
+		transition: all 200ms ease;
 		&:before {
 			top: 0;
 			left: 0;
@@ -260,21 +278,24 @@
 			transition: all 500ms ease;
 		}
 		@media #{$xxxl,$xxl,$xl,$lg,$md,$sm,$xs} {
+			color: var(--mt-title-color);
 			position: static;
 			transform: translateY(0%);
+			box-sizing: border-box;
+			border: 2px solid var(--mt-title-color);
 		}
 		&:hover {
-			border: 2px solid transparent;
+			border: 0px solid transparent;
 			&:before {
 				transform: scale(1);
 			}
 		}
 	}
 	.mt-port-prev {
-		left: -30px;
+		left: 15px;
 	}
 	.mt-port-next {
-		right: -30px;
+		right: 15px;
 	}
 }
 .mt-portfolio-item-3 {

@@ -44,7 +44,8 @@
 	gap: 18px;
 	padding: 30px 0px 27px;
 	position: relative;
-	&:before {
+	&:before,
+	&:after{
 		left: 0;
 		right: 0;
 		bottom: 0;
@@ -54,12 +55,20 @@
 		margin: 0 auto;
 		position: absolute;
 		transition: all 700ms ease;
-		background-color: var(--mt-title-color);
+		background: var(--mt-title-color);
+	}
+	&:after {
+		background: var(--mt-gradient-2);
 	}
 	&.active {
 		&:before {
 			width: 100%;
 			transition-delay: 700ms;
+		}
+	}
+	&:hover {
+		&:after {
+			width: 100%;
 		}
 	}
 	.item-icon {
@@ -86,9 +95,20 @@
 		transform: translateY(-50%);
 		i {
 			transform: rotate(-45deg);
+			transition: all 500ms ease;
 		}
 		@media #{$xxxs} {
 			display: none;
+		}
+	}
+	&:hover {
+		.item-icon {
+			animation: icon-bounce 0.8s ease-out infinite;
+		}
+		.icon-arrow {
+			i {
+				transform: rotate(0deg);
+			}
 		}
 	}
 }
