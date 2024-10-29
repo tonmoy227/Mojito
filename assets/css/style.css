@@ -3720,7 +3720,9 @@ select:visited {
 }
 .mt-hero-section-3 .hero_shape_1 {
   left: 0;
+  right: 0;
   top: -40%;
+  text-align: center;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
   -webkit-transform-origin: top;
@@ -3730,7 +3732,9 @@ select:visited {
 }
 .mt-hero-section-3 .hero_shape_2 {
   left: 0;
+  right: 0;
   bottom: -40%;
+  text-align: center;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
   -webkit-transform-origin: bottom;
@@ -5257,9 +5261,11 @@ select:visited {
 .mt-service-section-4 .service-bg {
   top: 0;
   left: 0;
+  right: 0;
   z-index: -1;
   height: 93%;
   width: 100%;
+  text-align: center;
   overflow: hidden;
   background-color: #19191a;
 }

@@ -416,14 +416,18 @@
 	}
 	.hero_shape_1 {
 		left: 0;
+		right: 0;
 		top: -40%;
+		text-align: center;
 		transform: scaleY(0);
 		transform-origin: top;
 		transition: all 900ms ease;
 	}
 	.hero_shape_2 {
 		left: 0;
+		right: 0;
 		bottom: -40%;
+		text-align: center;
 		transform: scaleY(0);
 		transform-origin: bottom;
 		transition: all 900ms ease;
