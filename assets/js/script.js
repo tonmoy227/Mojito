@@ -832,5 +832,6 @@ Faq Active
 				stagger: 0.25,
 			});
 		});
+		
 	});
 })(jQuery);

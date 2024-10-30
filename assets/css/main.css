@@ -22,7 +22,7 @@
   --mt-gradient-2: linear-gradient(90deg, #9d00ff, #0099f8);
 }
 
-.mt-footer-section-4 .mt-footer-copyright span, .mt-copyright-wrap .copyright-social a i, .mt-footer-widget .menu-widget li a:before, .mt-wc-text-area-4 .item-list li i, .mt-why-choose-wrap-2 .item-wc-feature .feature-list-item:before, .mt-why-choose-wrap-2 .item-text .mt-section-title .subtitle-2 span, .mt-feature-img .item-text li i, .mt-testi-item-3 .item-img:before, .mt-service-tab-btn-list .nav-tabs .nav-link.active span, .mt-service-content-4 .mt-section-title .subtitle-2, .mt-about-text-2 .mt-section-title .subtitle-2, .mt-hero-text-3 .hero-subtitlte span, .mt-hero-content-2 .mt-hero-text .hero_title span, .mt-hero-content-2 .mt-hero-text .hero-slug span, .mt-hero-content-2 .mt-hero-text .hero-slug i, .mt-hero-text-1 .hero_title .mt_gradient, .mt-header-section.header_style_one .mt-header-action .header-cta .item-text span, .mt-header-section.header_style_two .mt-header-action .header-cta .item-text span, .header-cta-btn a span, .mt-section-title .sec_title span, .mt-section-title .subtitle {
+.mt-footer-section-4 .mt-footer-copyright span, .mt-copyright-wrap .copyright-social a i, .mt-footer-widget .menu-widget li a:before, .mt-wc-text-area-4 .item-list li i, .mt-why-choose-wrap-2 .item-wc-feature .feature-list-item:before, .mt-why-choose-wrap-2 .item-text .mt-section-title .subtitle-2 span, .mt-feature-img .item-text li i, .mt-testi-item-3 .item-img:before, .mt-service-tab-btn-list .nav-tabs .nav-link.active span, .mt-service-content-4 .mt-section-title .subtitle-2, .mt-join-team a, .mt-about-text-2 .mt-section-title .subtitle-2, .mt-hero-text-3 .hero-subtitlte span, .mt-hero-content-2 .mt-hero-text .hero_title span, .mt-hero-content-2 .mt-hero-text .hero-slug span, .mt-hero-content-2 .mt-hero-text .hero-slug i, .mt-hero-text-1 .hero_title .mt_gradient, .mt-header-section.header_style_one .mt-header-action .header-cta .item-text span, .mt-header-section.header_style_two .mt-header-action .header-cta .item-text span, .header-cta-btn a span, .mt-section-title .sec_title span, .mt-section-title .subtitle {
   background: var(--mt-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -4944,6 +4944,209 @@ select:visited {
   }
 }
 
+.mt-about-value-section {
+  background-color: #F7F7F8;
+}
+.mt-about-value-section .mt-section-title {
+  max-width: 830px;
+}
+
+.mt-about-value-item {
+  z-index: 1;
+  padding: 35px;
+  position: relative;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+.mt-about-value-item:before, .mt-about-value-item:after {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  content: "";
+  border-radius: 8px;
+  position: absolute;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.mt-about-value-item:after {
+  background-color: #fff;
+}
+.mt-about-value-item:before {
+  background: var(--mt-gradient);
+}
+.mt-about-value-item .item-icon {
+  margin-bottom: 125px;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 767px) {
+  .mt-about-value-item .item-icon {
+    margin-bottom: 50px;
+  }
+}
+.mt-about-value-item .item-text h3 {
+  font-size: 32px;
+  font-weight: 700;
+  padding-bottom: 25px;
+  color: var(--mt-title-color);
+}
+.mt-about-value-item .item-text p {
+  color: #313030;
+}
+.mt-about-value-item:hover .item-icon {
+  -webkit-animation: icon-bounce 0.8s ease-out infinite;
+          animation: icon-bounce 0.8s ease-out infinite;
+}
+.mt-about-value-item:hover:before {
+  right: -5px;
+  bottom: -5px;
+}
+
+@-webkit-keyframes border_animation {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+  20% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.24);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.7);
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+@keyframes border_animation {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+  20% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.24);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.7);
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+.mt-video-play-bg {
+  padding: 230px 0px;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 767px) {
+  .mt-video-play-bg {
+    padding: 130px 0px;
+  }
+}
+.mt-video-play-bg .play-icon {
+  z-index: 2;
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 100%;
+}
+.mt-video-play-bg .play-icon .video_btn_border {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  border: 20px solid #fff;
+  -webkit-animation: border_animation 3.9s linear 0s infinite;
+  animation: border_animation 3.9s linear 0s infinite;
+}
+.mt-video-play-bg .play-icon .video_btn_border.border_wrap-2 {
+  -webkit-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
+.mt-video-play-bg .play-icon .video_btn_border.border_wrap-3 {
+  -webkit-animation-delay: 2.6s;
+  animation-delay: 2.6s;
+}
+.mt-video-play-bg .play-icon a {
+  z-index: 2;
+  width: 130px;
+  height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--vt-title-color);
+  font-size: 16px;
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.mt-video-play-section-4 {
+  z-index: 1;
+}
+.mt-video-play-section-4 .video-shape {
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  z-index: -1;
+  height: 430px;
+  margin: 0 auto;
+  text-align: center;
+}
+.mt-video-play-section-4 .video-shape img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mt-video-play-bg {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.mt-about-team-section .mt-section-title {
+  max-width: 650px;
+}
+
+.mt-join-team {
+  padding: 40px 0px;
+  border-top: 1px solid #D3D3D3;
+  border-bottom: 1px solid #D3D3D3;
+}
+.mt-join-team a {
+  font-size: 20px;
+  font-weight: 700;
+  display: inline-block;
+}
+.mt-join-team a:hover {
+  text-decoration: underline;
+}
+
+.mt-about-gallery-wrap {
+  margin: 0 auto;
+  max-width: 1920px;
+  gap: 20px 40px;
+}
+
 /*---------------------------------------------------- */
 /*Counter Section*/
 /*----------------------------------------------------*/
@@ -7946,6 +8149,11 @@ select:visited {
   margin-bottom: 30px;
   background-color: #fff;
   border-radius: 150px 150px 20px 20px;
+}
+.mt-team-item-4.ver_2 {
+  margin-bottom: 32px;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1019607843);
+          box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1019607843);
 }
 .mt-team-item-4 .item-icon {
   right: 25px;
