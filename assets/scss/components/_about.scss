@@ -33,10 +33,14 @@
 	}
 	&.ver_2 {
 		padding: 0;
+		width: 100%;
 		border: none;
 		border-radius: 0;
 		padding-bottom: 30px;
 		border-bottom: 1px solid #E8E6DC;
+		@media #{$md,$xs} {
+			margin-top: 40px;
+		}
 		.nav-item {
 			margin-left: 0;
 			margin-right: 24px;
@@ -197,15 +201,19 @@
 			font-size: 20px;
 			font-weight: 500;
 			margin-bottom: 15px;
-			padding-left: 30px;
+			padding-left: 25px;
 			position: relative;
+			@media #{$xs} {
+				width: 100%;
+			}
 			&:before {
-				top: 0;
 				left: 0;
+				top: 10px;
 				width: 16px;
 				content: '';
 				height: 16px;
 				position: absolute;
+				background-image: url(../img/icon/star3.svg);
 			}
 		}
 	}
@@ -621,11 +629,60 @@
 /*About Page Section*/
 /*--------------------------------------*/
 .mt-about-tab-section {
+	overflow: hidden;
 	.mt-section-title {
 		max-width: 1130px;
 		.sec_title {
 			line-height: 1;
 			font-size: 65px;
+			@media #{$md,$xs} {
+				font-size: 50px;
+			}
+			@media #{$xxs} {
+				font-size: 40px;
+			}
+		}
+	}
+}
+.mt-about-p-counter {
+	border-top: 1px solid #22282F1A;
+	.counter-p-item {
+		width: 25%;
+		padding: 55px 0px;
+		border-right: 1px solid #22282F1A;
+		@media #{$lg,$md} {
+			width: 50%;
+		}
+		@media #{$sm,$xs} {
+			width: 100%;
+			padding: 30px 0px;
+			border-right: none;
+			border-bottom: 1px solid #22282F1A;
+		}
+		.item-content {
+			gap: 15px;
+		}
+		h3 {
+			line-height: 1;
+			font-size: 100px;
+			color: var(--mt-title-color);
+			@media #{$xxxl,$xxl} { 
+				font-size: 70px;
+			}
+			@media #{$xl,$sm,$xs} { 
+				font-size: 55px;
+			}
+		}
+		p {
+			opacity: .8;
+			line-height: 1.1;
+			font-size: 23px;
+			max-width: 100px;
+			padding-bottom: 10px;
+			color: var(--mt-title-color);
+			@media #{$xl,$sm,$xs} { 
+				font-size: 20px;
+			}
 		}
 	}
 }
