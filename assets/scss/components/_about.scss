@@ -34,6 +34,27 @@
 	&.ver_2 {
 		padding: 0;
 		border: none;
+		border-radius: 0;
+		padding-bottom: 30px;
+		border-bottom: 1px solid #E8E6DC;
+		.nav-item {
+			margin-left: 0;
+			margin-right: 24px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		.nav-tabs {
+			.nav-link {
+				font-weight: 400;
+				box-shadow: none;
+				background-color: #E8E6DC;
+			}
+			.nav-link.active {
+				font-weight: 400;
+				box-shadow: none;
+			}
+		}
 	}
 	.nav-item {
 		margin: 0px 19px;
@@ -158,6 +179,33 @@
 				li {
 					color: #fff;
 				}
+			}
+		}
+	}
+	.tab-desc {
+		font-size: 23px;
+		margin-bottom: 20px;
+	}
+	.tab-list {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		li {
+			width: 50%;
+			color: #000000;
+			font-size: 20px;
+			font-weight: 500;
+			margin-bottom: 15px;
+			padding-left: 30px;
+			position: relative;
+			&:before {
+				top: 0;
+				left: 0;
+				width: 16px;
+				content: '';
+				height: 16px;
+				position: absolute;
 			}
 		}
 	}
@@ -571,7 +619,7 @@
 	}
 }
 /*About Page Section*/
-/*----------------------------------------------------*/
+/*--------------------------------------*/
 .mt-about-tab-section {
 	.mt-section-title {
 		max-width: 1130px;

@@ -4160,6 +4160,27 @@ select:visited {
 .mt-about-tab-btn.ver_2 {
   padding: 0;
   border: none;
+  border-radius: 0;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #E8E6DC;
+}
+.mt-about-tab-btn.ver_2 .nav-item {
+  margin-left: 0;
+  margin-right: 24px;
+}
+.mt-about-tab-btn.ver_2 .nav-item:last-child {
+  margin-right: 0;
+}
+.mt-about-tab-btn.ver_2 .nav-tabs .nav-link {
+  font-weight: 400;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #E8E6DC;
+}
+.mt-about-tab-btn.ver_2 .nav-tabs .nav-link.active {
+  font-weight: 400;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .mt-about-tab-btn .nav-item {
   margin: 0px 19px;
@@ -4294,6 +4315,34 @@ select:visited {
 }
 .mt-about-tab-text .mt-about-tab-list.dark_version .item-list li {
   color: #fff;
+}
+.mt-about-tab-text .tab-desc {
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+.mt-about-tab-text .tab-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.mt-about-tab-text .tab-list li {
+  width: 50%;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  padding-left: 30px;
+  position: relative;
+}
+.mt-about-tab-text .tab-list li:before {
+  top: 0;
+  left: 0;
+  width: 16px;
+  content: "";
+  height: 16px;
+  position: absolute;
 }
 
 .mt-about-client {
@@ -4808,7 +4857,7 @@ select:visited {
 }
 
 /*About Page Section*/
-/*----------------------------------------------------*/
+/*--------------------------------------*/
 .mt-about-tab-section .mt-section-title {
   max-width: 1130px;
 }
@@ -9770,7 +9819,7 @@ select:visited {
   background: var(--mt-gradient);
 }
 .mt-breadcrumb-content .mt-breadcrumb-text .bread_btn i {
-  margin-left: 18px;
+  margin-left: 10px;
 }
 .mt-breadcrumb-content .mt-breadcrumb-list {
   right: 0;
