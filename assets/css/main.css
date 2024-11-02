@@ -8281,6 +8281,81 @@ select:visited {
           backdrop-filter: blur(12px);
 }
 
+/*Portfolio Details Page/
+/*----------------------------------------------------*/
+.mt-portfolio-thumb {
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 18px;
+  position: relative;
+  margin-top: -150px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .mt-portfolio-thumb {
+    margin-top: 40px;
+  }
+}
+
+.mt-portfolio-details-text {
+  margin: 0 auto;
+  max-width: 735px;
+}
+
+.mt-gallery-wrap {
+  margin: 0 auto;
+  max-width: 1060px;
+}
+
+.mt-portfolio-details-text h3, .mt-portfolio-details-text h2 {
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 20px;
+  color: var(--mt-title-color);
+}
+.mt-portfolio-details-text h2 {
+  font-size: 32px;
+}
+.mt-portfolio-details-text p {
+  padding-bottom: 30px;
+}
+.mt-portfolio-details-text ul {
+  margin-bottom: 50px;
+}
+.mt-portfolio-details-text ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+.mt-portfolio-details-text ul li i {
+  padding-right: 10px;
+  color: var(--mt-title-color);
+}
+
+.mt-pd-item-img {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.mt-gallery-wrap .g-inner-item {
+  margin-bottom: 30px;
+}
+.mt-gallery-wrap .item-img {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+.mt-gallery-wrap .item-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /*---------------------------------------------------- */
 /*Blog Section*/
 /*----------------------------------------------------*/
@@ -11279,6 +11354,120 @@ select:visited {
   .mt-breadcrumb-content-2 .breadcrumb_title {
     font-size: 40px;
   }
+}
+
+/*---------------------------------------------------- */
+/*Career Section*/
+/*----------------------------------------------------*/
+.mt-career-hero-section {
+  z-index: 1;
+  overflow: hidden;
+}
+.mt-career-hero-section .mt-career-hero-content {
+  padding-top: 300px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 767px) {
+  .mt-career-hero-section .mt-career-hero-content {
+    padding: 180px 0px 70px;
+  }
+}
+.mt-career-hero-section .mt-career-hero-content h2 {
+  color: #fff;
+  font-size: 90px;
+  line-height: 1.1;
+  font-weight: 700;
+  max-width: 1108px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .mt-career-hero-section .mt-career-hero-content h2 {
+    font-size: 50px;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .mt-career-hero-section .mt-career-hero-content h2 {
+    font-size: 40px;
+  }
+}
+.mt-career-hero-section:before {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 85%;
+  content: "";
+  position: absolute;
+  background-color: #11203E;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 767px) {
+  .mt-career-hero-section:before {
+    height: 100%;
+  }
+}
+.mt-career-hero-section .mt-career-hero-img-text {
+  gap: 30px 50px;
+  margin-top: 90px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .mt-career-hero-section .mt-career-hero-img-text {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 767px) {
+  .mt-career-hero-section .mt-career-hero-img-text {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.mt-career-hero-section .mt-career-hero-img-text .item-img {
+  overflow: hidden;
+  border-radius: 20px;
+}
+.mt-career-hero-section .mt-career-hero-img-text .item-text {
+  max-width: 396px;
+}
+.mt-career-hero-section .mt-career-hero-img-text .item-text p {
+  color: #FFFFFF;
+  padding-bottom: 30px;
+}
+.mt-career-hero-section .mt-career-hero-img-text .item-text .bread_btn {
+  color: #22282F;
+  padding: 15px 40px;
+  border-radius: 40px;
+  display: inline-block;
+  background: var(--mt-gradient);
+}
+.mt-career-hero-section .mt-career-hero-img-text .item-text .bread_btn i {
+  margin-left: 10px;
+}
+
+.mt-career-ben {
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 32px;
+  border: 1px solid #DBDBDB;
+}
+.mt-career-ben .item-icon {
+  margin-bottom: 25px;
+}
+.mt-career-ben .item-text h3 {
+  font-size: 22px;
+  font-weight: 700;
+  padding-bottom: 15px;
+  color: var(--mt-title-color);
+}
+
+.mt-career-quote-section {
+  background-color: #E8E6DC;
+}
+.mt-career-quote-section .mt-section-title {
+  max-width: 845px;
 }
 
 /*---------------------------------------------------- */
