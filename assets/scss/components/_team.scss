@@ -273,3 +273,202 @@
 		}
 	}
 }
+/*Team Page/
+/*-------------------------------------------*/
+.mt-team-award-section {
+	z-index: 1;
+	.mt-section-title {
+		.sec_title {
+			color: #fff;
+		}
+	}
+	.mt-award-bg {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+.mt-award-tab-btn {
+	width: 100%;
+	height: 485px;
+	max-width: 550px;
+	padding: 120px 20px 80px 100px;
+	backdrop-filter: blur(10px);
+	border-radius: 500px 500px 0px 0px;
+	background-color: rgba(255, 255, 255, .10);
+	@media #{$lg,$md,$xs} {
+		margin: 0 auto;
+	}
+	@media #{$xxs} {
+		height: auto;
+		padding: 30px;
+		border-radius: 0;
+	}
+	.nav-pills .nav-link {
+		color: #fff;
+		font-size: 24px;
+		border-radius: 0;
+		font-weight: 500;
+		padding-left: 22px;
+		margin-bottom: 30px;
+		transition: all 500ms ease;
+		background-color: transparent;
+		position: relative;
+		&:before {
+			left: 0;
+			top: 14px;
+			width: 10px;
+			content: '';
+			height: 10px;
+			position: absolute;
+			border-radius: 100%;
+			transition: all 500ms ease;
+			background: var(--mt-gradient);
+		}
+	}
+	.nav-pills .nav-link.active {
+		font-size: 30px;
+		font-weight: 700;
+		@extend%gradient-text;
+		&:before {
+			top: 18px;
+		}
+	}
+}
+.mt-award-tab-content {
+	right: 0;
+	bottom: -120px;
+	position: absolute;
+	@media #{$lg,$md,$xs} {
+		position: static;
+		text-align: center;
+	}
+}
+/*Team Single*/
+/*------------------------------------------*/
+.mt-team-details-section {
+	padding-top: 290px;
+	@media #{$md,$sm,$xs} {
+		padding-top: 150px;
+		padding-bottom: 50px;
+	}
+}
+.mt-team-details-content {
+	gap: 30px 70px;
+	@media #{$xl,$lg} {
+		gap: 30px;
+	}
+	@media #{$md,$sm,$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.mt-team-details-img {
+	max-width: 610px;
+	.item-img {
+		background-color: #F7F7F8;
+		border-radius: 500px 500px 12px 12px;
+	}
+}
+.mt-team-details-text {
+	max-width: 580px;
+	.mt-item-desc-info {
+		h3 {
+			font-size: 40px;
+			font-weight: 700;
+			padding-bottom: 15px;
+			color: var(--mt-title-color);
+		}
+		span {
+			color: #63FF4B;
+		}
+		p {
+			color: #313030;
+			padding-top: 25px;
+		}
+	}
+}
+.mt-team-details-info {
+	h3 {
+		font-size: 26px;
+		font-weight: 700;
+		padding-bottom: 20px;
+		color: var(--mt-title-color);
+	}
+	li {
+		color: #313030;
+		margin-bottom: 8px;
+	}
+	.award-item {
+		margin-bottom: 15px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		span {
+			color: #6255ED;
+			font-size: 14px;
+		}
+		h4 {
+			color: #22282F;
+			font-size: 18px;
+			font-weight: 500;
+			padding-top: 5px;
+		}
+	}
+}
+.tm-skill-item-wrap {
+	.skill-set-percent {
+		width: 100%;
+		margin-bottom: 18px;
+	}
+	.skill-set-percent h4 {
+		z-index: 1;
+		left: 0px;
+		color: #261723;
+		font-size: 18px;
+		padding-bottom: 10px;
+
+	}
+	.skill-set-percent .progress {
+		height: 10px;
+		border-radius: 0;
+		margin-bottom: 6px;
+		overflow: visible;
+		position: relative;
+		border-radius: 30px;
+		background: linear-gradient(270deg, #1b95f81f 0%, #9b00ff61 100%);
+		&:last-child {
+			margin-bottom: 0;
+			.progress-bar {
+				background: var(--mt-gradient-2);
+			}
+		}
+	}
+	.skill-set-percent .progress span {
+		top: -25px;
+		right: 0;
+		font-size: 17px;
+		color: #5956F0;
+		position: relative;
+	}
+	.skill-set-percent .progress-bar {
+		top: 0px;
+		width: 0;
+		left: 0px;
+		float: left;
+		height: 100%;
+		position: relative;
+		border-radius: 30px;
+		background-color: rgb(157, 163, 222);
+		-webkit-transition: 1s all ease-in-out;
+		transition: 1s all ease-in-out;
+	}
+
+}

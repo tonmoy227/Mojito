@@ -858,8 +858,152 @@
 		}
 	}
 }
+.mt-about-gallery-section {
+	overflow: hidden;
+}
 .mt-about-gallery-wrap {
 	margin: 0 auto;
 	max-width: 1920px;
 	gap: 20px 40px;
+	.mt-gallery-item {
+		flex: 0 0 auto;
+	}
+}
+.mt-award-section {
+	.mt-section-title {
+		max-width: 830px;
+		p {
+			font-size: 23px;
+			padding-top: 10px;
+		}
+	}
+}
+.mt-award-content {
+	border-top: 1px solid #D9D9D9;
+}
+.mt-award-item {
+	overflow: hidden;
+	padding: 35px 0px;
+	border-bottom: 1px solid #D9D9D9;
+	@media #{$md,$xs} {
+		padding: 35px 15px;
+	}
+	&:before {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 0%;
+		content: '';
+		position: absolute;
+		transition: all 500ms ease;
+		background: linear-gradient(270deg, rgba(54, 255, 243, 0.24) 0%, rgba(99, 255, 75, 0.24) 100%);
+	}
+	.award-img {
+		top: 50%;
+		opacity: 0;
+		left: -40px;
+		transition: all 500ms ease;
+		transform: translateY(-50%);
+		@media #{$md,$xs} {
+			display: none;
+		}
+	}
+	.item-year-title {
+		gap: 20px 40px;
+		transition: all 500ms ease;
+		@media #{$xs} {
+			flex-wrap: wrap;
+		}
+	}
+	.item-year {
+		color: #F1F1F1;
+		line-height: 1;
+		font-size: 65px;
+		font-weight: 700;
+		letter-spacing: 1px;
+		transition: all 500ms ease;
+	}
+	.item-title {
+		max-width: 550px;
+		@media #{$lg} {
+			max-width: 480px;
+		}
+		@media #{$md,$xs} {
+			max-width: 700px;
+		}
+		h3 {
+			color: #060606;
+			font-size: 28px;
+			font-weight: 700;
+			padding-bottom: 10px;
+		}
+	}
+	.item-arrow {
+		transition: all 500ms ease;
+		@media #{$md,$xs} {
+			display: none;
+		}
+		a {
+			z-index: 1;
+			width: 80px;
+			height: 80px;
+			display: flex;
+			color: #060606;
+			font-size: 16px;
+			position: relative;
+			border-radius: 100%;
+			align-items: center;
+			justify-content: center;
+			border: 2px solid #515151;
+			i {
+				transition: all 500ms ease;
+			}
+			&:before {
+				top: 0;
+				left: 0;
+				z-index: -1;
+				width: 100%;
+				height: 100%;
+				content: '';
+				transform: scale(0);
+				position: absolute;
+				border-radius: 100%;
+				transition: all 500ms ease;
+				background: var(--mt-gradient);
+			}
+		}
+	}
+	&:hover {
+		&:before {
+			height: 100%;
+		}
+		.award-img {
+			opacity: 1;
+			left: 20px;
+		}
+		.item-year {
+			color: #fff;
+		}
+		.item-year-title {
+			transform: translateX(180px);
+			@media #{$md,$xs} {
+				transform: translateX(0px);
+			}
+		}
+		.item-arrow {
+			transform: translateX(-60px);
+			@media #{$lg,$md,$xs} {
+				transform: translateX(-15px);
+			}
+			a {
+				border: 2px solid transparent;
+				i {
+					transform: rotate(-45deg);
+				}
+				&:before {
+					transform: scale(1);
+				}
+			}
+		}
+	}
 }

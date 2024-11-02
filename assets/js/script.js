@@ -583,6 +583,28 @@ Faq Active
 	$(document).on('click', '.mt-faq-accordion .accordion-item', function(){
 		$(this).addClass('faq_active').siblings().removeClass('faq_active')
 	});
+	jQuery(document).ready(function ($) {
+		$('#pills-tab[data-mouse="hover"] a').hover(function(){
+			$(this).tab('show');
+		});
+		$('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
+			var target = $(e.relatedTarget).attr('href');
+			$(target).removeClass('active');
+		})
+	});
+	$("#js-contcheckbox").change(function() {
+		if(this.checked) {
+			$('.js-montlypricing').css('display', 'none');
+			$('.js-yearlypricing').css('display', 'inline-block');
+			$('.afterinput').addClass('text-success');
+			$('.beforeinput').removeClass('text-success');
+		} else {
+			$('.js-montlypricing').css('display', 'inline-block');
+			$('.js-yearlypricing').css('display', 'none');
+			$('.afterinput').removeClass('text-success');
+			$('.beforeinput').addClass('text-success');
+		}
+	});
 	jQuery(window).on('load', function(){
 		if($('.title_text').length) {
 			gsap.utils.toArray(".title_text").forEach(e => {
@@ -802,6 +824,24 @@ Faq Active
 				ease: "none",
 			});
 		});
+		gsap.utils.toArray('.mt-about-gallery-wrap').forEach((el, index) => { 
+			let Vertex = gsap.timeline({
+				scrollTrigger: {
+					trigger: ".mt-about-gallery-section",
+					scrub: 2,
+					start: "top 20%",
+					end: "bottom 20%",
+					toggleActions: "play none none reverse", 
+					markers: false
+				}
+			})
+
+			Vertex
+			.set(el, {transformOrigin: 'top bottom'})
+			.fromTo(el, { x: 0  }, { x: -1200 , duration: 30, immediateRender: false})
+		});
+
+
 		gsap.registerPlugin(ScrollTrigger);
 		var st = jQuery(".tx-split-text");
 		if(st.length == 0) return;
